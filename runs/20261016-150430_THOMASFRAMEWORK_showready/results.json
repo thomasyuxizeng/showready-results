@@ -1,0 +1,668 @@
+{
+    "schema":  "showready/1",
+    "meta":  {
+                 "tool_version":  "1.2.0",
+                 "role":  "prod",
+                 "mode":  "quick",
+                 "started":  "2026-10-16T15:04:30+09:00",
+                 "finished":  "2026-10-16T15:04:59+09:00",
+                 "computer":  "THOMASFRAMEWORK",
+                 "duration_s":  28.8,
+                 "srt_host":  "",
+                 "lan_hosts":  [
+
+                               ],
+                 "skipped":  [
+                                 "lan",
+                                 "load",
+                                 "network"
+                             ],
+                 "steps":  [
+                               {
+                                   "key":  "hardware",
+                                   "title":  "Hardware",
+                                   "status":  "ok",
+                                   "seconds":  26.1,
+                                   "message":  null,
+                                   "collector_errors":  0
+                               },
+                               {
+                                   "key":  "network",
+                                   "title":  "Network",
+                                   "status":  "skipped",
+                                   "seconds":  0,
+                                   "message":  "by -Skip",
+                                   "collector_errors":  0
+                               },
+                               {
+                                   "key":  "lan",
+                                   "title":  "LAN",
+                                   "status":  "skipped",
+                                   "seconds":  0,
+                                   "message":  "by -Skip",
+                                   "collector_errors":  0
+                               },
+                               {
+                                   "key":  "load",
+                                   "title":  "Load test",
+                                   "status":  "skipped",
+                                   "seconds":  0,
+                                   "message":  "by -Skip",
+                                   "collector_errors":  0
+                               },
+                               {
+                                   "key":  "verdict",
+                                   "title":  "Verdict",
+                                   "status":  "ok",
+                                   "seconds":  1.6,
+                                   "message":  null,
+                                   "collector_errors":  0
+                               }
+                           ],
+                 "lib_errors":  [
+
+                                ]
+             },
+    "profile":  {
+                    "name":  "Gen.G Academy Seoul -\u003e France",
+                    "inputs":  {
+                                   "count":  2,
+                                   "protocol":  "OMT",
+                                   "resolution":  "1920x1080",
+                                   "fps":  60,
+                                   "mbps_per_feed":  {
+                                                         "OMT":  200,
+                                                         "NDI":  150,
+                                                         "NDI-HX3":  62
+                                                     }
+                               },
+                    "outputs":  [
+                                    {
+                                        "id":  "srt",
+                                        "label":  "SRT to France",
+                                        "protocol":  "SRT",
+                                        "video_kbps":  10000,
+                                        "audio_kbps":  192
+                                    },
+                                    {
+                                        "id":  "youtube",
+                                        "label":  "YouTube",
+                                        "protocol":  "RTMP",
+                                        "video_kbps":  17000,
+                                        "audio_kbps":  128
+                                    },
+                                    {
+                                        "id":  "twitch",
+                                        "label":  "Twitch",
+                                        "protocol":  "RTMP",
+                                        "video_kbps":  6000,
+                                        "audio_kbps":  160
+                                    }
+                                ],
+                    "srt_destination_host":  ""
+                },
+    "hardware":  {
+                     "os":  {
+                                "caption":  "Microsoft Windows 11 Pro",
+                                "version":  "10.0.26200",
+                                "build":  "26200"
+                            },
+                     "computer":  {
+                                      "name":  "THOMASFRAMEWORK",
+                                      "manufacturer":  "Framework",
+                                      "model":  "Laptop (13th Gen Intel Core)",
+                                      "is_laptop":  true
+                                  },
+                     "cpu":  {
+                                 "name":  "13th Gen Intel(R) Core(TM) i5-1340P",
+                                 "cores":  12,
+                                 "threads":  16,
+                                 "max_mhz":  1900
+                             },
+                     "ram_gb":  13.7,
+                     "gpus":  [
+                                  {
+                                      "name":  "Intel(R) UHD Graphics",
+                                      "vendor":  "Intel",
+                                      "integrated":  true,
+                                      "driver_version":  "32.0.101.7088",
+                                      "nvidia_driver":  null,
+                                      "driver_date":  "2026-06-17",
+                                      "vram_gb":  null
+                                  }
+                              ],
+                     "nics":  [
+                                  {
+                                      "name":  "vEthernet (WSL (Hyper-V firewall))",
+                                      "description":  "Hyper-V Virtual Ethernet Adapter #2",
+                                      "status":  "Up",
+                                      "link_mbps":  10000,
+                                      "kind":  "virtual",
+                                      "default_route":  false,
+                                      "ipv4":  [
+                                                   "172.22.224.1"
+                                               ],
+                                      "network_category":  null,
+                                      "eee":  "unknown"
+                                  },
+                                  {
+                                      "name":  "vEthernet (Default Switch)",
+                                      "description":  "Hyper-V Virtual Ethernet Adapter",
+                                      "status":  "Up",
+                                      "link_mbps":  10000,
+                                      "kind":  "virtual",
+                                      "default_route":  false,
+                                      "ipv4":  [
+                                                   "172.31.48.1"
+                                               ],
+                                      "network_category":  null,
+                                      "eee":  "unknown"
+                                  },
+                                  {
+                                      "name":  "WiFi",
+                                      "description":  "Intel(R) Wi-Fi 6E AX210 160MHz",
+                                      "status":  "Up",
+                                      "link_mbps":  1201,
+                                      "kind":  "wifi",
+                                      "default_route":  true,
+                                      "ipv4":  [
+                                                   "172.30.2.95"
+                                               ],
+                                      "network_category":  "Public",
+                                      "eee":  "unknown"
+                                  },
+                                  {
+                                      "name":  "Bluetooth Network Connection",
+                                      "description":  "Bluetooth Device (Personal Area Network)",
+                                      "status":  "Disconnected",
+                                      "link_mbps":  null,
+                                      "kind":  "virtual",
+                                      "default_route":  false,
+                                      "ipv4":  [
+                                                   "169.254.25.101"
+                                               ],
+                                      "network_category":  null,
+                                      "eee":  "unknown"
+                                  }
+                              ],
+                     "power":  {
+                                   "plan_guid":  "381b4222-f694-41f0-9685-ff5bb260df2e",
+                                   "plan":  "balanced",
+                                   "on_battery":  true,
+                                   "battery_pct":  43
+                               },
+                     "disk":  {
+                                  "system_drive":  "C:",
+                                  "free_gb":  407.2,
+                                  "total_gb":  930.4
+                              },
+                     "software":  {
+                                      "vmix":  null,
+                                      "obs":  "32.1.2",
+                                      "ndi_runtime":  null,
+                                      "ndi_tools":  null,
+                                      "distroav":  null,
+                                      "omt":  null
+                                  },
+                     "windows":  {
+                                     "hags":  "unknown",
+                                     "game_mode":  "off",
+                                     "pending_reboot":  true,
+                                     "firewall_profiles":  [
+                                                               {
+                                                                   "name":  "Domain",
+                                                                   "enabled":  true
+                                                               },
+                                                               {
+                                                                   "name":  "Private",
+                                                                   "enabled":  true
+                                                               },
+                                                               {
+                                                                   "name":  "Public",
+                                                                   "enabled":  true
+                                                               }
+                                                           ]
+                                 },
+                     "processes":  {
+                                       "running":  [
+                                                       "chrome"
+                                                   ]
+                                   },
+                     "errors":  [
+
+                                ]
+                 },
+    "network":  null,
+    "lan":  null,
+    "loadtest":  null,
+    "verdict":  {
+                    "overall":  "NO-GO",
+                    "headline":  "Weakest link: Internet connection type (Wi-Fi; needs wired) - Plug the PC into the venue network with an Ethernet cable and turn Wi-Fi off. (+4 more blocking problem(s))",
+                    "weakest":  "uplink_wifi",
+                    "partial":  false,
+                    "not_tested":  [
+                                       "network",
+                                       "local network",
+                                       "load test"
+                                   ],
+                    "checks":  [
+                                   {
+                                       "id":  "fr_reach",
+                                       "section":  "france",
+                                       "title":  "France reachable",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Network test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "fr_rtt",
+                                       "section":  "france",
+                                       "title":  "Round-trip time to France (p95)",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Network test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "fr_rtt_spread",
+                                       "section":  "france",
+                                       "title":  "Round-trip stability (p99 - p50)",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Network test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "fr_icmp_loss",
+                                       "section":  "france",
+                                       "title":  "Ping loss to France",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Network test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "fr_udp_loss",
+                                       "section":  "france",
+                                       "title":  "UDP loss at SRT bitrate",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Network test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "fr_udp_bursts",
+                                       "section":  "france",
+                                       "title":  "UDP loss bursts",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Network test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "uplink_capacity",
+                                       "section":  "uplink",
+                                       "title":  "Upload capacity vs. show needs",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Network test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "uplink_wifi",
+                                       "section":  "uplink",
+                                       "title":  "Internet connection type",
+                                       "status":  "FAIL",
+                                       "value":  "Wi-Fi",
+                                       "limit":  "wired",
+                                       "margin":  0,
+                                       "detail":  "The default route (internet) goes through the Wi-Fi adapter WiFi.",
+                                       "fix":  "Plug the PC into the venue network with an Ethernet cable and turn Wi-Fi off."
+                                   },
+                                   {
+                                       "id":  "ingest_youtube",
+                                       "section":  "ingest",
+                                       "title":  "YouTube ingest reachable",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Network test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "ingest_twitch",
+                                       "section":  "ingest",
+                                       "title":  "Twitch ingest reachable",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Network test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "lan_wired",
+                                       "section":  "lan",
+                                       "title":  "Wired network connection",
+                                       "status":  "FAIL",
+                                       "value":  "no wired adapter up",
+                                       "limit":  "wired adapter up",
+                                       "margin":  0,
+                                       "detail":  "No wired network adapter is connected. Wi-Fi cannot carry 2x 1080p60 OMT/NDI reliably. Adapters up: vEthernet (WSL (Hyper-V firewall)) [virtual], vEthernet (Default Switch) [virtual], WiFi [wifi].",
+                                       "fix":  "Connect the PC to the production switch with an Ethernet cable (2.5 GbE or faster) for the NDI/OMT feeds."
+                                   },
+                                   {
+                                       "id":  "lan_headroom",
+                                       "section":  "lan",
+                                       "title":  "LAN headroom for incoming feeds",
+                                       "status":  "FAIL",
+                                       "value":  "no wired link",
+                                       "limit":  "",
+                                       "margin":  0,
+                                       "detail":  "No wired adapter is up, so there is no usable path for the incoming feeds.",
+                                       "fix":  "Connect a wired Ethernet adapter first."
+                                   },
+                                   {
+                                       "id":  "lan_virtual_adapters",
+                                       "section":  "lan",
+                                       "title":  "Virtual network adapters",
+                                       "status":  "WARN",
+                                       "value":  "2 virtual adapter(s) up",
+                                       "limit":  "none",
+                                       "margin":  null,
+                                       "detail":  "NDI/OMT discovery may bind to vEthernet (WSL (Hyper-V firewall)), vEthernet (Default Switch).",
+                                       "fix":  "Disable the virtual adapters for the show, or pin the adapter in NDI Access Manager / vMix."
+                                   },
+                                   {
+                                       "id":  "lan_profile",
+                                       "section":  "lan",
+                                       "title":  "Windows network profile",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "No wired adapter is up.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "lan_eee",
+                                       "section":  "lan",
+                                       "title":  "Energy-Efficient Ethernet",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "No wired adapter is up.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "lan_sources_found",
+                                       "section":  "lan",
+                                       "title":  "Incoming feeds found on the network",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "The local network step was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "lan_partner_throughput",
+                                       "section":  "lan",
+                                       "title":  "Network throughput from source PCs",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "The local network step was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "lan_hosts",
+                                       "section":  "lan",
+                                       "title":  "Devices on the local network",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "The local network step was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_cpu_threads",
+                                       "section":  "hardware",
+                                       "title":  "CPU threads",
+                                       "status":  "PASS",
+                                       "value":  "16 threads",
+                                       "limit":  "\u003e= 12 threads",
+                                       "margin":  1.33,
+                                       "detail":  "13th Gen Intel(R) Core(TM) i5-1340P - low-power laptop CPU (12 cores)",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_ram",
+                                       "section":  "hardware",
+                                       "title":  "RAM",
+                                       "status":  "FAIL",
+                                       "value":  "13.7 GB",
+                                       "limit":  "\u003e= 32 GB",
+                                       "margin":  0.45,
+                                       "detail":  "Installed RAM reads a few percent below its nominal size, so 32 GB is matched from 30.4 GB.",
+                                       "fix":  "Install at least 32 GB of RAM (64 GB is comfortable for vMix with 2 feeds)."
+                                   },
+                                   {
+                                       "id":  "hw_gpu",
+                                       "section":  "hardware",
+                                       "title":  "Dedicated GPU",
+                                       "status":  "WARN",
+                                       "value":  "no dedicated GPU",
+                                       "limit":  "dedicated NVIDIA/AMD GPU",
+                                       "margin":  null,
+                                       "detail":  "Found: Intel(R) UHD Graphics; no dedicated GPU - vMix at 1080p60 with 3 encodes is not supported on integrated graphics. OBS alone may cope at lower settings, but expect dropped frames.",
+                                       "fix":  "Use a PC with an NVIDIA RTX or AMD Radeon GPU for the show."
+                                   },
+                                   {
+                                       "id":  "hw_nvenc_sessions",
+                                       "section":  "hardware",
+                                       "title":  "NVENC encode sessions",
+                                       "status":  "INFO",
+                                       "value":  "not NVIDIA",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "No NVIDIA GPU: the NVENC session limit does not apply.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_power",
+                                       "section":  "hardware",
+                                       "title":  "Power plan and mains power",
+                                       "status":  "FAIL",
+                                       "value":  "on battery (43 % left)",
+                                       "limit":  "on mains power",
+                                       "margin":  0,
+                                       "detail":  "The PC is running on battery; Windows throttles the CPU/GPU. Power plan: Balanced.",
+                                       "fix":  "Plug in the charger (and use High performance) before the show."
+                                   },
+                                   {
+                                       "id":  "hw_gpu_driver_age",
+                                       "section":  "hardware",
+                                       "title":  "GPU driver age",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "No dedicated GPU.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_disk",
+                                       "section":  "hardware",
+                                       "title":  "System drive free space",
+                                       "status":  "PASS",
+                                       "value":  "407 GB free",
+                                       "limit":  "\u003e= 50 GB",
+                                       "margin":  8.14,
+                                       "detail":  "System drive C:.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_pending_reboot",
+                                       "section":  "hardware",
+                                       "title":  "Pending Windows reboot",
+                                       "status":  "WARN",
+                                       "value":  "reboot pending",
+                                       "limit":  "none",
+                                       "margin":  null,
+                                       "detail":  "Windows is waiting for a restart (updates or driver install).",
+                                       "fix":  "Reboot before the show, not during it."
+                                   },
+                                   {
+                                       "id":  "load_encoder",
+                                       "section":  "load",
+                                       "title":  "Hardware video encoder",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Load test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "load_realtime",
+                                       "section":  "load",
+                                       "title":  "Real-time 2 in + 3 out",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Load test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "load_cpu",
+                                       "section":  "load",
+                                       "title":  "CPU load during test",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Load test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "load_gpu_encode",
+                                       "section":  "load",
+                                       "title":  "GPU encoder load during test",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Load test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "load_throttle",
+                                       "section":  "load",
+                                       "title":  "CPU clock throttling",
+                                       "status":  "SKIP",
+                                       "value":  "",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Load test was not run.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "sw_mixer",
+                                       "section":  "software",
+                                       "title":  "vMix or OBS installed",
+                                       "status":  "PASS",
+                                       "value":  "OBS 32.1.2",
+                                       "limit":  "vMix or OBS",
+                                       "margin":  null,
+                                       "detail":  "A production mixer is installed.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "sw_ndi",
+                                       "section":  "software",
+                                       "title":  "NDI / OMT software",
+                                       "status":  "INFO",
+                                       "value":  "NDI runtime not found, DistroAV not found, OMT not found",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "The show uses OMT; make sure the sending PCs and vMix/OBS support it.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "sw_background",
+                                       "section":  "software",
+                                       "title":  "Background apps",
+                                       "status":  "WARN",
+                                       "value":  "1 running",
+                                       "limit":  "none",
+                                       "margin":  null,
+                                       "detail":  "These programs compete for CPU, GPU or network: chrome.",
+                                       "fix":  "Close: chrome."
+                                   }
+                               ],
+                    "settings":  [
+                                     {
+                                         "id":  "input_protocol",
+                                         "label":  "Input protocol",
+                                         "value":  "fix the network first",
+                                         "why":  "There is no wired link with enough capacity for the incoming feeds."
+                                     },
+                                     {
+                                         "id":  "power_plan",
+                                         "label":  "Windows power plan",
+                                         "value":  "High performance (or Ultimate), on mains power, sleep off",
+                                         "why":  "The default Balanced plan lets the CPU clock drop under bursty live-video load."
+                                     }
+                                 ],
+                    "manual_checks":  [
+                                          {
+                                              "id":  "mc_partner_latency",
+                                              "text":  "Confirm the French partner\u0027s receive latency matches the SRT latency above (the higher of the two ends wins)."
+                                          },
+                                          {
+                                              "id":  "mc_twitch_test",
+                                              "text":  "Twitch from Korea: do a 30-second test stream with the real stream key from this venue before show day."
+                                          },
+                                          {
+                                              "id":  "mc_same_time",
+                                              "text":  "Re-run ShowReady at the same time of day as the show (evening congestion differs from daytime)."
+                                          },
+                                          {
+                                              "id":  "mc_rehearsal",
+                                              "text":  "Run a 30-minute rehearsal with the real vMix/OBS scene and both real feeds; watch vMix/OBS dropped frames."
+                                          },
+                                          {
+                                              "id":  "mc_srthost",
+                                              "text":  "When the partner sends their SRT IP, run: Run-ShowReady.cmd -SrtHost \u003ctheir IP\u003e."
+                                          }
+                                      ],
+                    "calc":  {
+                                 "need_mbps":  36.028,
+                                 "intake_mbps":  400
+                             },
+                    "errors":  [
+
+                               ]
+                }
+}
