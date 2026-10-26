@@ -1,0 +1,1690 @@
+{
+    "meta":  {
+                 "tool_version":  "1.3.1-prep",
+                 "computer":  "DESKTOP-QLBEJKT",
+                 "user":  "DESKTOP-QLBEJKT\\User",
+                 "elevated":  true,
+                 "role":  "observer",
+                 "started":  "2026-10-26T19:26:53.3619569+09:00",
+                 "finished":  "2026-10-26T19:36:58.2612831+09:00",
+                 "dry_run":  false,
+                 "plan_only":  false
+             },
+    "settings":  {
+                     "language":  {
+                                      "ui":  "en-US",
+                                      "keep_input":  [
+                                                         "ko-KR"
+                                                     ]
+                                  },
+                     "disk":  {
+                                  "warn_gb":  50,
+                                  "fail_gb":  20
+                              },
+                     "updates":  {
+                                     "pause_days":  7
+                                 },
+                     "power":  {
+                                   "prefer":  "ultimate"
+                               },
+                     "drivers":  {
+                                     "nvidia_min":  "570.00",
+                                     "max_age_days":  365
+                                 },
+                     "startup":  {
+                                     "keep_patterns":  "SecurityHealth|Windows ?Defender|MsMpEng|AhnLab V3|V3 ?Lite|V3UI|V3L|ESET|egui|Kaspersky|avp\\.exe|Norton|McAfee|Bitdefender|Avast|AVG|Malwarebytes|RtkAud|Realtek|RTHDVCPL|Waves|MaxxAudio|Nahimic|Dolby|Sonic ?Studio|NVIDIA|NvContainer|AMD|Radeon|IGCC|igfx|Intel\\(R\\) Graphics|Synaptics|ELAN|Logitech|LGHUB|Razer|SteelSeries|Corsair|iCUE|Wooting|Bluetooth|ctfmon|IME|NDI|\\bOMT\\b|vMix|obs64|OBS Studio|Elgato|Stream ?Deck|Blackmagic|Desktop Video|Magewell|AJA|AnyDesk|TeamViewer|Parsec|RustDesk|Splashtop|Chrome Remote|vgtray|Vanguard|FACEIT|EasyAntiCheat|BattlEye|BEService",
+                                     "disable_patterns":  ".*"
+                                 },
+                     "background":  {
+                                        "close_patterns":  "^(chrome|msedge|firefox|whale|opera|brave|OneDrive|Teams|ms-teams|Spotify|Dropbox|GoogleDriveFS|iCloudDrive|iCloudServices|CCXProcess|Creative Cloud|AdobeIPCBroker|Acrobat|AcroCEF|KakaoTalk|LINE|Skype|Zoom|Everything|GoogleUpdate|MicrosoftEdgeUpdate|AdobeARM|jusched|nProtect.*|npkcmsvc|TouchEn.*|Veraport.*|IPinside.*|Delfino.*|Wizvera.*|CrossEX.*|INISAFE.*|MagicLine.*|KeySharp.*|AnySign.*|ASTx.*)$",
+                                        "close_prod_only_patterns":  "^(steam|steamwebhelper|EpicGamesLauncher|EpicWebHelper|Battle\\.net|RiotClientServices|RiotClientUx|RiotClientUxRender|LeagueClient|LeagueClientUx|Origin|EADesktop|upc|GalaxyClient)$",
+                                        "ask_patterns":  "^(Discord|Slack|WhatsApp|Telegram|KakaoTalk)$",
+                                        "never_close_patterns":  "^(System|Idle|smss|csrss|wininit|winlogon|services|lsass|svchost|explorer|dwm|fontdrvhost|sihost|ctfmon|RuntimeBroker|SearchHost|StartMenuExperienceHost|ShellExperienceHost|TextInputHost|SecurityHealth.*|MsMpEng|NisSrv|powershell|pwsh|cmd|conhost|WindowsTerminal|OpenConsole|ffmpeg|iperf3|vMix.*|obs64|obs32|NDI.*|OMT.*|AnyDesk|TeamViewer.*|parsecd|rustdesk|vgtray|vgc|FACEIT.*|EasyAntiCheat.*|BEService.*|League of Legends|VALORANT.*|cs2|dota2)$"
+                                    },
+                     "network":  {
+                                     "offer_disable_wifi_when_wired":  true,
+                                     "offer_disable_virtual_adapters":  true
+                                 },
+                     "notifications":  {
+                                           "disable_toasts":  true
+                                       }
+                 },
+    "plan":  [
+                 {
+                     "id":  "sys_admin",
+                     "section":  "drivers",
+                     "title":  "Process elevation and user context",
+                     "status":  "INFO",
+                     "current":  "Elevated: Yes, User: DESKTOP-QLBEJKT\\User, Console: DESKTOP-QLBEJKT\\User",
+                     "target":  "Elevated with matching console user",
+                     "detail":  "Running elevated as DESKTOP-QLBEJKT\\User matching console user (DESKTOP-QLBEJKT\\User).",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "sys_language",
+                     "section":  "language",
+                     "title":  "Windows display language",
+                     "status":  "CHANGE",
+                     "current":  "ko-KR (override: )",
+                     "target":  "en-US display language",
+                     "detail":  "Switch Windows display language to en-US while keeping ko-KR keyboard.",
+                     "risk":  "low",
+                     "needs_reboot":  true,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Install-Language -Language en-US -CopyToSettings",
+                                      "Set-SystemPreferredUILanguage -Language en-US",
+                                      "Set-WinUILanguageOverride -Language en-US",
+                                      "Set-WinUserLanguageList en-US, ko, ko-KR -Force"
+                                  ],
+                     "undo":  {
+                                  "win_ui_language_override":  "",
+                                  "user_language_list_tags":  [
+                                                                  "ko"
+                                                              ],
+                                  "system_preferred_ui_language":  "ko"
+                              }
+                 },
+                 {
+                     "id":  "sys_gpu_driver",
+                     "section":  "drivers",
+                     "title":  "NVIDIA GeForce RTX 2080 driver",
+                     "status":  "OK",
+                     "current":  "NVIDIA GeForce RTX 2080 driver 617.42 (2026-09-30)",
+                     "target":  "\u003e= 570.00 (NVIDIA Studio Driver)",
+                     "detail":  "NVIDIA driver 617.42 meets minimum version requirement (570.00) and is current (2026-09-30).",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "sys_nic_driver",
+                     "section":  "drivers",
+                     "title":  "Wired adapter driver: \uc774\ub354\ub137",
+                     "status":  "MANUAL",
+                     "current":  "Intel(R) Ethernet Connection (7) I219-V driver 12.19.1.37 (2021-06-22)",
+                     "target":  "Vendor driver (\u003c 3 years old)",
+                     "detail":  "Driver is older than 3 years (2021-06-22). Recommended to install the latest vendor driver: https://www.intel.com/content/www/us/en/download/15084/intel-ethernet-adapter-complete-driver-pack.html",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "sys_wu_drivers:0977dc84-7d56-4285-ae8b-c6f542500dae",
+                     "section":  "drivers",
+                     "title":  "Intel - Other hardware - Intel(R) Xeon(R) E3 - 1200/1500 v5/6th Gen Intel(R) Core(TM) PCIe Controller (x16) - 1901",
+                     "status":  "CHANGE",
+                     "current":  "not installed",
+                     "target":  "2015-10-28 OtherHardware",
+                     "detail":  "Available driver update from Windows Update (OtherHardware).",
+                     "risk":  "low",
+                     "needs_reboot":  true,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Windows Update: download and install Intel - Other hardware - Intel(R) Xeon(R) E3 - 1200/1500 v5/6th Gen Intel(R) Core(TM) PCIe Controller (x16) - 1901"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "sys_wu_drivers:2d45df59-198a-4275-a463-501805e02b77",
+                     "section":  "drivers",
+                     "title":  "Intel Corporation - Extension - 8/27/2018 12:00:00 AM - 24.20.100.6291",
+                     "status":  "CHANGE",
+                     "current":  "not installed",
+                     "target":  "2018-08-27 Extension",
+                     "detail":  "Available driver update from Windows Update (Extension).",
+                     "risk":  "low",
+                     "needs_reboot":  true,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Windows Update: download and install Intel Corporation - Extension - 8/27/2018 12:00:00 AM - 24.20.100.6291"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "sys_wu_drivers:557c4d28-8e6f-477c-9a3e-7c0def8db8d8",
+                     "section":  "drivers",
+                     "title":  "INTEL - System - 7/18/1968 12:00:00 AM - 10.1.14.7",
+                     "status":  "CHANGE",
+                     "current":  "not installed",
+                     "target":  "1968-07-18 OtherHardware",
+                     "detail":  "Available driver update from Windows Update (OtherHardware).",
+                     "risk":  "low",
+                     "needs_reboot":  true,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Windows Update: download and install INTEL - System - 7/18/1968 12:00:00 AM - 10.1.14.7"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "sys_wu_drivers:b01eaa60-b75b-47e4-9d29-4ba6aa98ce91",
+                     "section":  "drivers",
+                     "title":  "Intel Corporation - Display - 30.0.100.9805",
+                     "status":  "CHANGE",
+                     "current":  "not installed",
+                     "target":  "2021-07-23 Video",
+                     "detail":  "Available driver update from Windows Update (Video).",
+                     "risk":  "low",
+                     "needs_reboot":  true,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Windows Update: download and install Intel Corporation - Display - 30.0.100.9805"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "sys_disk",
+                     "section":  "disk",
+                     "title":  "System disk space",
+                     "status":  "OK",
+                     "current":  "70.9 GB free of 464.6 GB",
+                     "target":  "\u003e= 50 GB free",
+                     "detail":  "Sufficient disk space on C: (70.9 GB free of 464.6 GB).",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "sys_disk:D",
+                     "section":  "disk",
+                     "title":  "Disk space on D:",
+                     "status":  "INFO",
+                     "current":  "749.4 GB free of 931.5 GB",
+                     "target":  "Fixed drive capacity",
+                     "detail":  "Drive D: has 749.4 GB free of 931.5 GB total capacity.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "sys_reboot",
+                     "section":  "reboot",
+                     "title":  "Pending system reboot",
+                     "status":  "OK",
+                     "current":  "No pending reboot",
+                     "target":  "No pending reboot",
+                     "detail":  "No pending system reboots detected.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "sys_wu_pause",
+                     "section":  "updates",
+                     "title":  "Pause Windows Update",
+                     "status":  "CHANGE",
+                     "current":  "Not paused",
+                     "target":  "Pause for 7 days (until 2026-11-02T10:27:44Z)",
+                     "detail":  "Pause Windows Update for 7 days to prevent downloads and reboots during tests and the show.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKLM:\\SOFTWARE\\Microsoft\\WindowsUpdate\\UX\\Settings\u0027 -Name \u0027PauseUpdatesStartTime\u0027 -Value \u00272026-10-26T10:27:44Z\u0027",
+                                      "Set-ItemProperty -Path \u0027HKLM:\\SOFTWARE\\Microsoft\\WindowsUpdate\\UX\\Settings\u0027 -Name \u0027PauseUpdatesExpiryTime\u0027 -Value \u00272026-11-02T10:27:44Z\u0027",
+                                      "Set-ItemProperty -Path \u0027HKLM:\\SOFTWARE\\Microsoft\\WindowsUpdate\\UX\\Settings\u0027 -Name \u0027PauseFeatureUpdatesStartTime\u0027 -Value \u00272026-10-26T10:27:44Z\u0027",
+                                      "Set-ItemProperty -Path \u0027HKLM:\\SOFTWARE\\Microsoft\\WindowsUpdate\\UX\\Settings\u0027 -Name \u0027PauseFeatureUpdatesEndTime\u0027 -Value \u00272026-11-02T10:27:44Z\u0027",
+                                      "Set-ItemProperty -Path \u0027HKLM:\\SOFTWARE\\Microsoft\\WindowsUpdate\\UX\\Settings\u0027 -Name \u0027PauseQualityUpdatesStartTime\u0027 -Value \u00272026-10-26T10:27:44Z\u0027",
+                                      "Set-ItemProperty -Path \u0027HKLM:\\SOFTWARE\\Microsoft\\WindowsUpdate\\UX\\Settings\u0027 -Name \u0027PauseQualityUpdatesEndTime\u0027 -Value \u00272026-11-02T10:27:44Z\u0027"
+                                  ],
+                     "undo":  {
+                                  "PauseUpdatesStartTime":  "absent",
+                                  "PauseUpdatesExpiryTime":  "absent",
+                                  "PauseFeatureUpdatesStartTime":  "absent",
+                                  "PauseFeatureUpdatesEndTime":  "absent",
+                                  "PauseQualityUpdatesStartTime":  "absent",
+                                  "PauseQualityUpdatesEndTime":  "absent"
+                              }
+                 },
+                 {
+                     "id":  "tune_power",
+                     "section":  "power",
+                     "title":  "Power scheme and AC settings",
+                     "status":  "OK",
+                     "current":  "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c (optimized)",
+                     "target":  "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+                     "detail":  "Active scheme is High performance/Ultimate and all AC power settings are optimized.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Steam",
+                     "section":  "startup",
+                     "title":  "Startup app: Steam",
+                     "status":  "OK",
+                     "current":  "disabled",
+                     "target":  "disabled",
+                     "detail":  "already disabled",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:WallpaperEngine",
+                     "section":  "startup",
+                     "title":  "Startup app: WallpaperEngine",
+                     "status":  "OK",
+                     "current":  "disabled",
+                     "target":  "disabled",
+                     "detail":  "already disabled",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Discord",
+                     "section":  "startup",
+                     "title":  "Startup app: Discord",
+                     "status":  "OK",
+                     "current":  "disabled",
+                     "target":  "disabled",
+                     "detail":  "already disabled",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Queue",
+                     "section":  "startup",
+                     "title":  "Startup app: Queue",
+                     "status":  "OK",
+                     "current":  "disabled",
+                     "target":  "disabled",
+                     "detail":  "already disabled",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:KakaoTalk",
+                     "section":  "startup",
+                     "title":  "Startup app: KakaoTalk",
+                     "status":  "CHANGE",
+                     "current":  "enabled",
+                     "target":  "disabled",
+                     "detail":  "Third-party app configured to launch at Windows startup; disable to free resources.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027KakaoTalk\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                  ],
+                     "undo":  {
+                                  "type":  "startup_approved",
+                                  "approved_key":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                  "name":  "KakaoTalk",
+                                  "previous_val":  "absent"
+                              }
+                 },
+                 {
+                     "id":  "tune_startup:Volume Controller SD plugin",
+                     "section":  "startup",
+                     "title":  "Startup app: Volume Controller SD plugin",
+                     "status":  "OK",
+                     "current":  "enabled",
+                     "target":  "enabled",
+                     "detail":  "kept: needed for drivers/security/broadcast/remote access",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:SOOPPackage",
+                     "section":  "startup",
+                     "title":  "Startup app: SOOPPackage",
+                     "status":  "CHANGE",
+                     "current":  "enabled",
+                     "target":  "disabled",
+                     "detail":  "Third-party app configured to launch at Windows startup; disable to free resources.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027SOOPPackage\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                  ],
+                     "undo":  {
+                                  "type":  "startup_approved",
+                                  "approved_key":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                  "name":  "SOOPPackage",
+                                  "previous_val":  "AgAAAAAAAAAAAAAA"
+                              }
+                 },
+                 {
+                     "id":  "tune_startup:RiotClient",
+                     "section":  "startup",
+                     "title":  "Startup app: RiotClient",
+                     "status":  "CHANGE",
+                     "current":  "enabled",
+                     "target":  "disabled",
+                     "detail":  "Third-party app configured to launch at Windows startup; disable to free resources.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027RiotClient\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                  ],
+                     "undo":  {
+                                  "type":  "startup_approved",
+                                  "approved_key":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                  "name":  "RiotClient",
+                                  "previous_val":  "absent"
+                              }
+                 },
+                 {
+                     "id":  "tune_startup:Figma Agent",
+                     "section":  "startup",
+                     "title":  "Startup app: Figma Agent",
+                     "status":  "CHANGE",
+                     "current":  "enabled",
+                     "target":  "disabled",
+                     "detail":  "Third-party app configured to launch at Windows startup; disable to free resources.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027Figma Agent\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                  ],
+                     "undo":  {
+                                  "type":  "startup_approved",
+                                  "approved_key":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                  "name":  "Figma Agent",
+                                  "previous_val":  "absent"
+                              }
+                 },
+                 {
+                     "id":  "tune_startup:AdobeBridge",
+                     "section":  "startup",
+                     "title":  "Startup app: AdobeBridge",
+                     "status":  "CHANGE",
+                     "current":  "enabled",
+                     "target":  "disabled",
+                     "detail":  "Third-party app configured to launch at Windows startup; disable to free resources.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027AdobeBridge\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                  ],
+                     "undo":  {
+                                  "type":  "startup_approved",
+                                  "approved_key":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                  "name":  "AdobeBridge",
+                                  "previous_val":  "absent"
+                              }
+                 },
+                 {
+                     "id":  "tune_startup:Synapse3",
+                     "section":  "startup",
+                     "title":  "Startup app: Synapse3",
+                     "status":  "OK",
+                     "current":  "enabled",
+                     "target":  "enabled",
+                     "detail":  "kept: needed for drivers/security/broadcast/remote access",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:MicrosoftEdgeAutoLaunch_C46CFC0629905CC775E70B50EA8A519C",
+                     "section":  "startup",
+                     "title":  "Startup app: MicrosoftEdgeAutoLaunch_C46CFC0629905CC775E70B50EA8A519C",
+                     "status":  "CHANGE",
+                     "current":  "enabled",
+                     "target":  "disabled",
+                     "detail":  "Third-party app configured to launch at Windows startup; disable to free resources.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027MicrosoftEdgeAutoLaunch_C46CFC0629905CC775E70B50EA8A519C\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                  ],
+                     "undo":  {
+                                  "type":  "startup_approved",
+                                  "approved_key":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                  "name":  "MicrosoftEdgeAutoLaunch_C46CFC0629905CC775E70B50EA8A519C",
+                                  "previous_val":  "absent"
+                              }
+                 },
+                 {
+                     "id":  "tune_startup:SecurityHealth",
+                     "section":  "startup",
+                     "title":  "Startup app: SecurityHealth",
+                     "status":  "OK",
+                     "current":  "disabled",
+                     "target":  "disabled",
+                     "detail":  "kept: needed for drivers/security/broadcast/remote access",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Blackmagic Desktop Video Updater",
+                     "section":  "startup",
+                     "title":  "Startup app: Blackmagic Desktop Video Updater",
+                     "status":  "OK",
+                     "current":  "enabled",
+                     "target":  "enabled",
+                     "detail":  "kept: needed for drivers/security/broadcast/remote access",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Blackmagic Streaming Server",
+                     "section":  "startup",
+                     "title":  "Startup app: Blackmagic Streaming Server",
+                     "status":  "OK",
+                     "current":  "enabled",
+                     "target":  "enabled",
+                     "detail":  "kept: needed for drivers/security/broadcast/remote access",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:RTHDVCPL",
+                     "section":  "startup",
+                     "title":  "Startup app: RTHDVCPL",
+                     "status":  "OK",
+                     "current":  "enabled",
+                     "target":  "enabled",
+                     "detail":  "kept: needed for drivers/security/broadcast/remote access",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Stream Deck",
+                     "section":  "startup",
+                     "title":  "Startup app: Stream Deck",
+                     "status":  "OK",
+                     "current":  "enabled",
+                     "target":  "enabled",
+                     "detail":  "kept: needed for drivers/security/broadcast/remote access",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Riot Vanguard",
+                     "section":  "startup",
+                     "title":  "Startup app: Riot Vanguard",
+                     "status":  "OK",
+                     "current":  "disabled",
+                     "target":  "disabled",
+                     "detail":  "kept: needed for drivers/security/broadcast/remote access",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Logitech Download Assistant",
+                     "section":  "startup",
+                     "title":  "Startup app: Logitech Download Assistant",
+                     "status":  "OK",
+                     "current":  "disabled",
+                     "target":  "disabled",
+                     "detail":  "kept: needed for drivers/security/broadcast/remote access",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Logi Download Assistant",
+                     "section":  "startup",
+                     "title":  "Startup app: Logi Download Assistant",
+                     "status":  "CHANGE",
+                     "current":  "enabled",
+                     "target":  "disabled",
+                     "detail":  "Third-party app configured to launch at Windows startup; disable to free resources.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027Logi Download Assistant\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                  ],
+                     "undo":  {
+                                  "type":  "startup_approved",
+                                  "approved_key":  "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                  "name":  "Logi Download Assistant",
+                                  "previous_val":  "absent"
+                              }
+                 },
+                 {
+                     "id":  "tune_startup:Lightshot",
+                     "section":  "startup",
+                     "title":  "Startup app: Lightshot",
+                     "status":  "CHANGE",
+                     "current":  "enabled",
+                     "target":  "disabled",
+                     "detail":  "Third-party app configured to launch at Windows startup; disable to free resources.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32\u0027 -Name \u0027Lightshot\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                  ],
+                     "undo":  {
+                                  "type":  "startup_approved",
+                                  "approved_key":  "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32",
+                                  "name":  "Lightshot",
+                                  "previous_val":  "AgAAAAAAAAAAAAAA"
+                              }
+                 },
+                 {
+                     "id":  "tune_startup:Blackmagic CheckVersion",
+                     "section":  "startup",
+                     "title":  "Startup app: Blackmagic CheckVersion",
+                     "status":  "OK",
+                     "current":  "enabled",
+                     "target":  "enabled",
+                     "detail":  "kept: needed for drivers/security/broadcast/remote access",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Adobe CCXProcess",
+                     "section":  "startup",
+                     "title":  "Startup app: Adobe CCXProcess",
+                     "status":  "CHANGE",
+                     "current":  "enabled",
+                     "target":  "disabled",
+                     "detail":  "Third-party app configured to launch at Windows startup; disable to free resources.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32\u0027 -Name \u0027Adobe CCXProcess\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                  ],
+                     "undo":  {
+                                  "type":  "startup_approved",
+                                  "approved_key":  "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32",
+                                  "name":  "Adobe CCXProcess",
+                                  "previous_val":  "absent"
+                              }
+                 },
+                 {
+                     "id":  "tune_startup:Adobe Creative Cloud",
+                     "section":  "startup",
+                     "title":  "Startup app: Adobe Creative Cloud",
+                     "status":  "CHANGE",
+                     "current":  "enabled",
+                     "target":  "disabled",
+                     "detail":  "Third-party app configured to launch at Windows startup; disable to free resources.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32\u0027 -Name \u0027Adobe Creative Cloud\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                  ],
+                     "undo":  {
+                                  "type":  "startup_approved",
+                                  "approved_key":  "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32",
+                                  "name":  "Adobe Creative Cloud",
+                                  "previous_val":  "absent"
+                              }
+                 },
+                 {
+                     "id":  "tune_startup:RadminVPN",
+                     "section":  "startup",
+                     "title":  "Startup app: RadminVPN",
+                     "status":  "CHANGE",
+                     "current":  "enabled",
+                     "target":  "disabled",
+                     "detail":  "Third-party app configured to launch at Windows startup; disable to free resources.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32\u0027 -Name \u0027RadminVPN\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                  ],
+                     "undo":  {
+                                  "type":  "startup_approved",
+                                  "approved_key":  "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32",
+                                  "name":  "RadminVPN",
+                                  "previous_val":  "absent"
+                              }
+                 },
+                 {
+                     "id":  "tune_startup:Imaging Edge Desktop.lnk",
+                     "section":  "startup",
+                     "title":  "Startup item: Imaging Edge Desktop.lnk",
+                     "status":  "OK",
+                     "current":  "enabled",
+                     "target":  "enabled",
+                     "detail":  "kept: needed for drivers/security/broadcast/remote access",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:X-USB Control Panel Autostart.lnk",
+                     "section":  "startup",
+                     "title":  "Startup item: X-USB Control Panel Autostart.lnk",
+                     "status":  "OK",
+                     "current":  "enabled",
+                     "target":  "enabled",
+                     "detail":  "kept: needed for drivers/security/broadcast/remote access",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:task:\\MicrosoftEdgeUpdateTaskMachineCore",
+                     "section":  "startup",
+                     "title":  "Scheduled updater task: MicrosoftEdgeUpdateTaskMachineCore",
+                     "status":  "CHANGE",
+                     "current":  "Ready",
+                     "target":  "Disabled",
+                     "detail":  "Third-party scheduled task launches background updater. Disable task.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Disable-ScheduledTask -TaskPath \u0027\\\u0027 -TaskName \u0027MicrosoftEdgeUpdateTaskMachineCore\u0027"
+                                  ],
+                     "undo":  {
+                                  "type":  "task",
+                                  "task_path":  "\\",
+                                  "task_name":  "MicrosoftEdgeUpdateTaskMachineCore"
+                              }
+                 },
+                 {
+                     "id":  "tune_startup:task:\\MicrosoftEdgeUpdateTaskMachineUA",
+                     "section":  "startup",
+                     "title":  "Scheduled updater task: MicrosoftEdgeUpdateTaskMachineUA",
+                     "status":  "CHANGE",
+                     "current":  "Ready",
+                     "target":  "Disabled",
+                     "detail":  "Third-party scheduled task launches background updater. Disable task.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Disable-ScheduledTask -TaskPath \u0027\\\u0027 -TaskName \u0027MicrosoftEdgeUpdateTaskMachineUA\u0027"
+                                  ],
+                     "undo":  {
+                                  "type":  "task",
+                                  "task_path":  "\\",
+                                  "task_name":  "MicrosoftEdgeUpdateTaskMachineUA"
+                              }
+                 },
+                 {
+                     "id":  "tune_startup:task:\\GoogleSystem\\GoogleUpdater\\GoogleUpdaterTaskSystem157.0.8089.0{2EC50B49-F79D-44F0-92A8-5ED0EA9E5662}",
+                     "section":  "startup",
+                     "title":  "Scheduled updater task: GoogleUpdaterTaskSystem157.0.8089.0{2EC50B49-F79D-44F0-92A8-5ED0EA9E5662}",
+                     "status":  "CHANGE",
+                     "current":  "Ready",
+                     "target":  "Disabled",
+                     "detail":  "Third-party scheduled task launches background updater. Disable task.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Disable-ScheduledTask -TaskPath \u0027\\GoogleSystem\\GoogleUpdater\\\u0027 -TaskName \u0027GoogleUpdaterTaskSystem157.0.8089.0{2EC50B49-F79D-44F0-92A8-5ED0EA9E5662}\u0027"
+                                  ],
+                     "undo":  {
+                                  "type":  "task",
+                                  "task_path":  "\\GoogleSystem\\GoogleUpdater\\",
+                                  "task_name":  "GoogleUpdaterTaskSystem157.0.8089.0{2EC50B49-F79D-44F0-92A8-5ED0EA9E5662}"
+                              }
+                 },
+                 {
+                     "id":  "tune_background:AdobeIPCBroker",
+                     "section":  "background",
+                     "title":  "Close background app: AdobeIPCBroker (1 instance)",
+                     "status":  "CHANGE",
+                     "current":  "1 running",
+                     "target":  "closed",
+                     "detail":  "Save any open work first: this closes the app.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Stop-Process -Name \u0027AdobeIPCBroker\u0027 -Force"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_background:CCXProcess",
+                     "section":  "background",
+                     "title":  "Close background app: CCXProcess (1 instance)",
+                     "status":  "CHANGE",
+                     "current":  "1 running",
+                     "target":  "closed",
+                     "detail":  "Save any open work first: this closes the app.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Stop-Process -Name \u0027CCXProcess\u0027 -Force"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_background:chrome",
+                     "section":  "background",
+                     "title":  "Close background app: chrome (11 instances)",
+                     "status":  "CHANGE",
+                     "current":  "11 running",
+                     "target":  "closed",
+                     "detail":  "Save any open work first: this closes the app (open tabs will close).",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Stop-Process -Name \u0027chrome\u0027 -Force"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_background:Creative Cloud",
+                     "section":  "background",
+                     "title":  "Close background app: Creative Cloud (1 instance)",
+                     "status":  "CHANGE",
+                     "current":  "1 running",
+                     "target":  "closed",
+                     "detail":  "Save any open work first: this closes the app.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Stop-Process -Name \u0027Creative Cloud\u0027 -Force"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_background:KakaoTalk",
+                     "section":  "background",
+                     "title":  "Close background app: KakaoTalk (1 instance)",
+                     "status":  "CHANGE",
+                     "current":  "1 running",
+                     "target":  "closed",
+                     "detail":  "Might be your crew comms; closed only if you say yes.",
+                     "risk":  "medium",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Stop-Process -Name \u0027KakaoTalk\u0027 -Force"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_background:msedge",
+                     "section":  "background",
+                     "title":  "Close background app: msedge (5 instances)",
+                     "status":  "CHANGE",
+                     "current":  "5 running",
+                     "target":  "closed",
+                     "detail":  "Save any open work first: this closes the app (open tabs will close).",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "Stop-Process -Name \u0027msedge\u0027 -Force"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_background:Slack",
+                     "section":  "background",
+                     "title":  "Close background app: Slack (5 instances)",
+                     "status":  "CHANGE",
+                     "current":  "5 running",
+                     "target":  "closed",
+                     "detail":  "Might be your crew comms; closed only if you say yes.",
+                     "risk":  "medium",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Stop-Process -Name \u0027Slack\u0027 -Force"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_network:virtual:\uc774\ub354\ub137",
+                     "section":  "network",
+                     "title":  "Disable virtual adapter: \uc774\ub354\ub137",
+                     "status":  "CHANGE",
+                     "current":  "Up",
+                     "target":  "Disabled",
+                     "detail":  "VPN/virtual adapters can capture NDI/OMT discovery. Say no if you need this VPN during the show.",
+                     "risk":  "medium",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Disable-NetAdapter -Name \u0027\uc774\ub354\ub137\u0027 -Confirm:$false"
+                                  ],
+                     "undo":  {
+                                  "type":  "adapter_state",
+                                  "adapter":  "\uc774\ub354\ub137",
+                                  "action":  "enable"
+                              }
+                 },
+                 {
+                     "id":  "tune_network:virtual:Radmin VPN",
+                     "section":  "network",
+                     "title":  "Disable virtual adapter: Radmin VPN",
+                     "status":  "CHANGE",
+                     "current":  "Up",
+                     "target":  "Disabled",
+                     "detail":  "VPN/virtual adapters can capture NDI/OMT discovery. Say no if you need this VPN during the show.",
+                     "risk":  "medium",
+                     "needs_reboot":  false,
+                     "needs_admin":  true,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Disable-NetAdapter -Name \u0027Radmin VPN\u0027 -Confirm:$false"
+                                  ],
+                     "undo":  {
+                                  "type":  "adapter_state",
+                                  "adapter":  "Radmin VPN",
+                                  "action":  "enable"
+                              }
+                 },
+                 {
+                     "id":  "tune_capture",
+                     "section":  "capture",
+                     "title":  "Xbox Game Bar background recording",
+                     "status":  "CHANGE",
+                     "current":  "GameDVR_Enabled=1, AppCaptureEnabled=absent",
+                     "target":  "0",
+                     "detail":  "Xbox Game Bar background recording uses the GPU encoder; disable it.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "if (-not (Test-Path \u0027HKCU:\\System\\GameConfigStore\u0027)) { [void](New-Item -Path \u0027HKCU:\\System\\GameConfigStore\u0027 -Force) }; Set-ItemProperty -Path \u0027HKCU:\\System\\GameConfigStore\u0027 -Name \u0027GameDVR_Enabled\u0027 -Value 0 -Type DWord",
+                                      "if (-not (Test-Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\u0027)) { [void](New-Item -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\u0027 -Force) }; Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\u0027 -Name \u0027AppCaptureEnabled\u0027 -Value 0 -Type DWord"
+                                  ],
+                     "undo":  {
+                                  "type":  "capture",
+                                  "game_dvr_enabled":  1,
+                                  "app_capture_enabled":  "absent"
+                              }
+                 },
+                 {
+                     "id":  "tune_notifications",
+                     "section":  "notifications",
+                     "title":  "Toast notifications",
+                     "status":  "CHANGE",
+                     "current":  "ToastEnabled=absent, NOC_GLOBAL_SETTING_TOASTS_ENABLED=absent",
+                     "target":  "0",
+                     "detail":  "Disable toast notification popups so they do not appear during the broadcast.",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  true,
+                     "commands":  [
+                                      "if (-not (Test-Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\PushNotifications\u0027)) { [void](New-Item -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\PushNotifications\u0027 -Force) }; Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\PushNotifications\u0027 -Name \u0027ToastEnabled\u0027 -Value 0 -Type DWord",
+                                      "if (-not (Test-Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\u0027)) { [void](New-Item -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\u0027 -Force) }; Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\u0027 -Name \u0027NOC_GLOBAL_SETTING_TOASTS_ENABLED\u0027 -Value 0 -Type DWord"
+                                  ],
+                     "undo":  {
+                                  "type":  "notifications",
+                                  "toast_enabled":  "absent",
+                                  "noc_global_setting_toasts_enabled":  "absent"
+                              }
+                 }
+             ],
+    "applied":  [
+                    {
+                        "id":  "sys_language",
+                        "section":  "language",
+                        "title":  "Windows display language",
+                        "status":  "FAILED",
+                        "current":  "ko-KR (override: )",
+                        "target":  "en-US display language",
+                        "detail":  "\u0027if\u0027 \uc6a9\uc5b4\uac00 cmdlet, \ud568\uc218, \uc2a4\ud06c\ub9bd\ud2b8 \ud30c\uc77c \ub610\ub294 \uc2e4\ud589\ud560 \uc218 \uc788\ub294 \ud504\ub85c\uadf8\ub7a8 \uc774\ub984\uc73c\ub85c \uc778\uc2dd\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\ub984\uc774 \uc815\ud655\ud55c\uc9c0 \ud655\uc778\ud558\uace0 \uacbd\ub85c\uac00 \ud3ec\ud568\ub41c \uacbd\uc6b0 \uacbd\ub85c\uac00 \uc62c\ubc14\ub978\uc9c0 \uac80\uc99d\ud55c \ub2e4\uc74c \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uc2ed\uc2dc\uc624.",
+                        "risk":  "low",
+                        "needs_reboot":  true,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Install-Language -Language en-US -CopyToSettings",
+                                         "Set-SystemPreferredUILanguage -Language en-US",
+                                         "Set-WinUILanguageOverride -Language en-US",
+                                         "Set-WinUserLanguageList en-US, ko, ko-KR -Force"
+                                     ],
+                        "undo":  {
+                                     "win_ui_language_override":  "",
+                                     "user_language_list_tags":  [
+                                                                     "ko"
+                                                                 ],
+                                     "system_preferred_ui_language":  "ko"
+                                 }
+                    },
+                    {
+                        "id":  "sys_wu_drivers:0977dc84-7d56-4285-ae8b-c6f542500dae",
+                        "section":  "drivers",
+                        "title":  "Intel - Other hardware - Intel(R) Xeon(R) E3 - 1200/1500 v5/6th Gen Intel(R) Core(TM) PCIe Controller (x16) - 1901",
+                        "status":  "FAILED",
+                        "current":  "not installed",
+                        "target":  "2015-10-28 OtherHardware",
+                        "detail":  "\u0027if\u0027 \uc6a9\uc5b4\uac00 cmdlet, \ud568\uc218, \uc2a4\ud06c\ub9bd\ud2b8 \ud30c\uc77c \ub610\ub294 \uc2e4\ud589\ud560 \uc218 \uc788\ub294 \ud504\ub85c\uadf8\ub7a8 \uc774\ub984\uc73c\ub85c \uc778\uc2dd\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\ub984\uc774 \uc815\ud655\ud55c\uc9c0 \ud655\uc778\ud558\uace0 \uacbd\ub85c\uac00 \ud3ec\ud568\ub41c \uacbd\uc6b0 \uacbd\ub85c\uac00 \uc62c\ubc14\ub978\uc9c0 \uac80\uc99d\ud55c \ub2e4\uc74c \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uc2ed\uc2dc\uc624.",
+                        "risk":  "low",
+                        "needs_reboot":  true,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Windows Update: download and install Intel - Other hardware - Intel(R) Xeon(R) E3 - 1200/1500 v5/6th Gen Intel(R) Core(TM) PCIe Controller (x16) - 1901"
+                                     ],
+                        "undo":  null
+                    },
+                    {
+                        "id":  "sys_wu_drivers:2d45df59-198a-4275-a463-501805e02b77",
+                        "section":  "drivers",
+                        "title":  "Intel Corporation - Extension - 8/27/2018 12:00:00 AM - 24.20.100.6291",
+                        "status":  "FAILED",
+                        "current":  "not installed",
+                        "target":  "2018-08-27 Extension",
+                        "detail":  "\u0027if\u0027 \uc6a9\uc5b4\uac00 cmdlet, \ud568\uc218, \uc2a4\ud06c\ub9bd\ud2b8 \ud30c\uc77c \ub610\ub294 \uc2e4\ud589\ud560 \uc218 \uc788\ub294 \ud504\ub85c\uadf8\ub7a8 \uc774\ub984\uc73c\ub85c \uc778\uc2dd\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\ub984\uc774 \uc815\ud655\ud55c\uc9c0 \ud655\uc778\ud558\uace0 \uacbd\ub85c\uac00 \ud3ec\ud568\ub41c \uacbd\uc6b0 \uacbd\ub85c\uac00 \uc62c\ubc14\ub978\uc9c0 \uac80\uc99d\ud55c \ub2e4\uc74c \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uc2ed\uc2dc\uc624.",
+                        "risk":  "low",
+                        "needs_reboot":  true,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Windows Update: download and install Intel Corporation - Extension - 8/27/2018 12:00:00 AM - 24.20.100.6291"
+                                     ],
+                        "undo":  null
+                    },
+                    {
+                        "id":  "sys_wu_drivers:557c4d28-8e6f-477c-9a3e-7c0def8db8d8",
+                        "section":  "drivers",
+                        "title":  "INTEL - System - 7/18/1968 12:00:00 AM - 10.1.14.7",
+                        "status":  "FAILED",
+                        "current":  "not installed",
+                        "target":  "1968-07-18 OtherHardware",
+                        "detail":  "\u0027if\u0027 \uc6a9\uc5b4\uac00 cmdlet, \ud568\uc218, \uc2a4\ud06c\ub9bd\ud2b8 \ud30c\uc77c \ub610\ub294 \uc2e4\ud589\ud560 \uc218 \uc788\ub294 \ud504\ub85c\uadf8\ub7a8 \uc774\ub984\uc73c\ub85c \uc778\uc2dd\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\ub984\uc774 \uc815\ud655\ud55c\uc9c0 \ud655\uc778\ud558\uace0 \uacbd\ub85c\uac00 \ud3ec\ud568\ub41c \uacbd\uc6b0 \uacbd\ub85c\uac00 \uc62c\ubc14\ub978\uc9c0 \uac80\uc99d\ud55c \ub2e4\uc74c \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uc2ed\uc2dc\uc624.",
+                        "risk":  "low",
+                        "needs_reboot":  true,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Windows Update: download and install INTEL - System - 7/18/1968 12:00:00 AM - 10.1.14.7"
+                                     ],
+                        "undo":  null
+                    },
+                    {
+                        "id":  "sys_wu_drivers:b01eaa60-b75b-47e4-9d29-4ba6aa98ce91",
+                        "section":  "drivers",
+                        "title":  "Intel Corporation - Display - 30.0.100.9805",
+                        "status":  "FAILED",
+                        "current":  "not installed",
+                        "target":  "2021-07-23 Video",
+                        "detail":  "\u0027if\u0027 \uc6a9\uc5b4\uac00 cmdlet, \ud568\uc218, \uc2a4\ud06c\ub9bd\ud2b8 \ud30c\uc77c \ub610\ub294 \uc2e4\ud589\ud560 \uc218 \uc788\ub294 \ud504\ub85c\uadf8\ub7a8 \uc774\ub984\uc73c\ub85c \uc778\uc2dd\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\ub984\uc774 \uc815\ud655\ud55c\uc9c0 \ud655\uc778\ud558\uace0 \uacbd\ub85c\uac00 \ud3ec\ud568\ub41c \uacbd\uc6b0 \uacbd\ub85c\uac00 \uc62c\ubc14\ub978\uc9c0 \uac80\uc99d\ud55c \ub2e4\uc74c \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uc2ed\uc2dc\uc624.",
+                        "risk":  "low",
+                        "needs_reboot":  true,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Windows Update: download and install Intel Corporation - Display - 30.0.100.9805"
+                                     ],
+                        "undo":  null
+                    },
+                    {
+                        "id":  "tune_startup:KakaoTalk",
+                        "section":  "startup",
+                        "title":  "Startup app: KakaoTalk",
+                        "status":  "DONE",
+                        "current":  "enabled",
+                        "target":  "disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027KakaoTalk\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                     ],
+                        "undo":  {
+                                     "type":  "startup_approved",
+                                     "approved_key":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                     "name":  "KakaoTalk",
+                                     "previous_val":  "absent"
+                                 }
+                    },
+                    {
+                        "id":  "tune_startup:SOOPPackage",
+                        "section":  "startup",
+                        "title":  "Startup app: SOOPPackage",
+                        "status":  "DONE",
+                        "current":  "enabled",
+                        "target":  "disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027SOOPPackage\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                     ],
+                        "undo":  {
+                                     "type":  "startup_approved",
+                                     "approved_key":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                     "name":  "SOOPPackage",
+                                     "previous_val":  "AgAAAAAAAAAAAAAA"
+                                 }
+                    },
+                    {
+                        "id":  "tune_startup:RiotClient",
+                        "section":  "startup",
+                        "title":  "Startup app: RiotClient",
+                        "status":  "DONE",
+                        "current":  "enabled",
+                        "target":  "disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027RiotClient\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                     ],
+                        "undo":  {
+                                     "type":  "startup_approved",
+                                     "approved_key":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                     "name":  "RiotClient",
+                                     "previous_val":  "absent"
+                                 }
+                    },
+                    {
+                        "id":  "tune_startup:Figma Agent",
+                        "section":  "startup",
+                        "title":  "Startup app: Figma Agent",
+                        "status":  "DONE",
+                        "current":  "enabled",
+                        "target":  "disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027Figma Agent\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                     ],
+                        "undo":  {
+                                     "type":  "startup_approved",
+                                     "approved_key":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                     "name":  "Figma Agent",
+                                     "previous_val":  "absent"
+                                 }
+                    },
+                    {
+                        "id":  "tune_startup:AdobeBridge",
+                        "section":  "startup",
+                        "title":  "Startup app: AdobeBridge",
+                        "status":  "DONE",
+                        "current":  "enabled",
+                        "target":  "disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027AdobeBridge\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                     ],
+                        "undo":  {
+                                     "type":  "startup_approved",
+                                     "approved_key":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                     "name":  "AdobeBridge",
+                                     "previous_val":  "absent"
+                                 }
+                    },
+                    {
+                        "id":  "tune_startup:MicrosoftEdgeAutoLaunch_C46CFC0629905CC775E70B50EA8A519C",
+                        "section":  "startup",
+                        "title":  "Startup app: MicrosoftEdgeAutoLaunch_C46CFC0629905CC775E70B50EA8A519C",
+                        "status":  "DONE",
+                        "current":  "enabled",
+                        "target":  "disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027MicrosoftEdgeAutoLaunch_C46CFC0629905CC775E70B50EA8A519C\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                     ],
+                        "undo":  {
+                                     "type":  "startup_approved",
+                                     "approved_key":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                     "name":  "MicrosoftEdgeAutoLaunch_C46CFC0629905CC775E70B50EA8A519C",
+                                     "previous_val":  "absent"
+                                 }
+                    },
+                    {
+                        "id":  "tune_startup:Logi Download Assistant",
+                        "section":  "startup",
+                        "title":  "Startup app: Logi Download Assistant",
+                        "status":  "DONE",
+                        "current":  "enabled",
+                        "target":  "disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Set-ItemProperty -Path \u0027HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027Logi Download Assistant\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                     ],
+                        "undo":  {
+                                     "type":  "startup_approved",
+                                     "approved_key":  "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run",
+                                     "name":  "Logi Download Assistant",
+                                     "previous_val":  "absent"
+                                 }
+                    },
+                    {
+                        "id":  "tune_startup:Lightshot",
+                        "section":  "startup",
+                        "title":  "Startup app: Lightshot",
+                        "status":  "DONE",
+                        "current":  "enabled",
+                        "target":  "disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Set-ItemProperty -Path \u0027HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32\u0027 -Name \u0027Lightshot\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                     ],
+                        "undo":  {
+                                     "type":  "startup_approved",
+                                     "approved_key":  "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32",
+                                     "name":  "Lightshot",
+                                     "previous_val":  "AgAAAAAAAAAAAAAA"
+                                 }
+                    },
+                    {
+                        "id":  "tune_startup:Adobe CCXProcess",
+                        "section":  "startup",
+                        "title":  "Startup app: Adobe CCXProcess",
+                        "status":  "DONE",
+                        "current":  "enabled",
+                        "target":  "disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Set-ItemProperty -Path \u0027HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32\u0027 -Name \u0027Adobe CCXProcess\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                     ],
+                        "undo":  {
+                                     "type":  "startup_approved",
+                                     "approved_key":  "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32",
+                                     "name":  "Adobe CCXProcess",
+                                     "previous_val":  "absent"
+                                 }
+                    },
+                    {
+                        "id":  "tune_startup:Adobe Creative Cloud",
+                        "section":  "startup",
+                        "title":  "Startup app: Adobe Creative Cloud",
+                        "status":  "DONE",
+                        "current":  "enabled",
+                        "target":  "disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Set-ItemProperty -Path \u0027HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32\u0027 -Name \u0027Adobe Creative Cloud\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                     ],
+                        "undo":  {
+                                     "type":  "startup_approved",
+                                     "approved_key":  "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32",
+                                     "name":  "Adobe Creative Cloud",
+                                     "previous_val":  "absent"
+                                 }
+                    },
+                    {
+                        "id":  "tune_startup:RadminVPN",
+                        "section":  "startup",
+                        "title":  "Startup app: RadminVPN",
+                        "status":  "DONE",
+                        "current":  "enabled",
+                        "target":  "disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Set-ItemProperty -Path \u0027HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32\u0027 -Name \u0027RadminVPN\u0027 -Value ([byte[]](@([byte]0x03,0,0,0) + [BitConverter]::GetBytes([DateTime]::UtcNow.ToFileTimeUtc()))) -Type Binary"
+                                     ],
+                        "undo":  {
+                                     "type":  "startup_approved",
+                                     "approved_key":  "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32",
+                                     "name":  "RadminVPN",
+                                     "previous_val":  "absent"
+                                 }
+                    },
+                    {
+                        "id":  "tune_startup:task:\\MicrosoftEdgeUpdateTaskMachineCore",
+                        "section":  "startup",
+                        "title":  "Scheduled updater task: MicrosoftEdgeUpdateTaskMachineCore",
+                        "status":  "DONE",
+                        "current":  "Ready",
+                        "target":  "Disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Disable-ScheduledTask -TaskPath \u0027\\\u0027 -TaskName \u0027MicrosoftEdgeUpdateTaskMachineCore\u0027"
+                                     ],
+                        "undo":  {
+                                     "type":  "task",
+                                     "task_path":  "\\",
+                                     "task_name":  "MicrosoftEdgeUpdateTaskMachineCore"
+                                 }
+                    },
+                    {
+                        "id":  "tune_startup:task:\\MicrosoftEdgeUpdateTaskMachineUA",
+                        "section":  "startup",
+                        "title":  "Scheduled updater task: MicrosoftEdgeUpdateTaskMachineUA",
+                        "status":  "DONE",
+                        "current":  "Ready",
+                        "target":  "Disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Disable-ScheduledTask -TaskPath \u0027\\\u0027 -TaskName \u0027MicrosoftEdgeUpdateTaskMachineUA\u0027"
+                                     ],
+                        "undo":  {
+                                     "type":  "task",
+                                     "task_path":  "\\",
+                                     "task_name":  "MicrosoftEdgeUpdateTaskMachineUA"
+                                 }
+                    },
+                    {
+                        "id":  "tune_startup:task:\\GoogleSystem\\GoogleUpdater\\GoogleUpdaterTaskSystem157.0.8089.0{2EC50B49-F79D-44F0-92A8-5ED0EA9E5662}",
+                        "section":  "startup",
+                        "title":  "Scheduled updater task: GoogleUpdaterTaskSystem157.0.8089.0{2EC50B49-F79D-44F0-92A8-5ED0EA9E5662}",
+                        "status":  "DONE",
+                        "current":  "Ready",
+                        "target":  "Disabled",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Disable-ScheduledTask -TaskPath \u0027\\GoogleSystem\\GoogleUpdater\\\u0027 -TaskName \u0027GoogleUpdaterTaskSystem157.0.8089.0{2EC50B49-F79D-44F0-92A8-5ED0EA9E5662}\u0027"
+                                     ],
+                        "undo":  {
+                                     "type":  "task",
+                                     "task_path":  "\\GoogleSystem\\GoogleUpdater\\",
+                                     "task_name":  "GoogleUpdaterTaskSystem157.0.8089.0{2EC50B49-F79D-44F0-92A8-5ED0EA9E5662}"
+                                 }
+                    },
+                    {
+                        "id":  "tune_background:AdobeIPCBroker",
+                        "section":  "background",
+                        "title":  "Close background app: AdobeIPCBroker (1 instance)",
+                        "status":  "DONE",
+                        "current":  "1 running",
+                        "target":  "closed",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Stop-Process -Name \u0027AdobeIPCBroker\u0027 -Force"
+                                     ],
+                        "undo":  null
+                    },
+                    {
+                        "id":  "tune_background:CCXProcess",
+                        "section":  "background",
+                        "title":  "Close background app: CCXProcess (1 instance)",
+                        "status":  "DONE",
+                        "current":  "1 running",
+                        "target":  "closed",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Stop-Process -Name \u0027CCXProcess\u0027 -Force"
+                                     ],
+                        "undo":  null
+                    },
+                    {
+                        "id":  "tune_background:chrome",
+                        "section":  "background",
+                        "title":  "Close background app: chrome (11 instances)",
+                        "status":  "DONE",
+                        "current":  "11 running",
+                        "target":  "closed",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Stop-Process -Name \u0027chrome\u0027 -Force"
+                                     ],
+                        "undo":  null
+                    },
+                    {
+                        "id":  "tune_background:Creative Cloud",
+                        "section":  "background",
+                        "title":  "Close background app: Creative Cloud (1 instance)",
+                        "status":  "DONE",
+                        "current":  "1 running",
+                        "target":  "closed",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Stop-Process -Name \u0027Creative Cloud\u0027 -Force"
+                                     ],
+                        "undo":  null
+                    },
+                    {
+                        "id":  "tune_background:msedge",
+                        "section":  "background",
+                        "title":  "Close background app: msedge (5 instances)",
+                        "status":  "FAILED",
+                        "current":  "5 running",
+                        "target":  "closed",
+                        "detail":  "\uc774\ub984\uc774 \"msedge\"\uc778 \ud504\ub85c\uc138\uc2a4\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \ud504\ub85c\uc138\uc2a4 \uc774\ub984\uc744 \uac80\uc99d\ud558\uace0 \ub2e4\uc2dc cmdlet\uc744 \ud638\ucd9c\ud558\uc2ed\uc2dc\uc624.",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Stop-Process -Name \u0027msedge\u0027 -Force"
+                                     ],
+                        "undo":  null
+                    },
+                    {
+                        "id":  "tune_background:KakaoTalk",
+                        "section":  "background",
+                        "title":  "Close background app: KakaoTalk (1 instance)",
+                        "status":  "DONE",
+                        "current":  "1 running",
+                        "target":  "closed",
+                        "detail":  "Applied successfully",
+                        "risk":  "medium",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  false,
+                        "commands":  [
+                                         "Stop-Process -Name \u0027KakaoTalk\u0027 -Force"
+                                     ],
+                        "undo":  null
+                    },
+                    {
+                        "id":  "tune_background:Slack",
+                        "section":  "background",
+                        "title":  "Close background app: Slack (5 instances)",
+                        "status":  "DONE",
+                        "current":  "5 running",
+                        "target":  "closed",
+                        "detail":  "Applied successfully",
+                        "risk":  "medium",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  false,
+                        "commands":  [
+                                         "Stop-Process -Name \u0027Slack\u0027 -Force"
+                                     ],
+                        "undo":  null
+                    },
+                    {
+                        "id":  "tune_capture",
+                        "section":  "capture",
+                        "title":  "Xbox Game Bar background recording",
+                        "status":  "DONE",
+                        "current":  "GameDVR_Enabled=1, AppCaptureEnabled=absent",
+                        "target":  "0",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "if (-not (Test-Path \u0027HKCU:\\System\\GameConfigStore\u0027)) { [void](New-Item -Path \u0027HKCU:\\System\\GameConfigStore\u0027 -Force) }; Set-ItemProperty -Path \u0027HKCU:\\System\\GameConfigStore\u0027 -Name \u0027GameDVR_Enabled\u0027 -Value 0 -Type DWord",
+                                         "if (-not (Test-Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\u0027)) { [void](New-Item -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\u0027 -Force) }; Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\u0027 -Name \u0027AppCaptureEnabled\u0027 -Value 0 -Type DWord"
+                                     ],
+                        "undo":  {
+                                     "type":  "capture",
+                                     "game_dvr_enabled":  1,
+                                     "app_capture_enabled":  "absent"
+                                 }
+                    },
+                    {
+                        "id":  "tune_notifications",
+                        "section":  "notifications",
+                        "title":  "Toast notifications",
+                        "status":  "DONE",
+                        "current":  "ToastEnabled=absent, NOC_GLOBAL_SETTING_TOASTS_ENABLED=absent",
+                        "target":  "0",
+                        "detail":  "Applied successfully",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  false,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "if (-not (Test-Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\PushNotifications\u0027)) { [void](New-Item -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\PushNotifications\u0027 -Force) }; Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\PushNotifications\u0027 -Name \u0027ToastEnabled\u0027 -Value 0 -Type DWord",
+                                         "if (-not (Test-Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\u0027)) { [void](New-Item -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\u0027 -Force) }; Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\u0027 -Name \u0027NOC_GLOBAL_SETTING_TOASTS_ENABLED\u0027 -Value 0 -Type DWord"
+                                     ],
+                        "undo":  {
+                                     "type":  "notifications",
+                                     "toast_enabled":  "absent",
+                                     "noc_global_setting_toasts_enabled":  "absent"
+                                 }
+                    },
+                    {
+                        "id":  "sys_wu_pause",
+                        "section":  "updates",
+                        "title":  "Pause Windows Update",
+                        "status":  "FAILED",
+                        "current":  "Not paused",
+                        "target":  "Pause for 7 days (until 2026-11-02T10:27:44Z)",
+                        "detail":  "\u0027if\u0027 \uc6a9\uc5b4\uac00 cmdlet, \ud568\uc218, \uc2a4\ud06c\ub9bd\ud2b8 \ud30c\uc77c \ub610\ub294 \uc2e4\ud589\ud560 \uc218 \uc788\ub294 \ud504\ub85c\uadf8\ub7a8 \uc774\ub984\uc73c\ub85c \uc778\uc2dd\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\ub984\uc774 \uc815\ud655\ud55c\uc9c0 \ud655\uc778\ud558\uace0 \uacbd\ub85c\uac00 \ud3ec\ud568\ub41c \uacbd\uc6b0 \uacbd\ub85c\uac00 \uc62c\ubc14\ub978\uc9c0 \uac80\uc99d\ud55c \ub2e4\uc74c \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uc2ed\uc2dc\uc624.",
+                        "risk":  "low",
+                        "needs_reboot":  false,
+                        "needs_admin":  true,
+                        "default_apply":  true,
+                        "commands":  [
+                                         "Set-ItemProperty -Path \u0027HKLM:\\SOFTWARE\\Microsoft\\WindowsUpdate\\UX\\Settings\u0027 -Name \u0027PauseUpdatesStartTime\u0027 -Value \u00272026-10-26T10:27:44Z\u0027",
+                                         "Set-ItemProperty -Path \u0027HKLM:\\SOFTWARE\\Microsoft\\WindowsUpdate\\UX\\Settings\u0027 -Name \u0027PauseUpdatesExpiryTime\u0027 -Value \u00272026-11-02T10:27:44Z\u0027",
+                                         "Set-ItemProperty -Path \u0027HKLM:\\SOFTWARE\\Microsoft\\WindowsUpdate\\UX\\Settings\u0027 -Name \u0027PauseFeatureUpdatesStartTime\u0027 -Value \u00272026-10-26T10:27:44Z\u0027",
+                                         "Set-ItemProperty -Path \u0027HKLM:\\SOFTWARE\\Microsoft\\WindowsUpdate\\UX\\Settings\u0027 -Name \u0027PauseFeatureUpdatesEndTime\u0027 -Value \u00272026-11-02T10:27:44Z\u0027",
+                                         "Set-ItemProperty -Path \u0027HKLM:\\SOFTWARE\\Microsoft\\WindowsUpdate\\UX\\Settings\u0027 -Name \u0027PauseQualityUpdatesStartTime\u0027 -Value \u00272026-10-26T10:27:44Z\u0027",
+                                         "Set-ItemProperty -Path \u0027HKLM:\\SOFTWARE\\Microsoft\\WindowsUpdate\\UX\\Settings\u0027 -Name \u0027PauseQualityUpdatesEndTime\u0027 -Value \u00272026-11-02T10:27:44Z\u0027"
+                                     ],
+                        "undo":  {
+                                     "PauseUpdatesStartTime":  "absent",
+                                     "PauseUpdatesExpiryTime":  "absent",
+                                     "PauseFeatureUpdatesStartTime":  "absent",
+                                     "PauseFeatureUpdatesEndTime":  "absent",
+                                     "PauseQualityUpdatesStartTime":  "absent",
+                                     "PauseQualityUpdatesEndTime":  "absent"
+                                 }
+                    }
+                ],
+    "manual":  [
+                   {
+                       "id":  "sys_nic_driver",
+                       "section":  "drivers",
+                       "title":  "Wired adapter driver: \uc774\ub354\ub137",
+                       "status":  "MANUAL",
+                       "current":  "Intel(R) Ethernet Connection (7) I219-V driver 12.19.1.37 (2021-06-22)",
+                       "target":  "Vendor driver (\u003c 3 years old)",
+                       "detail":  "Driver is older than 3 years (2021-06-22). Recommended to install the latest vendor driver: https://www.intel.com/content/www/us/en/download/15084/intel-ethernet-adapter-complete-driver-pack.html",
+                       "risk":  "low",
+                       "needs_reboot":  false,
+                       "needs_admin":  false,
+                       "default_apply":  false,
+                       "commands":  [
+
+                                    ],
+                       "undo":  null
+                   }
+               ]
+}
