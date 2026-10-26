@@ -1,0 +1,3323 @@
+{
+    "schema":  "showready/1",
+    "meta":  {
+                 "tool_version":  "1.3.1",
+                 "role":  "prod",
+                 "mode":  "quick",
+                 "started":  "2026-10-26T19:42:04+09:00",
+                 "finished":  "2026-10-26T19:45:58+09:00",
+                 "computer":  "STUDIOPC1",
+                 "duration_s":  233.8,
+                 "srt_host":  "",
+                 "lan_hosts":  [
+                                   "121.165.221.94"
+                               ],
+                 "skipped":  [
+
+                             ],
+                 "steps":  [
+                               {
+                                   "key":  "hardware",
+                                   "title":  "Hardware",
+                                   "status":  "ok",
+                                   "seconds":  4.5,
+                                   "message":  null,
+                                   "collector_errors":  0
+                               },
+                               {
+                                   "key":  "network",
+                                   "title":  "Network",
+                                   "status":  "ok",
+                                   "seconds":  173.8,
+                                   "message":  null,
+                                   "collector_errors":  0
+                               },
+                               {
+                                   "key":  "lan",
+                                   "title":  "LAN",
+                                   "status":  "ok",
+                                   "seconds":  7,
+                                   "message":  null,
+                                   "collector_errors":  0
+                               },
+                               {
+                                   "key":  "load",
+                                   "title":  "Load test",
+                                   "status":  "ok",
+                                   "seconds":  47.3,
+                                   "message":  null,
+                                   "collector_errors":  0
+                               },
+                               {
+                                   "key":  "verdict",
+                                   "title":  "Verdict",
+                                   "status":  "ok",
+                                   "seconds":  0.9,
+                                   "message":  null,
+                                   "collector_errors":  0
+                               }
+                           ],
+                 "lib_errors":  [
+
+                                ]
+             },
+    "profile":  {
+                    "name":  "Gen.G Academy Seoul -\u003e France",
+                    "inputs":  {
+                                   "count":  2,
+                                   "protocol":  "OMT",
+                                   "resolution":  "1920x1080",
+                                   "fps":  60,
+                                   "mbps_per_feed":  {
+                                                         "OMT":  200,
+                                                         "NDI":  150,
+                                                         "NDI-HX3":  62
+                                                     }
+                               },
+                    "outputs":  [
+                                    {
+                                        "id":  "srt",
+                                        "label":  "SRT to France",
+                                        "protocol":  "SRT",
+                                        "video_kbps":  10000,
+                                        "audio_kbps":  192
+                                    },
+                                    {
+                                        "id":  "youtube",
+                                        "label":  "YouTube",
+                                        "protocol":  "RTMP",
+                                        "video_kbps":  17000,
+                                        "audio_kbps":  128
+                                    },
+                                    {
+                                        "id":  "twitch",
+                                        "label":  "Twitch",
+                                        "protocol":  "RTMP",
+                                        "video_kbps":  6000,
+                                        "audio_kbps":  160
+                                    }
+                                ],
+                    "srt_destination_host":  ""
+                },
+    "hardware":  {
+                     "os":  {
+                                "caption":  "Microsoft Windows 11 Pro",
+                                "version":  "10.0.26200",
+                                "build":  "26200"
+                            },
+                     "computer":  {
+                                      "name":  "STUDIOPC1",
+                                      "manufacturer":  "Gigabyte Technology Co., Ltd.",
+                                      "model":  "Z790 UD",
+                                      "is_laptop":  false
+                                  },
+                     "cpu":  {
+                                 "name":  "Intel(R) Core(TM) i7-14700K",
+                                 "cores":  20,
+                                 "threads":  28,
+                                 "max_mhz":  3400
+                             },
+                     "ram_gb":  31.8,
+                     "gpus":  [
+                                  {
+                                      "name":  "NVIDIA GeForce RTX 4070 Ti SUPER",
+                                      "vendor":  "NVIDIA",
+                                      "integrated":  false,
+                                      "driver_version":  "32.0.16.2101",
+                                      "nvidia_driver":  621.01,
+                                      "driver_date":  "2026-10-19",
+                                      "vram_gb":  16
+                                  },
+                                  {
+                                      "name":  "Intel(R) UHD Graphics 770",
+                                      "vendor":  "Intel",
+                                      "integrated":  true,
+                                      "driver_version":  "32.0.101.6129",
+                                      "nvidia_driver":  null,
+                                      "driver_date":  "2024-10-18",
+                                      "vram_gb":  null
+                                  }
+                              ],
+                     "nics":  [
+                                  {
+                                      "name":  "Radmin VPN",
+                                      "description":  "Famatech Radmin VPN Ethernet Adapter",
+                                      "status":  "Up",
+                                      "link_mbps":  100,
+                                      "kind":  "virtual",
+                                      "default_route":  false,
+                                      "ipv4":  [
+                                                   "26.240.45.246"
+                                               ],
+                                      "network_category":  "Public",
+                                      "eee":  "unknown"
+                                  },
+                                  {
+                                      "name":  "\uc774\ub354\ub137",
+                                      "description":  "Realtek Gaming 2.5GbE Family Controller",
+                                      "status":  "Up",
+                                      "link_mbps":  1000,
+                                      "kind":  "wired",
+                                      "default_route":  true,
+                                      "ipv4":  [
+                                                   "121.165.221.92"
+                                               ],
+                                      "network_category":  "Public",
+                                      "eee":  "on"
+                                  },
+                                  {
+                                      "name":  "Tailscale",
+                                      "description":  "Tailscale Tunnel",
+                                      "status":  "Up",
+                                      "link_mbps":  100000,
+                                      "kind":  "virtual",
+                                      "default_route":  false,
+                                      "ipv4":  [
+                                                   "169.254.83.107"
+                                               ],
+                                      "network_category":  "Private",
+                                      "eee":  "unknown"
+                                  }
+                              ],
+                     "power":  {
+                                   "plan_guid":  "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+                                   "plan":  "high_performance",
+                                   "on_battery":  false,
+                                   "battery_pct":  100
+                               },
+                     "disk":  {
+                                  "system_drive":  "C:",
+                                  "free_gb":  1298.9,
+                                  "total_gb":  1862
+                              },
+                     "software":  {
+                                      "vmix":  "3.1",
+                                      "obs":  "32.1.2",
+                                      "ndi_runtime":  "5.6.1.0",
+                                      "ndi_tools":  "6.1.1.0",
+                                      "distroav":  "6.1.1",
+                                      "omt":  null
+                                  },
+                     "windows":  {
+                                     "hags":  "unknown",
+                                     "game_mode":  "unknown",
+                                     "pending_reboot":  false,
+                                     "firewall_profiles":  [
+                                                               {
+                                                                   "name":  "Domain",
+                                                                   "enabled":  true
+                                                               },
+                                                               {
+                                                                   "name":  "Private",
+                                                                   "enabled":  true
+                                                               },
+                                                               {
+                                                                   "name":  "Public",
+                                                                   "enabled":  true
+                                                               }
+                                                           ]
+                                 },
+                     "processes":  {
+                                       "running":  [
+                                                       "chrome"
+                                                   ]
+                                   },
+                     "errors":  [
+
+                                ]
+                 },
+    "network":  {
+                    "public":  {
+                                   "ip":  "121.165.221.92",
+                                   "city":  "Seoul",
+                                   "country":  "KR",
+                                   "org":  "AS4766 Korea Telecom"
+                               },
+                    "targets":  [
+                                    {
+                                        "name":  "Orange (FR ISP)",
+                                        "host":  "orange.fr",
+                                        "group":  "france",
+                                        "service":  null,
+                                        "ip":  "81.52.142.219",
+                                        "icmp":  {
+                                                     "sent":  30,
+                                                     "received":  30,
+                                                     "loss_pct":  0,
+                                                     "min_ms":  274,
+                                                     "p50_ms":  274,
+                                                     "p95_ms":  275,
+                                                     "p99_ms":  278,
+                                                     "max_ms":  278,
+                                                     "jitter_ms":  0.41,
+                                                     "samples_ms":  [
+                                                                        274,
+                                                                        275,
+                                                                        274,
+                                                                        274,
+                                                                        275,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        278,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274,
+                                                                        274
+                                                                    ],
+                                                     "blocked":  false
+                                                 },
+                                        "tcp":  {
+                                                    "port":  443,
+                                                    "attempts":  8,
+                                                    "ok":  8,
+                                                    "p50_ms":  270.7,
+                                                    "p95_ms":  279.8,
+                                                    "samples_ms":  [
+                                                                       279.8,
+                                                                       268.5,
+                                                                       271.2,
+                                                                       263.6,
+                                                                       269.2,
+                                                                       274.3,
+                                                                       270.7,
+                                                                       276.9
+                                                                   ]
+                                                }
+                                    },
+                                    {
+                                        "name":  "Free (FR ISP)",
+                                        "host":  "free.fr",
+                                        "group":  "france",
+                                        "service":  null,
+                                        "ip":  "212.27.48.10",
+                                        "icmp":  {
+                                                     "sent":  30,
+                                                     "received":  30,
+                                                     "loss_pct":  0,
+                                                     "min_ms":  269,
+                                                     "p50_ms":  269,
+                                                     "p95_ms":  270,
+                                                     "p99_ms":  272,
+                                                     "max_ms":  272,
+                                                     "jitter_ms":  0.28,
+                                                     "samples_ms":  [
+                                                                        269,
+                                                                        270,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        272,
+                                                                        270,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269,
+                                                                        269
+                                                                    ],
+                                                     "blocked":  false
+                                                 },
+                                        "tcp":  {
+                                                    "port":  443,
+                                                    "attempts":  8,
+                                                    "ok":  8,
+                                                    "p50_ms":  274.6,
+                                                    "p95_ms":  280.3,
+                                                    "samples_ms":  [
+                                                                       267.3,
+                                                                       274.6,
+                                                                       277.6,
+                                                                       268.3,
+                                                                       267.5,
+                                                                       278,
+                                                                       280.3,
+                                                                       278.1
+                                                                   ]
+                                                }
+                                    },
+                                    {
+                                        "name":  "Moji (Paris DC)",
+                                        "host":  "iperf3.moji.fr",
+                                        "group":  "france",
+                                        "service":  null,
+                                        "ip":  "45.147.210.189",
+                                        "icmp":  {
+                                                     "sent":  30,
+                                                     "received":  30,
+                                                     "loss_pct":  0,
+                                                     "min_ms":  231,
+                                                     "p50_ms":  231,
+                                                     "p95_ms":  236,
+                                                     "p99_ms":  239,
+                                                     "max_ms":  239,
+                                                     "jitter_ms":  0.83,
+                                                     "samples_ms":  [
+                                                                        231,
+                                                                        232,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        236,
+                                                                        239,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        234,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231,
+                                                                        231
+                                                                    ],
+                                                     "blocked":  false
+                                                 },
+                                        "tcp":  {
+                                                    "port":  5201,
+                                                    "attempts":  8,
+                                                    "ok":  8,
+                                                    "p50_ms":  231.6,
+                                                    "p95_ms":  236.3,
+                                                    "samples_ms":  [
+                                                                       232.3,
+                                                                       231.6,
+                                                                       233.4,
+                                                                       230.4,
+                                                                       230.5,
+                                                                       236.3,
+                                                                       231.5,
+                                                                       231.6
+                                                                   ]
+                                                }
+                                    },
+                                    {
+                                        "name":  "MilkyWan (Paris DC)",
+                                        "host":  "speedtest.milkywan.fr",
+                                        "group":  "france",
+                                        "service":  null,
+                                        "ip":  "80.67.167.93",
+                                        "icmp":  {
+                                                     "sent":  30,
+                                                     "received":  30,
+                                                     "loss_pct":  0,
+                                                     "min_ms":  233,
+                                                     "p50_ms":  233,
+                                                     "p95_ms":  236,
+                                                     "p99_ms":  241,
+                                                     "max_ms":  241,
+                                                     "jitter_ms":  0.76,
+                                                     "samples_ms":  [
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        236,
+                                                                        241,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        236,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233,
+                                                                        233
+                                                                    ],
+                                                     "blocked":  false
+                                                 },
+                                        "tcp":  {
+                                                    "port":  443,
+                                                    "attempts":  8,
+                                                    "ok":  8,
+                                                    "p50_ms":  236.5,
+                                                    "p95_ms":  241.1,
+                                                    "samples_ms":  [
+                                                                       239.2,
+                                                                       237.1,
+                                                                       232.6,
+                                                                       236.5,
+                                                                       232.8,
+                                                                       233.7,
+                                                                       241.1,
+                                                                       238.1
+                                                                   ]
+                                                }
+                                    },
+                                    {
+                                        "name":  "Scaleway (Paris DC)",
+                                        "host":  "ping.online.net",
+                                        "group":  "france",
+                                        "service":  null,
+                                        "ip":  "51.158.1.21",
+                                        "icmp":  {
+                                                     "sent":  30,
+                                                     "received":  30,
+                                                     "loss_pct":  0,
+                                                     "min_ms":  286,
+                                                     "p50_ms":  286,
+                                                     "p95_ms":  287,
+                                                     "p99_ms":  289,
+                                                     "max_ms":  289,
+                                                     "jitter_ms":  0.31,
+                                                     "samples_ms":  [
+                                                                        287,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        287,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        289,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286,
+                                                                        286
+                                                                    ],
+                                                     "blocked":  false
+                                                 },
+                                        "tcp":  {
+                                                    "port":  5201,
+                                                    "attempts":  8,
+                                                    "ok":  8,
+                                                    "p50_ms":  265.1,
+                                                    "p95_ms":  277.4,
+                                                    "samples_ms":  [
+                                                                       277.4,
+                                                                       264.9,
+                                                                       265.1,
+                                                                       269.5,
+                                                                       269.2,
+                                                                       260.1,
+                                                                       270.8,
+                                                                       259.5
+                                                                   ]
+                                                }
+                                    },
+                                    {
+                                        "name":  "Bouygues (Paris)",
+                                        "host":  "paris.bbr.iperf.bytel.fr",
+                                        "group":  "france",
+                                        "service":  null,
+                                        "ip":  "5.51.3.41",
+                                        "icmp":  {
+                                                     "sent":  30,
+                                                     "received":  0,
+                                                     "loss_pct":  0,
+                                                     "min_ms":  null,
+                                                     "p50_ms":  null,
+                                                     "p95_ms":  null,
+                                                     "p99_ms":  null,
+                                                     "max_ms":  null,
+                                                     "jitter_ms":  null,
+                                                     "samples_ms":  [
+
+                                                                    ],
+                                                     "blocked":  true
+                                                 },
+                                        "tcp":  {
+                                                    "port":  9200,
+                                                    "attempts":  8,
+                                                    "ok":  8,
+                                                    "p50_ms":  274,
+                                                    "p95_ms":  1047,
+                                                    "samples_ms":  [
+                                                                       275.7,
+                                                                       274,
+                                                                       272.3,
+                                                                       1044.8,
+                                                                       1047,
+                                                                       271.9,
+                                                                       279.7,
+                                                                       269.8
+                                                                   ]
+                                                }
+                                    },
+                                    {
+                                        "name":  "AWS eu-west-3 (Paris)",
+                                        "host":  "ec2.eu-west-3.amazonaws.com",
+                                        "group":  "france",
+                                        "service":  null,
+                                        "ip":  "13.39.221.36",
+                                        "icmp":  {
+                                                     "sent":  30,
+                                                     "received":  0,
+                                                     "loss_pct":  0,
+                                                     "min_ms":  null,
+                                                     "p50_ms":  null,
+                                                     "p95_ms":  null,
+                                                     "p99_ms":  null,
+                                                     "max_ms":  null,
+                                                     "jitter_ms":  null,
+                                                     "samples_ms":  [
+
+                                                                    ],
+                                                     "blocked":  true
+                                                 },
+                                        "tcp":  {
+                                                    "port":  443,
+                                                    "attempts":  8,
+                                                    "ok":  8,
+                                                    "p50_ms":  279.9,
+                                                    "p95_ms":  285.9,
+                                                    "samples_ms":  [
+                                                                       284.6,
+                                                                       280.5,
+                                                                       274.4,
+                                                                       279.9,
+                                                                       285.9,
+                                                                       266.9,
+                                                                       280,
+                                                                       279.1
+                                                                   ]
+                                                }
+                                    },
+                                    {
+                                        "name":  "Twitch ingest Paris",
+                                        "host":  "euw30.contribute.live-video.net",
+                                        "group":  "france",
+                                        "service":  null,
+                                        "ip":  "35.55.24.0",
+                                        "icmp":  {
+                                                     "sent":  30,
+                                                     "received":  0,
+                                                     "loss_pct":  0,
+                                                     "min_ms":  null,
+                                                     "p50_ms":  null,
+                                                     "p95_ms":  null,
+                                                     "p99_ms":  null,
+                                                     "max_ms":  null,
+                                                     "jitter_ms":  null,
+                                                     "samples_ms":  [
+
+                                                                    ],
+                                                     "blocked":  true
+                                                 },
+                                        "tcp":  {
+                                                    "port":  1935,
+                                                    "attempts":  8,
+                                                    "ok":  8,
+                                                    "p50_ms":  271.5,
+                                                    "p95_ms":  283.5,
+                                                    "samples_ms":  [
+                                                                       274,
+                                                                       269.4,
+                                                                       283.5,
+                                                                       271.5,
+                                                                       278.7,
+                                                                       271.9,
+                                                                       261,
+                                                                       261.5
+                                                                   ]
+                                                }
+                                    },
+                                    {
+                                        "name":  "Twitch ingest Seoul",
+                                        "host":  "apn20.contribute.live-video.net",
+                                        "group":  "ingest",
+                                        "service":  "twitch",
+                                        "ip":  "35.55.5.9",
+                                        "icmp":  {
+                                                     "sent":  30,
+                                                     "received":  0,
+                                                     "loss_pct":  0,
+                                                     "min_ms":  null,
+                                                     "p50_ms":  null,
+                                                     "p95_ms":  null,
+                                                     "p99_ms":  null,
+                                                     "max_ms":  null,
+                                                     "jitter_ms":  null,
+                                                     "samples_ms":  [
+
+                                                                    ],
+                                                     "blocked":  true
+                                                 },
+                                        "tcp":  {
+                                                    "port":  1935,
+                                                    "attempts":  8,
+                                                    "ok":  8,
+                                                    "p50_ms":  2.8,
+                                                    "p95_ms":  7.7,
+                                                    "samples_ms":  [
+                                                                       7.7,
+                                                                       3,
+                                                                       2.8,
+                                                                       2.9,
+                                                                       3,
+                                                                       2.8,
+                                                                       2.8,
+                                                                       2.8
+                                                                   ]
+                                                }
+                                    },
+                                    {
+                                        "name":  "Twitch ingest Tokyo",
+                                        "host":  "apn10.contribute.live-video.net",
+                                        "group":  "ingest",
+                                        "service":  "twitch",
+                                        "ip":  "35.55.1.14",
+                                        "icmp":  {
+                                                     "sent":  30,
+                                                     "received":  0,
+                                                     "loss_pct":  0,
+                                                     "min_ms":  null,
+                                                     "p50_ms":  null,
+                                                     "p95_ms":  null,
+                                                     "p99_ms":  null,
+                                                     "max_ms":  null,
+                                                     "jitter_ms":  null,
+                                                     "samples_ms":  [
+
+                                                                    ],
+                                                     "blocked":  true
+                                                 },
+                                        "tcp":  {
+                                                    "port":  1935,
+                                                    "attempts":  8,
+                                                    "ok":  8,
+                                                    "p50_ms":  34.2,
+                                                    "p95_ms":  36.7,
+                                                    "samples_ms":  [
+                                                                       36.7,
+                                                                       34,
+                                                                       33.8,
+                                                                       34.5,
+                                                                       34.3,
+                                                                       34.1,
+                                                                       34.9,
+                                                                       34.2
+                                                                   ]
+                                                }
+                                    },
+                                    {
+                                        "name":  "YouTube ingest (nearest)",
+                                        "host":  "a.rtmp.youtube.com",
+                                        "group":  "ingest",
+                                        "service":  "youtube",
+                                        "ip":  "172.217.209.134",
+                                        "icmp":  {
+                                                     "sent":  30,
+                                                     "received":  30,
+                                                     "loss_pct":  0,
+                                                     "min_ms":  34,
+                                                     "p50_ms":  34,
+                                                     "p95_ms":  35,
+                                                     "p99_ms":  35,
+                                                     "max_ms":  35,
+                                                     "jitter_ms":  0.14,
+                                                     "samples_ms":  [
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        35,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        35,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34,
+                                                                        34
+                                                                    ],
+                                                     "blocked":  false
+                                                 },
+                                        "tcp":  {
+                                                    "port":  1935,
+                                                    "attempts":  8,
+                                                    "ok":  8,
+                                                    "p50_ms":  34.5,
+                                                    "p95_ms":  45.2,
+                                                    "samples_ms":  [
+                                                                       35.4,
+                                                                       35,
+                                                                       34.8,
+                                                                       29.6,
+                                                                       34.5,
+                                                                       45.2,
+                                                                       29.8,
+                                                                       29.4
+                                                                   ]
+                                                }
+                                    }
+                                ],
+                    "traces":  [
+                                   {
+                                       "host":  "orange.fr",
+                                       "hops":  [
+                                                    {
+                                                        "hop":  1,
+                                                        "ip":  "121.165.221.254",
+                                                        "rtt_ms":  [
+                                                                       1,
+                                                                       1,
+                                                                       1
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  2,
+                                                        "ip":  null,
+                                                        "rtt_ms":  [
+                                                                       null,
+                                                                       null,
+                                                                       null
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  3,
+                                                        "ip":  null,
+                                                        "rtt_ms":  [
+                                                                       null,
+                                                                       null,
+                                                                       null
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  4,
+                                                        "ip":  "112.189.14.85",
+                                                        "rtt_ms":  [
+                                                                       1,
+                                                                       1,
+                                                                       1
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  5,
+                                                        "ip":  "112.174.47.169",
+                                                        "rtt_ms":  [
+                                                                       7,
+                                                                       7,
+                                                                       7
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  6,
+                                                        "ip":  "112.174.91.126",
+                                                        "rtt_ms":  [
+                                                                       7,
+                                                                       7,
+                                                                       7
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  7,
+                                                        "ip":  "112.174.87.98",
+                                                        "rtt_ms":  [
+                                                                       132,
+                                                                       132,
+                                                                       132
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  8,
+                                                        "ip":  "213.155.141.168",
+                                                        "rtt_ms":  [
+                                                                       132,
+                                                                       null,
+                                                                       132
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  9,
+                                                        "ip":  "62.115.139.106",
+                                                        "rtt_ms":  [
+                                                                       143,
+                                                                       143,
+                                                                       144
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  10,
+                                                        "ip":  "62.115.139.150",
+                                                        "rtt_ms":  [
+                                                                       null,
+                                                                       142,
+                                                                       null
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  11,
+                                                        "ip":  null,
+                                                        "rtt_ms":  [
+                                                                       null,
+                                                                       null,
+                                                                       null
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  12,
+                                                        "ip":  "195.12.254.213",
+                                                        "rtt_ms":  [
+                                                                       null,
+                                                                       null,
+                                                                       138
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  13,
+                                                        "ip":  "81.52.166.172",
+                                                        "rtt_ms":  [
+                                                                       273,
+                                                                       null,
+                                                                       273
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  14,
+                                                        "ip":  "193.252.137.9",
+                                                        "rtt_ms":  [
+                                                                       277,
+                                                                       null,
+                                                                       277
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  15,
+                                                        "ip":  null,
+                                                        "rtt_ms":  [
+                                                                       null,
+                                                                       null,
+                                                                       null
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  16,
+                                                        "ip":  null,
+                                                        "rtt_ms":  [
+                                                                       null,
+                                                                       null,
+                                                                       null
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  17,
+                                                        "ip":  "81.52.143.167",
+                                                        "rtt_ms":  [
+                                                                       277,
+                                                                       null,
+                                                                       277
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "hop":  18,
+                                                        "ip":  "81.52.142.219",
+                                                        "rtt_ms":  [
+                                                                       274,
+                                                                       null,
+                                                                       274
+                                                                   ]
+                                                    }
+                                                ]
+                                   }
+                               ],
+                    "udp":  [
+                                {
+                                    "host":  "iperf3.moji.fr",
+                                    "port":  5200,
+                                    "target_mbps":  12.5,
+                                    "seconds":  20,
+                                    "packet_bytes":  1316,
+                                    "packets":  23745,
+                                    "lost":  0,
+                                    "loss_pct":  0,
+                                    "jitter_ms":  0.03,
+                                    "intervals":  [
+
+                                                  ],
+                                    "worst_interval_loss_pct":  0,
+                                    "lossy_intervals":  0,
+                                    "error":  null
+                                },
+                                {
+                                    "host":  "speedtest.milkywan.fr",
+                                    "port":  9200,
+                                    "target_mbps":  12.5,
+                                    "seconds":  20,
+                                    "packet_bytes":  1316,
+                                    "packets":  23746,
+                                    "lost":  0,
+                                    "loss_pct":  0,
+                                    "jitter_ms":  0.03,
+                                    "intervals":  [
+                                                      {
+                                                          "t":  1,
+                                                          "packets":  907,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  2,
+                                                          "packets":  1187,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  3,
+                                                          "packets":  1188,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  4,
+                                                          "packets":  1187,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  5,
+                                                          "packets":  1187,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  6,
+                                                          "packets":  1187,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  7,
+                                                          "packets":  1188,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  8,
+                                                          "packets":  1187,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  9,
+                                                          "packets":  1187,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  10,
+                                                          "packets":  1187,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  11,
+                                                          "packets":  1188,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  12,
+                                                          "packets":  1187,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  13,
+                                                          "packets":  1186,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  14,
+                                                          "packets":  1188,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  15,
+                                                          "packets":  1188,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  16,
+                                                          "packets":  1188,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  17,
+                                                          "packets":  1186,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  18,
+                                                          "packets":  1188,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  19,
+                                                          "packets":  1188,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  20,
+                                                          "packets":  1186,
+                                                          "lost":  0
+                                                      },
+                                                      {
+                                                          "t":  20.2,
+                                                          "packets":  281,
+                                                          "lost":  0
+                                                      }
+                                                  ],
+                                    "worst_interval_loss_pct":  0,
+                                    "lossy_intervals":  0,
+                                    "error":  null
+                                },
+                                {
+                                    "host":  "ping.online.net",
+                                    "port":  5202,
+                                    "target_mbps":  12.5,
+                                    "seconds":  20,
+                                    "packet_bytes":  1316,
+                                    "packets":  23746,
+                                    "lost":  0,
+                                    "loss_pct":  0,
+                                    "jitter_ms":  0.05,
+                                    "intervals":  [
+
+                                                  ],
+                                    "worst_interval_loss_pct":  0,
+                                    "lossy_intervals":  0,
+                                    "error":  null
+                                }
+                            ],
+                    "upload":  {
+                                   "method":  "cloudflare",
+                                   "mbps":  720,
+                                   "streams":  4,
+                                   "bytes":  83886080,
+                                   "seconds":  0.93,
+                                   "error":  null
+                               },
+                    "errors":  [
+
+                               ]
+                },
+    "lan":  {
+                "adapter":  {
+                                "name":  "\uc774\ub354\ub137",
+                                "description":  "Realtek Gaming 2.5GbE Family Controller",
+                                "kind":  "wired",
+                                "chosen_because":  "wired",
+                                "ipv4":  "121.165.221.92",
+                                "prefix_length":  24,
+                                "gateway":  "121.165.221.254",
+                                "link_mbps":  1000,
+                                "local_ips":  [
+                                                  "26.240.45.246",
+                                                  "121.165.221.92",
+                                                  "169.254.83.107",
+                                                  "127.0.0.1"
+                                              ]
+                            },
+                "mdns":  {
+                             "query_ok":  true,
+                             "listen_ms":  3000,
+                             "methods":  [
+                                             {
+                                                 "name":  "unicast",
+                                                 "ok":  true,
+                                                 "answers":  3,
+                                                 "error":  null
+                                             },
+                                             {
+                                                 "name":  "windows",
+                                                 "ok":  true,
+                                                 "answers":  0,
+                                                 "error":  null
+                                             }
+                                         ],
+                             "responders":  [
+                                                "121.165.221.98"
+                                            ],
+                             "service_types_seen":  [
+                                                        "_cros_p2p._tcp"
+                                                    ]
+                         },
+                "sources":  [
+
+                            ],
+                "discovery_servers":  {
+                                          "ndi":  [
+
+                                                  ],
+                                          "omt":  [
+
+                                                  ],
+                                          "ndi_config_path":  "C:\\ProgramData\\NDI\\ndi-config.v1.json",
+                                          "omt_settings_path":  null
+                                      },
+                "sweep":  {
+                              "cidr":  "121.165.221.0/24",
+                              "scanned":  253,
+                              "alive":  80,
+                              "seconds":  1.6,
+                              "skipped_reason":  null
+                          },
+                "hosts":  [
+                              {
+                                  "ip":  "121.165.221.1",
+                                  "mac":  "74-56-3c-96-26-0e",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.4",
+                                  "mac":  "74-56-3c-96-25-fc",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.5",
+                                  "mac":  "74-56-3c-98-ef-09",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.6",
+                                  "mac":  "74-56-3c-98-ee-a0",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.7",
+                                  "mac":  "74-56-3c-98-ef-08",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.8",
+                                  "mac":  "74-56-3c-98-ee-aa",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.9",
+                                  "mac":  "74-56-3c-98-ef-06",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.10",
+                                  "mac":  "74-56-3c-96-31-02",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.11",
+                                  "mac":  "74-56-3c-96-25-c0",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.12",
+                                  "mac":  "74-56-3c-96-31-17",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.13",
+                                  "mac":  "74-56-3c-98-f0-c8",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.15",
+                                  "mac":  "74-56-3c-96-31-24",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.16",
+                                  "mac":  "74-56-3c-96-25-56",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.17",
+                                  "mac":  "74-56-3c-96-26-08",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.18",
+                                  "mac":  "74-56-3c-96-31-1d",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.19",
+                                  "mac":  "74-56-3c-98-ee-ad",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.22",
+                                  "mac":  "74-56-3c-96-26-0b",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.23",
+                                  "mac":  "74-56-3c-96-30-80",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.24",
+                                  "mac":  "74-56-3c-96-31-03",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.25",
+                                  "mac":  "74-56-3c-96-25-8c",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.27",
+                                  "mac":  "74-56-3c-96-26-09",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.28",
+                                  "mac":  "74-56-3c-96-31-26",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.32",
+                                  "mac":  "74-56-3c-96-31-28",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.35",
+                                  "mac":  "74-56-3c-96-31-20",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.36",
+                                  "mac":  "74-56-3c-96-26-06",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.37",
+                                  "mac":  "74-56-3c-96-25-fe",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.38",
+                                  "mac":  "74-56-3c-96-25-ff",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.42",
+                                  "mac":  "74-56-3c-96-25-fb",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.43",
+                                  "mac":  "74-56-3c-96-31-16",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.44",
+                                  "mac":  "74-56-3c-96-31-1c",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.45",
+                                  "mac":  "74-56-3c-96-30-fe",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.46",
+                                  "mac":  "74-56-3c-96-26-01",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.47",
+                                  "mac":  "74-56-3c-96-30-7a",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.50",
+                                  "mac":  "88-36-6c-45-f2-f1",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.51",
+                                  "mac":  "74-56-3c-ba-6e-38",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.53",
+                                  "mac":  "74-56-3c-ba-6d-bf",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.54",
+                                  "mac":  "74-56-3c-ba-6e-58",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.55",
+                                  "mac":  "74-56-3c-ba-6d-bb",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.59",
+                                  "mac":  "74-56-3c-ba-6d-c7",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.60",
+                                  "mac":  "74-56-3c-bb-58-7c",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.61",
+                                  "mac":  "74-56-3c-bb-58-55",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.62",
+                                  "mac":  "74-56-3c-ba-6d-c9",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.63",
+                                  "mac":  "74-56-3c-ba-6d-d0",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.64",
+                                  "mac":  "74-56-3c-bc-0f-21",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.65",
+                                  "mac":  "74-56-3c-ba-6f-0e",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.67",
+                                  "mac":  "74-56-3c-ba-6e-88",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.68",
+                                  "mac":  "74-56-3c-ba-6f-03",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.69",
+                                  "mac":  "74-56-3c-ba-6e-4a",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.70",
+                                  "mac":  "74-56-3c-ba-6d-cf",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.92",
+                                  "mac":  "10-ff-e0-25-c5-90",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  true,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.94",
+                                  "mac":  "40-b0-76-dc-34-fc",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.95",
+                                  "mac":  "04-d9-f5-c8-f7-d0",
+                                  "vendor":  "ASUS",
+                                  "category":  "pc",
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.98",
+                                  "mac":  "74-d4-dd-b9-e0-26",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  1,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.101",
+                                  "mac":  "74-56-3c-92-b2-73",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.102",
+                                  "mac":  "74-56-3c-2c-c4-9f",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.103",
+                                  "mac":  "74-56-3c-92-b1-ee",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.104",
+                                  "mac":  "74-56-3c-2c-c5-9b",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.105",
+                                  "mac":  "74-56-3c-98-ef-05",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.107",
+                                  "mac":  "74-56-3c-96-30-7f",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.108",
+                                  "mac":  "74-56-3c-96-26-07",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.111",
+                                  "mac":  "74-56-3c-2c-d2-c6",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.114",
+                                  "mac":  "74-56-3c-92-b2-72",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.117",
+                                  "mac":  "74-56-3c-2c-c5-72",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.118",
+                                  "mac":  "74-56-3c-2c-c5-79",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.120",
+                                  "mac":  "a8-a1-59-bc-54-f5",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.121",
+                                  "mac":  "a8-a1-59-bc-55-05",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.123",
+                                  "mac":  "74-56-3c-96-30-f0",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.124",
+                                  "mac":  "a8-a1-59-bc-52-6c",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.125",
+                                  "mac":  "a8-a1-59-bc-54-f8",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.126",
+                                  "mac":  "a8-a1-59-bc-55-02",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.129",
+                                  "mac":  "a8-a1-59-bc-43-37",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.132",
+                                  "mac":  "74-56-3c-bc-0f-02",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.133",
+                                  "mac":  "a8-a1-59-bc-55-0d",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.134",
+                                  "mac":  "a8-a1-59-bc-54-f3",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.140",
+                                  "mac":  "74-d4-dd-b9-e0-2d",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  1,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.151",
+                                  "mac":  "d8-77-66-14-b4-d6",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  1,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.164",
+                                  "mac":  "74-56-3c-8e-94-64",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.200",
+                                  "mac":  "74-56-3c-ba-6d-ce",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.203",
+                                  "mac":  "a8-e5-39-dd-9a-c2",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  2,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.235",
+                                  "mac":  "00-1b-21-c5-4d-e0",
+                                  "vendor":  "Intel",
+                                  "category":  "pc",
+                                  "randomized_mac":  false,
+                                  "ping_ms":  null,
+                                  "is_self":  false,
+                                  "is_gateway":  false,
+                                  "sources":  [
+
+                                              ]
+                              },
+                              {
+                                  "ip":  "121.165.221.254",
+                                  "mac":  "00-08-5a-00-9e-27",
+                                  "vendor":  null,
+                                  "category":  null,
+                                  "randomized_mac":  false,
+                                  "ping_ms":  0,
+                                  "is_self":  false,
+                                  "is_gateway":  true,
+                                  "sources":  [
+
+                                              ]
+                              }
+                          ],
+                "partners":  [
+                                 {
+                                     "host":  "121.165.221.94",
+                                     "ip":  "121.165.221.94",
+                                     "port":  5201,
+                                     "origin":  "cli",
+                                     "loopback":  false,
+                                     "direction":  "to_this_pc",
+                                     "tcp":  null,
+                                     "udp":  null,
+                                     "error":  "cannot connect to 121.165.221.94:5201 (is Run-Observer.cmd or Run-LanPartner.cmd still waiting?)"
+                                 }
+                             ],
+                "combined":  null,
+                "test":  {
+                             "protocol":  "OMT",
+                             "per_feed_mbps":  200,
+                             "target_mbps":  400,
+                             "seconds":  10
+                         },
+                "errors":  [
+
+                           ]
+            },
+    "loadtest":  {
+                     "ffmpeg":  {
+                                    "found":  true,
+                                    "path":  "C:\\Users\\pc\\Downloads\\ShowReady-kit (1)\\ShowReady\\bin\\ffmpeg.exe",
+                                    "version":  "n8.1.3-18-g46d899d7a0-20261015"
+                                },
+                     "encoders":  {
+                                      "available":  [
+                                                        "libx264",
+                                                        "libx264rgb",
+                                                        "libopenh264",
+                                                        "h264_amf",
+                                                        "h264_d3d12va",
+                                                        "h264_mf",
+                                                        "h264_nvenc",
+                                                        "h264_qsv",
+                                                        "h264_vaapi",
+                                                        "h264_vulkan"
+                                                    ],
+                                      "tested":  [
+                                                     {
+                                                         "name":  "h264_nvenc",
+                                                         "ok":  true,
+                                                         "error":  null,
+                                                         "error_lines":  [
+
+                                                                         ],
+                                                         "driver_required":  null
+                                                     }
+                                                 ],
+                                      "chosen":  "h264_nvenc"
+                                  },
+                     "source":  {
+                                    "codec":  "speedhq",
+                                    "pix_fmt":  "yuv422p",
+                                    "width":  1920,
+                                    "height":  1080,
+                                    "fps":  60,
+                                    "seconds":  4,
+                                    "file_mb":  24.11
+                                },
+                     "seconds":  45,
+                     "streams":  [
+                                     {
+                                         "role":  "in-1",
+                                         "kind":  "decode",
+                                         "codec":  "speedhq",
+                                         "target_kbps":  null,
+                                         "speed_min":  1,
+                                         "speed_p50":  1.01,
+                                         "fps_p50":  60.62,
+                                         "ok":  true,
+                                         "error":  null
+                                     },
+                                     {
+                                         "role":  "in-2",
+                                         "kind":  "decode",
+                                         "codec":  "speedhq",
+                                         "target_kbps":  null,
+                                         "speed_min":  1,
+                                         "speed_p50":  1.01,
+                                         "fps_p50":  60.64,
+                                         "ok":  true,
+                                         "error":  null
+                                     },
+                                     {
+                                         "role":  "out-srt",
+                                         "kind":  "encode",
+                                         "codec":  "h264_nvenc",
+                                         "target_kbps":  10000,
+                                         "speed_min":  null,
+                                         "speed_p50":  null,
+                                         "fps_p50":  null,
+                                         "ok":  false,
+                                         "error":  "Process failed (exit code -542398533): Conversion failed!"
+                                     },
+                                     {
+                                         "role":  "out-youtube",
+                                         "kind":  "encode",
+                                         "codec":  "h264_nvenc",
+                                         "target_kbps":  17000,
+                                         "speed_min":  null,
+                                         "speed_p50":  null,
+                                         "fps_p50":  null,
+                                         "ok":  false,
+                                         "error":  "Process failed (exit code -542398533): Conversion failed!"
+                                     },
+                                     {
+                                         "role":  "out-twitch",
+                                         "kind":  "encode",
+                                         "codec":  "h264_nvenc",
+                                         "target_kbps":  6000,
+                                         "speed_min":  null,
+                                         "speed_p50":  null,
+                                         "fps_p50":  null,
+                                         "ok":  false,
+                                         "error":  "Process failed (exit code -542398533): Conversion failed!"
+                                     }
+                                 ],
+                     "system":  {
+                                    "cpu_p50":  4,
+                                    "cpu_p95":  10.8,
+                                    "cpu_max":  16,
+                                    "perf_start":  157,
+                                    "perf_min":  140,
+                                    "perf_p50":  153,
+                                    "gpu_enc_p95":  0,
+                                    "gpu_dec_p95":  0,
+                                    "gpu_3d_p95":  8.2,
+                                    "mem_used_pct_max":  31,
+                                    "samples":  [
+                                                    {
+                                                        "t":  0,
+                                                        "cpu":  6,
+                                                        "perf":  157,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  1,
+                                                        "cpu":  5,
+                                                        "perf":  160,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  2,
+                                                        "cpu":  2,
+                                                        "perf":  150,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  3,
+                                                        "cpu":  1,
+                                                        "perf":  141,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  4,
+                                                        "cpu":  10,
+                                                        "perf":  156,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  5,
+                                                        "cpu":  3,
+                                                        "perf":  141,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  6,
+                                                        "cpu":  2,
+                                                        "perf":  147,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  7,
+                                                        "cpu":  2,
+                                                        "perf":  146,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  8,
+                                                        "cpu":  4,
+                                                        "perf":  152,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  3,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  9,
+                                                        "cpu":  3,
+                                                        "perf":  153,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  2,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  10,
+                                                        "cpu":  15,
+                                                        "perf":  155,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  2,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  11,
+                                                        "cpu":  8,
+                                                        "perf":  159,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  14,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  12,
+                                                        "cpu":  8,
+                                                        "perf":  158,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  1,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  13,
+                                                        "cpu":  5,
+                                                        "perf":  155,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  14,
+                                                        "cpu":  11,
+                                                        "perf":  157,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  11,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  15,
+                                                        "cpu":  6,
+                                                        "perf":  159,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  2,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  16,
+                                                        "cpu":  9,
+                                                        "perf":  144,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  4,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  17,
+                                                        "cpu":  8,
+                                                        "perf":  157,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  31
+                                                    },
+                                                    {
+                                                        "t":  18,
+                                                        "cpu":  6,
+                                                        "perf":  155,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  4,
+                                                        "mem":  31
+                                                    },
+                                                    {
+                                                        "t":  19,
+                                                        "cpu":  16,
+                                                        "perf":  155,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  1,
+                                                        "mem":  31
+                                                    },
+                                                    {
+                                                        "t":  20,
+                                                        "cpu":  3,
+                                                        "perf":  143,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  5,
+                                                        "mem":  31
+                                                    },
+                                                    {
+                                                        "t":  21,
+                                                        "cpu":  5,
+                                                        "perf":  157,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  9,
+                                                        "mem":  31
+                                                    },
+                                                    {
+                                                        "t":  22,
+                                                        "cpu":  10,
+                                                        "perf":  158,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  23,
+                                                        "cpu":  2,
+                                                        "perf":  154,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  1,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  24,
+                                                        "cpu":  7,
+                                                        "perf":  158,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  2,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  25,
+                                                        "cpu":  7,
+                                                        "perf":  152,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  2,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  26,
+                                                        "cpu":  5,
+                                                        "perf":  156,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  2,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  27,
+                                                        "cpu":  9,
+                                                        "perf":  157,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  28,
+                                                        "cpu":  4,
+                                                        "perf":  156,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  29,
+                                                        "cpu":  3,
+                                                        "perf":  148,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  30,
+                                                        "cpu":  2,
+                                                        "perf":  140,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  31,
+                                                        "cpu":  2,
+                                                        "perf":  143,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  32,
+                                                        "cpu":  2,
+                                                        "perf":  145,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  33,
+                                                        "cpu":  1,
+                                                        "perf":  142,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  34,
+                                                        "cpu":  3,
+                                                        "perf":  153,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  0,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  35,
+                                                        "cpu":  5,
+                                                        "perf":  148,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  4,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  36,
+                                                        "cpu":  8,
+                                                        "perf":  156,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  1,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  37,
+                                                        "cpu":  3,
+                                                        "perf":  149,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  1,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  38,
+                                                        "cpu":  2,
+                                                        "perf":  149,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  3,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  39,
+                                                        "cpu":  4,
+                                                        "perf":  152,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  1,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  40,
+                                                        "cpu":  4,
+                                                        "perf":  147,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  4,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  41,
+                                                        "cpu":  4,
+                                                        "perf":  152,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  2,
+                                                        "mem":  30
+                                                    },
+                                                    {
+                                                        "t":  42,
+                                                        "cpu":  3,
+                                                        "perf":  150,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  1,
+                                                        "mem":  31
+                                                    },
+                                                    {
+                                                        "t":  43,
+                                                        "cpu":  5,
+                                                        "perf":  153,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  2,
+                                                        "mem":  31
+                                                    },
+                                                    {
+                                                        "t":  44,
+                                                        "cpu":  4,
+                                                        "perf":  152,
+                                                        "gpu_enc":  0,
+                                                        "gpu_dec":  0,
+                                                        "gpu_3d":  4,
+                                                        "mem":  30
+                                                    }
+                                                ]
+                                },
+                     "note":  "SpeedHQ is the codec inside full-bandwidth NDI; OMT\u0027s VMX is the same class but not identical. vMix/OBS compositing load is NOT included \u2014 treat results as a lower bound.",
+                     "errors":  [
+
+                                ]
+                 },
+    "verdict":  {
+                    "overall":  "NO-GO",
+                    "headline":  "Weakest link: Real-time 2 in + 3 out (2 of 5 streams real-time; needs speed \u003e= 0.97 x) - This PC cannot decode 2 feeds and encode 3 outputs in real time: use a stronger PC, or reduce outputs and bitrates.",
+                    "weakest":  "load_realtime",
+                    "partial":  false,
+                    "not_tested":  [
+
+                                   ],
+                    "checks":  [
+                                   {
+                                       "id":  "fr_reach",
+                                       "section":  "france",
+                                       "title":  "France reachable",
+                                       "status":  "PASS",
+                                       "value":  "8 of 8 France targets answered",
+                                       "limit":  "\u003e= 1 target",
+                                       "margin":  8,
+                                       "detail":  "Answered: Orange (FR ISP), Free (FR ISP), Moji (Paris DC), MilkyWan (Paris DC), Scaleway (Paris DC), Bouygues (Paris), AWS eu-west-3 (Paris), Twitch ingest Paris.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "fr_rtt",
+                                       "section":  "france",
+                                       "title":  "Round-trip time to France (p95)",
+                                       "status":  "INFO",
+                                       "value":  "279 ms",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Median of the p95 values of 8 France targets; they range from 236 ms (MilkyWan (Paris DC)) to 1047 ms (Bouygues (Paris)). The SRT latency below is computed from this; re-run with -SrtHost \u003cpartner IP\u003e for the exact path.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "fr_rtt_spread",
+                                       "section":  "france",
+                                       "title":  "Round-trip stability (p99 - p50)",
+                                       "status":  "PASS",
+                                       "value":  "8 ms",
+                                       "limit":  "\u003c 40 ms",
+                                       "margin":  5,
+                                       "detail":  "Worst spread between the typical (p50) and slowest 1 % (p99) ping: Moji (Paris DC). Big spread means jitter that SRT must absorb.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "fr_icmp_loss",
+                                       "section":  "france",
+                                       "title":  "Ping loss to France",
+                                       "status":  "PASS",
+                                       "value":  "0.0 %",
+                                       "limit":  "\u003c 1 %",
+                                       "margin":  10,
+                                       "detail":  "Pooled over 5 target(s): 0 of 150 pings lost. Ignores ping (not a fault): Bouygues (Paris), AWS eu-west-3 (Paris), Twitch ingest Paris.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "fr_udp_loss",
+                                       "section":  "france",
+                                       "title":  "UDP loss at SRT bitrate",
+                                       "status":  "PASS",
+                                       "value":  "0.00 %",
+                                       "limit":  "\u003c= 1 %",
+                                       "margin":  10,
+                                       "detail":  "Receiver-side loss over 3 iperf3 test(s) at 12.5 Mbps for 20 s each: iperf3.moji.fr 0.00 %, speedtest.milkywan.fr 0.00 %, ping.online.net 0.00 %.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "fr_udp_bursts",
+                                       "section":  "france",
+                                       "title":  "UDP loss bursts",
+                                       "status":  "PASS",
+                                       "value":  "0 lossy intervals",
+                                       "limit":  "0",
+                                       "margin":  null,
+                                       "detail":  "No 1 s interval lost more than 5 % of its packets.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "uplink_capacity",
+                                       "section":  "uplink",
+                                       "title":  "Upload capacity vs. show needs",
+                                       "status":  "PASS",
+                                       "value":  "720 Mbps",
+                                       "limit":  "\u003e= 2 x 36.0 Mbps",
+                                       "margin":  9.99,
+                                       "detail":  "Measured upload to a nearby Cloudflare PoP: 720 Mbps. The show needs 36.0 Mbps (SRT video+audio with 25 % overhead, YouTube, Twitch), ratio 20.0 x.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "uplink_wifi",
+                                       "section":  "uplink",
+                                       "title":  "Internet connection type",
+                                       "status":  "PASS",
+                                       "value":  "wired",
+                                       "limit":  "wired",
+                                       "margin":  null,
+                                       "detail":  "Internet traffic leaves through \uc774\ub354\ub137.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "ingest_youtube",
+                                       "section":  "ingest",
+                                       "title":  "YouTube ingest reachable",
+                                       "status":  "PASS",
+                                       "value":  "45 ms",
+                                       "limit":  "\u003c= 120 ms",
+                                       "margin":  2.65,
+                                       "detail":  "TCP connect p95 per ingest (port 1935): YouTube ingest (nearest) 45 ms.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "ingest_twitch",
+                                       "section":  "ingest",
+                                       "title":  "Twitch ingest reachable",
+                                       "status":  "PASS",
+                                       "value":  "8 ms",
+                                       "limit":  "\u003c= 120 ms",
+                                       "margin":  10,
+                                       "detail":  "TCP connect p95 per ingest (port 1935): Twitch ingest Seoul 8 ms, Twitch ingest Tokyo 37 ms. Reachability only - Twitch closed its Korean business in Feb 2024; do a 30-second test stream with the real key from this venue.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "lan_wired",
+                                       "section":  "lan",
+                                       "title":  "Wired network connection",
+                                       "status":  "PASS",
+                                       "value":  "\uc774\ub354\ub137 at 1000 Mbps",
+                                       "limit":  "wired adapter up",
+                                       "margin":  null,
+                                       "detail":  "Wired adapter(s) up: \uc774\ub354\ub137.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "lan_headroom",
+                                       "section":  "lan",
+                                       "title":  "LAN headroom for incoming feeds",
+                                       "status":  "PASS",
+                                       "value":  "1000 Mbps link",
+                                       "limit":  "\u003e= 2 x 436 Mbps",
+                                       "margin":  1.15,
+                                       "detail":  "\uc774\ub354\ub137 links at 1000 Mbps; 2 x OMT feeds need 400 Mbps plus 36.0 Mbps of outgoing streams on the same adapter, ratio 2.3 x.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "lan_virtual_adapters",
+                                       "section":  "lan",
+                                       "title":  "Virtual network adapters",
+                                       "status":  "WARN",
+                                       "value":  "2 virtual adapter(s) up",
+                                       "limit":  "none",
+                                       "margin":  null,
+                                       "detail":  "NDI/OMT discovery may bind to Radmin VPN, Tailscale.",
+                                       "fix":  "Disable the virtual adapters for the show, or pin the adapter in NDI Access Manager / vMix."
+                                   },
+                                   {
+                                       "id":  "lan_profile",
+                                       "section":  "lan",
+                                       "title":  "Windows network profile",
+                                       "status":  "WARN",
+                                       "value":  "Public",
+                                       "limit":  "Private",
+                                       "margin":  null,
+                                       "detail":  "\uc774\ub354\ub137 is on a Public network profile, so Windows Firewall blocks NDI/OMT discovery.",
+                                       "fix":  "Set the wired network to Private (Settings \u003e Network \u0026 Internet \u003e Ethernet \u003e Network profile type) so Windows Firewall allows NDI/OMT discovery."
+                                   },
+                                   {
+                                       "id":  "lan_eee",
+                                       "section":  "lan",
+                                       "title":  "Energy-Efficient Ethernet",
+                                       "status":  "WARN",
+                                       "value":  "on",
+                                       "limit":  "off",
+                                       "margin":  null,
+                                       "detail":  "Energy-Efficient Ethernet is enabled on \uc774\ub354\ub137 and can cause micro-drops in live video.",
+                                       "fix":  "Turn off Energy-Efficient Ethernet in the adapter properties (Device Manager \u003e adapter \u003e Advanced)."
+                                   },
+                                   {
+                                       "id":  "lan_sources_found",
+                                       "section":  "lan",
+                                       "title":  "Incoming feeds found on the network",
+                                       "status":  "INFO",
+                                       "value":  "0 OMT sources",
+                                       "limit":  "\u003e= 2 OMT sources",
+                                       "margin":  null,
+                                       "detail":  "No OMT senders yet, which is expected until NDI/OMT is installed on the source PCs. 1 other device(s) answered mDNS, so discovery itself works. Once the senders are installed, run this again; set lan.require_sources to true in config.json to make this check count.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "lan_partner_throughput",
+                                       "section":  "lan",
+                                       "title":  "Network throughput from source PCs",
+                                       "status":  "WARN",
+                                       "value":  "not measured",
+                                       "limit":  "\u003e= 300 Mbps, \u003c 0.1 % UDP loss",
+                                       "margin":  null,
+                                       "detail":  "Could not test 121.165.221.94: cannot connect to 121.165.221.94:5201 (is Run-Observer.cmd or Run-LanPartner.cmd still waiting?).",
+                                       "fix":  "Make sure Run-Observer.cmd (or Run-LanPartner.cmd) is still waiting on 121.165.221.94 and that Windows Firewall on that PC allowed iperf3 on Private networks, then run again."
+                                   },
+                                   {
+                                       "id":  "lan_hosts",
+                                       "section":  "lan",
+                                       "title":  "Devices on the local network",
+                                       "status":  "INFO",
+                                       "value":  "80 devices on 121.165.221.0/24",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "Gateway: 121.165.221.254 (unknown vendor). PCs: 2 (ASUS, Intel). Unknown vendor: 78 (0 with a private/randomised MAC). Managed switches only appear if they have a management IP on this subnet.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_cpu_threads",
+                                       "section":  "hardware",
+                                       "title":  "CPU threads",
+                                       "status":  "PASS",
+                                       "value":  "28 threads",
+                                       "limit":  "\u003e= 12 threads",
+                                       "margin":  2.33,
+                                       "detail":  "Intel(R) Core(TM) i7-14700K (20 cores)",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_ram",
+                                       "section":  "hardware",
+                                       "title":  "RAM",
+                                       "status":  "PASS",
+                                       "value":  "31.8 GB",
+                                       "limit":  "\u003e= 32 GB",
+                                       "margin":  1.05,
+                                       "detail":  "Installed RAM reads a few percent below its nominal size, so 32 GB is matched from 30.4 GB.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_gpu",
+                                       "section":  "hardware",
+                                       "title":  "Dedicated GPU",
+                                       "status":  "PASS",
+                                       "value":  "NVIDIA GeForce RTX 4070 Ti SUPER (16 GB)",
+                                       "limit":  "dedicated NVIDIA/AMD GPU",
+                                       "margin":  null,
+                                       "detail":  "A dedicated GPU provides the hardware video encoders for the three outputs.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_nvenc_sessions",
+                                       "section":  "hardware",
+                                       "title":  "NVENC encode sessions",
+                                       "status":  "PASS",
+                                       "value":  "8 sessions (driver 621.01)",
+                                       "limit":  "driver \u003e= 551.76 for 8",
+                                       "margin":  2.67,
+                                       "detail":  "This driver allows 8 simultaneous NVENC sessions: 3 outputs plus recording or a spare.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_power",
+                                       "section":  "hardware",
+                                       "title":  "Power plan and mains power",
+                                       "status":  "PASS",
+                                       "value":  "High performance, mains",
+                                       "limit":  "High performance or Ultimate",
+                                       "margin":  null,
+                                       "detail":  "Power plan keeps the CPU at full speed.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_gpu_driver_age",
+                                       "section":  "hardware",
+                                       "title":  "GPU driver age",
+                                       "status":  "PASS",
+                                       "value":  "7 days old",
+                                       "limit":  "\u003c= 365 days",
+                                       "margin":  10,
+                                       "detail":  "Newest dedicated GPU driver is dated 2026-10-19.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_disk",
+                                       "section":  "hardware",
+                                       "title":  "System drive free space",
+                                       "status":  "PASS",
+                                       "value":  "1299 GB free",
+                                       "limit":  "\u003e= 50 GB",
+                                       "margin":  10,
+                                       "detail":  "System drive C:.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_pending_reboot",
+                                       "section":  "hardware",
+                                       "title":  "Pending Windows reboot",
+                                       "status":  "PASS",
+                                       "value":  "none pending",
+                                       "limit":  "none",
+                                       "margin":  null,
+                                       "detail":  "No restart is waiting.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "load_encoder",
+                                       "section":  "load",
+                                       "title":  "Hardware video encoder",
+                                       "status":  "PASS",
+                                       "value":  "h264_nvenc",
+                                       "limit":  "hardware encoder",
+                                       "margin":  null,
+                                       "detail":  "The test encoded with h264_nvenc.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "load_realtime",
+                                       "section":  "load",
+                                       "title":  "Real-time 2 in + 3 out",
+                                       "status":  "FAIL",
+                                       "value":  "2 of 5 streams real-time",
+                                       "limit":  "speed \u003e= 0.97 x",
+                                       "margin":  1.03,
+                                       "detail":  "Too slow for real time: out-srt [Process failed (exit code -542398533): Conversion failed!], out-youtube [Process failed (exit code -542398533): Conversion failed!], out-twitch [Process failed (exit code -542398533): Conversion failed!].",
+                                       "fix":  "This PC cannot decode 2 feeds and encode 3 outputs in real time: use a stronger PC, or reduce outputs and bitrates."
+                                   },
+                                   {
+                                       "id":  "load_cpu",
+                                       "section":  "load",
+                                       "title":  "CPU load during test",
+                                       "status":  "PASS",
+                                       "value":  "11 %",
+                                       "limit":  "\u003c 60 %",
+                                       "margin":  5.56,
+                                       "detail":  "CPU p95 during the test; vMix/OBS compositing is not included. Peak 16 %.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "load_gpu_encode",
+                                       "section":  "load",
+                                       "title":  "GPU encoder load during test",
+                                       "status":  "PASS",
+                                       "value":  "0 %",
+                                       "limit":  "\u003c 70 %",
+                                       "margin":  10,
+                                       "detail":  "GPU video-encode engine load (p95) while encoding the three outputs.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "load_throttle",
+                                       "section":  "load",
+                                       "title":  "CPU clock throttling",
+                                       "status":  "PASS",
+                                       "value":  "11 % drop",
+                                       "limit":  "\u003c= 15 %",
+                                       "margin":  1.39,
+                                       "detail":  "CPU performance went from 157 % at the start to 140 % at its lowest.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "sw_mixer",
+                                       "section":  "software",
+                                       "title":  "vMix or OBS installed",
+                                       "status":  "PASS",
+                                       "value":  "vMix 3.1, OBS 32.1.2",
+                                       "limit":  "vMix or OBS",
+                                       "margin":  null,
+                                       "detail":  "A production mixer is installed.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "sw_ndi",
+                                       "section":  "software",
+                                       "title":  "NDI / OMT software",
+                                       "status":  "INFO",
+                                       "value":  "NDI runtime 5.6.1.0, NDI Tools 6.1.1.0, DistroAV 6.1.1, OMT not found",
+                                       "limit":  "",
+                                       "margin":  null,
+                                       "detail":  "The show uses OMT; make sure the sending PCs and vMix/OBS support it.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "sw_background",
+                                       "section":  "software",
+                                       "title":  "Background apps",
+                                       "status":  "WARN",
+                                       "value":  "1 running",
+                                       "limit":  "none",
+                                       "margin":  null,
+                                       "detail":  "These programs compete for CPU, GPU or network: chrome.",
+                                       "fix":  "Close: chrome."
+                                   }
+                               ],
+                    "settings":  [
+                                     {
+                                         "id":  "srt_latency",
+                                         "label":  "SRT latency (both ends)",
+                                         "value":  "1,150 ms",
+                                         "why":  "~4 x p95 RTT 279 ms = 1117 ms, rounded up to 1,150 ms. Haivision table minimum 850 ms (3 x for loss \u003c= 1 %); raised to 4 x because the path is long-haul (RTT \u003e 150 ms) and short probes miss rare bursts. SRT needs several round trips to resend lost packets; the 120-125 ms encoder default will drop video on this path."
+                                     },
+                                     {
+                                         "id":  "srt_overhead",
+                                         "label":  "SRT bandwidth overhead",
+                                         "value":  "25 %",
+                                         "why":  "Haivision rule: at least the table overhead (1 %) and never below 100 / 4 = 25 %."
+                                     },
+                                     {
+                                         "id":  "srt_bitrate",
+                                         "label":  "SRT video bitrate",
+                                         "value":  "10 Mbps video CBR, keyframe 2 s",
+                                         "why":  "Constant bitrate keeps the SRT overhead calculation valid; a 2 s keyframe interval is what the partner decoder expects."
+                                     },
+                                     {
+                                         "id":  "srt_mode",
+                                         "label":  "SRT mode",
+                                         "value":  "caller, packet size 1316, same latency on both ends (receiver latency wins if higher)",
+                                         "why":  "The Seoul PC calls out to the partner in France; both sides must be set so the higher latency is not a surprise."
+                                     },
+                                     {
+                                         "id":  "ingest_servers",
+                                         "label":  "Ingest servers",
+                                         "value":  "YouTube: rtmp://a.rtmp.youtube.com/live2 (auto-nearest) | Twitch: apn20.contribute.live-video.net",
+                                         "why":  "The Twitch host is the one with the fastest TCP connect from this venue."
+                                     },
+                                     {
+                                         "id":  "input_protocol",
+                                         "label":  "Input protocol",
+                                         "value":  "OMT (Medium) or full NDI",
+                                         "why":  "The wired link has 2.3 x the bandwidth the feeds need."
+                                     },
+                                     {
+                                         "id":  "power_plan",
+                                         "label":  "Windows power plan",
+                                         "value":  "High performance (or Ultimate), on mains power, sleep off",
+                                         "why":  "The default Balanced plan lets the CPU clock drop under bursty live-video load."
+                                     },
+                                     {
+                                         "id":  "encoder",
+                                         "label":  "Video encoder",
+                                         "value":  "NVENC H.264 (h264_nvenc), preset P4, CBR, keyframe 2 s - same for all three outputs",
+                                         "why":  "Chosen by the load test (first hardware encoder that worked)."
+                                     }
+                                 ],
+                    "manual_checks":  [
+                                          {
+                                              "id":  "mc_partner_latency",
+                                              "text":  "Confirm the French partner\u0027s receive latency matches the SRT latency above (the higher of the two ends wins)."
+                                          },
+                                          {
+                                              "id":  "mc_twitch_test",
+                                              "text":  "Twitch from Korea: do a 30-second test stream with the real stream key from this venue before show day."
+                                          },
+                                          {
+                                              "id":  "mc_same_time",
+                                              "text":  "Re-run ShowReady at the same time of day as the show (evening congestion differs from daytime)."
+                                          },
+                                          {
+                                              "id":  "mc_rehearsal",
+                                              "text":  "Run a 30-minute rehearsal with the real vMix/OBS scene and both real feeds; watch vMix/OBS dropped frames."
+                                          },
+                                          {
+                                              "id":  "mc_srthost",
+                                              "text":  "When the partner sends their SRT IP, run: Run-ShowReady.cmd -SrtHost \u003ctheir IP\u003e."
+                                          }
+                                      ],
+                    "calc":  {
+                                 "srt":  {
+                                             "rtt_p95_ms":  279.2,
+                                             "rtt_calc_ms":  279.2,
+                                             "loss_pct":  0,
+                                             "loss_source":  "udp",
+                                             "udp_measured":  true,
+                                             "lossy_intervals":  0,
+                                             "mult_table":  3,
+                                             "mult":  4,
+                                             "latency_table_ms":  850,
+                                             "latency_raw_ms":  1117,
+                                             "latency_ms":  1150,
+                                             "overhead_pct":  25,
+                                             "reasons":  [
+                                                             "the path is long-haul (RTT \u003e 150 ms) and short probes miss rare bursts"
+                                                         ]
+                                         },
+                                 "need_mbps":  36.028,
+                                 "intake_mbps":  400
+                             },
+                    "errors":  [
+
+                               ]
+                }
+}
