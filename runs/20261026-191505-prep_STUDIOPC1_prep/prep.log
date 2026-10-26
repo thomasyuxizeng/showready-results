@@ -1,0 +1,133 @@
+2026-10-26 19:15:05  
+2026-10-26 19:15:05  ==========================================================================
+2026-10-26 19:15:05    ShowReady 1.3.1-prep  -  PC preparation
+2026-10-26 19:15:05  ==========================================================================
+2026-10-26 19:15:07    prod PC (vMix/OBS)
+2026-10-26 19:15:07    2026-10-26 19:15  |  STUDIOPC1
+2026-10-26 19:15:07  
+2026-10-26 19:15:07  Checking process elevation and user context...
+2026-10-26 19:15:07  Inspecting Windows display language and international settings...
+2026-10-26 19:15:09  Inspecting GPU controllers and driver versions...
+2026-10-26 19:15:09  Inspecting wired network adapter drivers...
+2026-10-26 19:15:09  Searching Windows Update for drivers (can take a few minutes)...
+2026-10-26 19:15:23  Inspecting disk space...
+2026-10-26 19:15:23  Checking for pending system reboots...
+2026-10-26 19:15:23  Checking Windows Update pause state...
+2026-10-26 19:15:23  Inspecting power configuration...
+2026-10-26 19:15:23  Inspecting startup apps...
+2026-10-26 19:15:24  Inspecting background processes...
+2026-10-26 19:15:24  Inspecting network adapters...
+2026-10-26 19:15:24  Inspecting capture settings...
+2026-10-26 19:15:24  Inspecting notification settings...
+2026-10-26 19:15:24    PLAN:
+2026-10-26 19:15:24  
+2026-10-26 19:15:24    === LANGUAGE ===
+2026-10-26 19:15:24    [OK]      Windows display language: en-US (override: en-US) -> English display language
+2026-10-26 19:15:24  
+2026-10-26 19:15:24    === DRIVERS ===
+2026-10-26 19:15:24    [INFO]    Process elevation and user context     : Elevated: Yes, User: STUDIOPC1\pc, Console: STUDIOPC1\pc -> Elevated with matching console user
+2026-10-26 19:15:24    [OK]      NVIDIA GeForce RTX 4070 Ti SUPER driver: NVIDIA GeForce RTX 4070 Ti SUPER driver 621.01 (2026-10-19) -> >= 570.00 (NVIDIA Studio Driver)
+2026-10-26 19:15:24    [MANUAL]  Intel(R) UHD Graphics 770 driver       : Intel(R) UHD Graphics 770 driver 32.0.101.6129 (2024-10-18) -> Current Intel driver (< 365 days old)
+2026-10-26 19:15:24    [INFO]    Wired adapter driver: 이더넷              : Realtek Gaming 2.5GbE Family Controller driver 1125.20.729.2024 (2024-07-29) -> Vendor driver (< 3 years old)
+2026-10-26 19:15:24    [OK]      Windows Update drivers                 : No pending driver updates -> Drivers up to date
+2026-10-26 19:15:24  
+2026-10-26 19:15:24    === DISK ===
+2026-10-26 19:15:24    [OK]      System disk space: 1298.8 GB free of 1862 GB -> >= 50 GB free
+2026-10-26 19:15:24    [INFO]    Disk space on D: : 3662.3 GB free of 3726 GB -> Fixed drive capacity
+2026-10-26 19:15:24  
+2026-10-26 19:15:24    === REBOOT ===
+2026-10-26 19:15:24    [OK]      Pending system reboot: No pending reboot -> No pending reboot
+2026-10-26 19:15:24  
+2026-10-26 19:15:24    === POWER ===
+2026-10-26 19:15:24    [CHANGE]  Power scheme and AC settings: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c (AC settings need optimization) -> 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c (AC settings optimized)
+2026-10-26 19:15:24  
+2026-10-26 19:15:24    === STARTUP ===
+2026-10-26 19:15:24    [CHANGE]  Startup app: KakaoTalk                                                                                : enabled -> disabled
+2026-10-26 19:15:24    [OK]      Startup app: Volume Controller SD plugin                                                              : enabled -> enabled
+2026-10-26 19:15:24    [CHANGE]  Startup app: SOOPPackage                                                                              : enabled -> disabled
+2026-10-26 19:15:24    [CHANGE]  Startup app: RiotClient                                                                               : enabled -> disabled
+2026-10-26 19:15:24    [CHANGE]  Startup app: Figma Agent                                                                              : enabled -> disabled
+2026-10-26 19:15:24    [CHANGE]  Startup app: Teams                                                                                    : enabled -> disabled
+2026-10-26 19:15:24    [CHANGE]  Startup app: Discord                                                                                  : enabled -> disabled
+2026-10-26 19:15:24    [CHANGE]  Startup app: MicrosoftEdgeAutoLaunch_72FC07CE8FBC282A90F28F3BD5668C8E                                 : enabled -> disabled
+2026-10-26 19:15:24    [CHANGE]  Startup app: RobloxPlayerBeta                                                                         : enabled -> disabled
+2026-10-26 19:15:24    [OK]      Startup app: GoogleDriveFS                                                                            : disabled -> disabled
+2026-10-26 19:15:24    [OK]      Startup app: SecurityHealth                                                                           : enabled -> enabled
+2026-10-26 19:15:24    [OK]      Startup app: RtkAudUService                                                                           : enabled -> enabled
+2026-10-26 19:15:24    [OK]      Startup app: Stream Deck                                                                              : enabled -> enabled
+2026-10-26 19:15:24    [OK]      Startup app: Blackmagic Desktop Video Updater                                                         : enabled -> enabled
+2026-10-26 19:15:24    [OK]      Startup app: Riot Vanguard                                                                            : enabled -> enabled
+2026-10-26 19:15:24    [OK]      Startup app: Adobe CCXProcess                                                                         : disabled -> disabled
+2026-10-26 19:15:24    [OK]      Startup app: Blackmagic Streaming Server                                                              : enabled -> enabled
+2026-10-26 19:15:24    [CHANGE]  Startup app: SandollCloud                                                                             : enabled -> disabled
+2026-10-26 19:15:24    [CHANGE]  Startup app: RadminVPN                                                                                : enabled -> disabled
+2026-10-26 19:15:24    [OK]      Startup app: Adobe Creative Cloud                                                                     : disabled -> disabled
+2026-10-26 19:15:24    [OK]      Startup item: AnyDesk.lnk                                                                             : enabled -> enabled
+2026-10-26 19:15:24    [OK]      Startup item: Imaging Edge Desktop.lnk                                                                : enabled -> enabled
+2026-10-26 19:15:24    [OK]      Startup item: Tailscale.lnk                                                                           : enabled -> enabled
+2026-10-26 19:15:24    [OK]      Startup item: X-USB Control Panel Autostart.lnk                                                       : enabled -> enabled
+2026-10-26 19:15:24    [CHANGE]  Scheduled updater task: MicrosoftEdgeUpdateTaskMachineCore                                            : Ready -> Disabled
+2026-10-26 19:15:24    [CHANGE]  Scheduled updater task: MicrosoftEdgeUpdateTaskMachineUA                                              : Ready -> Disabled
+2026-10-26 19:15:24    [CHANGE]  Scheduled updater task: OneDrive Reporting Task-S-1-5-21-1857157186-2895555079-3495748289-1003        : Ready -> Disabled
+2026-10-26 19:15:24    [CHANGE]  Scheduled updater task: OneDrive Standalone Update Task-S-1-5-21-1857157186-2895555079-3495748289-1003: Ready -> Disabled
+2026-10-26 19:15:24    [CHANGE]  Scheduled updater task: OneDrive Standalone Update Task-S-1-5-21-1857157186-2895555079-3495748289-500 : Ready -> Disabled
+2026-10-26 19:15:24    [CHANGE]  Scheduled updater task: OneDrive Startup Task-S-1-5-21-1857157186-2895555079-3495748289-1003          : Ready -> Disabled
+2026-10-26 19:15:24    [CHANGE]  Scheduled updater task: GoogleUpdaterTaskSystem157.0.8089.0{D09687E6-9B08-48BF-B3CF-76EE43FAEAAC}     : Ready -> Disabled
+2026-10-26 19:15:24  
+2026-10-26 19:15:24    === BACKGROUND ===
+2026-10-26 19:15:24    [CHANGE]  Close background app: Discord (6 instances)           : 6 running -> closed
+2026-10-26 19:15:24    [CHANGE]  Close background app: MicrosoftEdgeUpdate (1 instance): 1 running -> closed
+2026-10-26 19:15:24    [CHANGE]  Close background app: ms-teams (2 instances)          : 2 running -> closed
+2026-10-26 19:15:24  
+2026-10-26 19:15:24    === NETWORK ===
+2026-10-26 19:15:24    [CHANGE]  Disable virtual adapter: Radmin VPN: Up -> Disabled
+2026-10-26 19:15:24    [CHANGE]  Disable virtual adapter: 이더넷       : Up -> Disabled
+2026-10-26 19:15:24    [CHANGE]  Disable virtual adapter: Tailscale : Up -> Disabled
+2026-10-26 19:15:24  
+2026-10-26 19:15:24    === CAPTURE ===
+2026-10-26 19:15:24    [CHANGE]  Xbox Game Bar background recording: GameDVR_Enabled=1, AppCaptureEnabled=absent -> 0
+2026-10-26 19:15:24  
+2026-10-26 19:15:24    === NOTIFICATIONS ===
+2026-10-26 19:15:24    [CHANGE]  Toast notifications: ToastEnabled=0, NOC_GLOBAL_SETTING_TOASTS_ENABLED=absent -> 0
+2026-10-26 19:15:24  
+2026-10-26 19:15:24    === UPDATES ===
+2026-10-26 19:15:24    [CHANGE]  Pause Windows Update: Not paused -> Pause for 7 days (until 2026-11-02T10:15:23Z)
+2026-10-26 19:15:24  
+2026-10-26 19:15:24  --------------------------------------------------------------------------
+2026-10-26 19:15:24    SELECTION
+2026-10-26 19:15:24  --------------------------------------------------------------------------
+2026-10-26 19:15:34  This closes apps now. Save your work first.
+2026-10-26 19:15:47  
+2026-10-26 19:15:47  --------------------------------------------------------------------------
+2026-10-26 19:15:47    APPLYING CHANGES
+2026-10-26 19:15:47  --------------------------------------------------------------------------
+2026-10-26 19:15:47  This closes apps now. Save your work first.
+2026-10-26 19:15:47  Applying tuning (23 item(s))...
+2026-10-26 19:15:48  Applying updates pause (1 item(s))...
+2026-10-26 19:15:48  Error applying updates pause: The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2026-10-26 19:15:48  
+2026-10-26 19:15:48    APPLIED RESULTS:
+2026-10-26 19:15:48    [DONE]    Power scheme and AC settings: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c (AC settings optimized)
+2026-10-26 19:15:48    [DONE]    Startup app: KakaoTalk: disabled
+2026-10-26 19:15:48    [DONE]    Startup app: SOOPPackage: disabled
+2026-10-26 19:15:48    [DONE]    Startup app: RiotClient: disabled
+2026-10-26 19:15:48    [DONE]    Startup app: Figma Agent: disabled
+2026-10-26 19:15:48    [DONE]    Startup app: Teams: disabled
+2026-10-26 19:15:48    [DONE]    Startup app: Discord: disabled
+2026-10-26 19:15:48    [DONE]    Startup app: MicrosoftEdgeAutoLaunch_72FC07CE8FBC282A90F28F3BD5668C8E: disabled
+2026-10-26 19:15:48    [DONE]    Startup app: RobloxPlayerBeta: disabled
+2026-10-26 19:15:48    [DONE]    Startup app: SandollCloud: disabled
+2026-10-26 19:15:48    [DONE]    Startup app: RadminVPN: disabled
+2026-10-26 19:15:48    [DONE]    Scheduled updater task: MicrosoftEdgeUpdateTaskMachineCore: Disabled
+2026-10-26 19:15:48    [DONE]    Scheduled updater task: MicrosoftEdgeUpdateTaskMachineUA: Disabled
+2026-10-26 19:15:48    [DONE]    Scheduled updater task: OneDrive Reporting Task-S-1-5-21-1857157186-2895555079-3495748289-1003: Disabled
+2026-10-26 19:15:48    [DONE]    Scheduled updater task: OneDrive Standalone Update Task-S-1-5-21-1857157186-2895555079-3495748289-1003: Disabled
+2026-10-26 19:15:48    [DONE]    Scheduled updater task: OneDrive Standalone Update Task-S-1-5-21-1857157186-2895555079-3495748289-500: Disabled
+2026-10-26 19:15:48    [DONE]    Scheduled updater task: OneDrive Startup Task-S-1-5-21-1857157186-2895555079-3495748289-1003: Disabled
+2026-10-26 19:15:48    [DONE]    Scheduled updater task: GoogleUpdaterTaskSystem157.0.8089.0{D09687E6-9B08-48BF-B3CF-76EE43FAEAAC}: Disabled
+2026-10-26 19:15:48    [DONE]    Close background app: MicrosoftEdgeUpdate (1 instance): closed
+2026-10-26 19:15:48    [DONE]    Close background app: ms-teams (2 instances): closed
+2026-10-26 19:15:48    [DONE]    Close background app: Discord (6 instances): closed
+2026-10-26 19:15:48    [DONE]    Xbox Game Bar background recording: 0
+2026-10-26 19:15:48    [DONE]    Toast notifications: 0
+2026-10-26 19:15:48    [FAILED]  Pause Windows Update: The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
