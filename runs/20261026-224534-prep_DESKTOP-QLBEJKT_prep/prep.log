@@ -1,0 +1,115 @@
+2026-10-26 22:45:34  
+2026-10-26 22:45:34  ==========================================================================
+2026-10-26 22:45:34    ShowReady 1.3.1-prep  -  PC preparation
+2026-10-26 22:45:34  ==========================================================================
+2026-10-26 22:45:39    observer PC
+2026-10-26 22:45:39    2026-10-26 22:45  |  DESKTOP-QLBEJKT
+2026-10-26 22:45:39  
+2026-10-26 22:45:40  Checking process elevation and user context...
+2026-10-26 22:45:40  Inspecting Windows display language and international settings...
+2026-10-26 22:45:42  Inspecting GPU controllers and driver versions...
+2026-10-26 22:45:42  Inspecting wired network adapter drivers...
+2026-10-26 22:45:45  Searching Windows Update for drivers (can take a few minutes)...
+2026-10-26 22:45:50  Inspecting disk space...
+2026-10-26 22:45:50  Checking for pending system reboots...
+2026-10-26 22:45:50  Checking Windows Update pause state...
+2026-10-26 22:45:50  Inspecting power configuration...
+2026-10-26 22:45:50  Inspecting startup apps...
+2026-10-26 22:45:55  Inspecting background processes...
+2026-10-26 22:45:55  Inspecting network adapters...
+2026-10-26 22:45:55  Inspecting capture settings...
+2026-10-26 22:45:55  Inspecting notification settings...
+2026-10-26 22:45:55    PLAN:
+2026-10-26 22:45:55  
+2026-10-26 22:45:55    === LANGUAGE ===
+2026-10-26 22:45:55    [OK]      Windows display language: en-US (override: en-US) -> English display language
+2026-10-26 22:45:55  
+2026-10-26 22:45:55    === DRIVERS ===
+2026-10-26 22:45:55    [INFO]    Process elevation and user context                                : Elevated: Yes, User: DESKTOP-QLBEJKT\User, Console: DESKTOP-QLBEJKT\User -> Elevated with matching console user
+2026-10-26 22:45:55    [OK]      NVIDIA GeForce RTX 2080 driver                                    : NVIDIA GeForce RTX 2080 driver 617.42 (2026-09-30) -> >= 570.00 (NVIDIA Studio Driver)
+2026-10-26 22:45:55    [MANUAL]  Wired adapter driver: Ethernet                                    : Intel(R) Ethernet Connection (7) I219-V driver 12.19.1.37 (2021-06-22) -> Vendor driver (< 3 years old)
+2026-10-26 22:45:55    [CHANGE]  INTEL - System - 7/18/1968 12:00:00 AM - 10.1.14.7                : not installed -> 1968-07-18 OtherHardware
+2026-10-26 22:45:55    [CHANGE]  Logitech USB Driver Update (1.1.84.7627)                          : not installed -> 2026-02-27 OtherHardware
+2026-10-26 22:45:55    [CHANGE]  LG Electronics Inc. SoftwareComponent Driver Update (2.0.2026.810): not installed -> 2026-08-10 OtherHardware
+2026-10-26 22:45:55  
+2026-10-26 22:45:56    === DISK ===
+2026-10-26 22:45:56    [MANUAL]  Low disk space warning: 46.6 GB free of 464.1 GB -> >= 50 GB free
+2026-10-26 22:45:56    [INFO]    Disk space on D:      : 749.4 GB free of 931.5 GB -> Fixed drive capacity
+2026-10-26 22:45:56  
+2026-10-26 22:45:56    === REBOOT ===
+2026-10-26 22:45:56    [MANUAL]  Pending system reboot: Pending reboot (PendingFileRenameOperations) -> No pending reboot
+2026-10-26 22:45:56  
+2026-10-26 22:45:56    === POWER ===
+2026-10-26 22:45:56    [OK]      Power scheme and AC settings: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c (optimized) -> 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+2026-10-26 22:45:56  
+2026-10-26 22:45:56    === STARTUP ===
+2026-10-26 22:45:56    [OK]      Startup app: Steam                                                   : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: WallpaperEngine                                         : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: Discord                                                 : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: Queue                                                   : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: KakaoTalk                                               : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: Volume Controller SD plugin                             : enabled -> enabled
+2026-10-26 22:45:56    [OK]      Startup app: SOOPPackage                                             : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: RiotClient                                              : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: Figma Agent                                             : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: Synapse3                                                : enabled -> enabled
+2026-10-26 22:45:56    [OK]      Startup app: MicrosoftEdgeAutoLaunch_C46CFC0629905CC775E70B50EA8A519C: disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: SecurityHealth                                          : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: Blackmagic Desktop Video Updater                        : enabled -> enabled
+2026-10-26 22:45:56    [OK]      Startup app: Blackmagic Streaming Server                             : enabled -> enabled
+2026-10-26 22:45:56    [OK]      Startup app: RTHDVCPL                                                : enabled -> enabled
+2026-10-26 22:45:56    [OK]      Startup app: Stream Deck                                             : enabled -> enabled
+2026-10-26 22:45:56    [OK]      Startup app: Riot Vanguard                                           : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: Logi Download Assistant                                 : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: Lightshot                                               : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: Adobe CCXProcess                                        : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: Adobe Creative Cloud                                    : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup app: RadminVPN                                               : disabled -> disabled
+2026-10-26 22:45:56    [OK]      Startup item: Imaging Edge Desktop.lnk                               : enabled -> enabled
+2026-10-26 22:45:56    [OK]      Startup item: X-USB Control Panel Autostart.lnk                      : enabled -> enabled
+2026-10-26 22:45:56  
+2026-10-26 22:45:56    === BACKGROUND ===
+2026-10-26 22:45:56    [CHANGE]  Close background app: chrome (12 instances)           : 12 running -> closed
+2026-10-26 22:45:56    [CHANGE]  Close background app: MicrosoftEdgeUpdate (1 instance): 1 running -> closed
+2026-10-26 22:45:56    [CHANGE]  Close background app: Slack (5 instances)             : 5 running -> closed
+2026-10-26 22:45:56  
+2026-10-26 22:45:56    === NETWORK ===
+2026-10-26 22:45:56    [CHANGE]  Disable virtual adapter: Ethernet  : Up -> Disabled
+2026-10-26 22:45:56    [CHANGE]  Disable virtual adapter: Radmin VPN: Up -> Disabled
+2026-10-26 22:45:56  
+2026-10-26 22:45:56    === CAPTURE ===
+2026-10-26 22:45:56    [OK]      Xbox Game Bar background recording: 0 -> 0
+2026-10-26 22:45:56  
+2026-10-26 22:45:56    === NOTIFICATIONS ===
+2026-10-26 22:45:56    [OK]      Toast notifications: 0 -> 0
+2026-10-26 22:45:56  
+2026-10-26 22:45:56    === UPDATES ===
+2026-10-26 22:45:56    [CHANGE]  Pause Windows Update: Not paused -> Pause for 7 days (until 2026-11-02T13:45:50Z)
+2026-10-26 22:45:56  
+2026-10-26 22:45:56  --------------------------------------------------------------------------
+2026-10-26 22:45:56    SELECTION
+2026-10-26 22:45:56  --------------------------------------------------------------------------
+2026-10-26 22:46:03  This closes apps now. Save your work first.
+2026-10-26 22:46:21  
+2026-10-26 22:46:21  --------------------------------------------------------------------------
+2026-10-26 22:46:21    APPLYING CHANGES
+2026-10-26 22:46:21  --------------------------------------------------------------------------
+2026-10-26 22:46:21  Windows Update drivers can take 5-20 minutes
+2026-10-26 22:46:21  Applying drivers (3 item(s))...
+2026-10-26 22:46:21  Searching Windows Update for update 557c4d28-8e6f-477c-9a3e-7c0def8db8d8...
+2026-10-26 22:46:27  Downloading Windows Update driver: INTEL - System - 7/18/1968 12:00:00 AM - 10.1.14.7...
+2026-10-26 22:46:29  Installing Windows Update driver: INTEL - System - 7/18/1968 12:00:00 AM - 10.1.14.7...
+2026-10-26 22:46:31  Error applying drivers: The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2026-10-26 22:46:31  This closes apps now. Save your work first.
+2026-10-26 22:46:31  Applying tuning (3 item(s))...
+2026-10-26 22:46:31  Applying updates pause (1 item(s))...
+2026-10-26 22:46:31  Error applying updates pause: The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2026-10-26 22:46:31  
+2026-10-26 22:46:31    APPLIED RESULTS:
+2026-10-26 22:46:31    [FAILED]  INTEL - System - 7/18/1968 12:00:00 AM - 10.1.14.7: The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2026-10-26 22:46:31    [FAILED]  Logitech USB Driver Update (1.1.84.7627): The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2026-10-26 22:46:32    [FAILED]  LG Electronics Inc. SoftwareComponent Driver Update (2.0.2026.810): The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2026-10-26 22:46:32    [DONE]    Close background app: chrome (12 instances): closed
+2026-10-26 22:46:32    [DONE]    Close background app: MicrosoftEdgeUpdate (1 instance): closed
+2026-10-26 22:46:32    [DONE]    Close background app: Slack (5 instances): closed
+2026-10-26 22:46:32    [FAILED]  Pause Windows Update: The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
