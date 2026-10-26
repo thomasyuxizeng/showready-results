@@ -1,0 +1,28 @@
+2026-10-26 19:14:32  
+2026-10-26 19:14:32  ==========================================================================
+2026-10-26 19:14:32    ShowReady 1.3.1-prep  -  PC preparation
+2026-10-26 19:14:32  ==========================================================================
+2026-10-26 19:14:32    ShowReady PC  |  Undo mode (latest)
+2026-10-26 19:14:32    2026-10-26 19:14  |  DESKTOP-LCTC4NL
+2026-10-26 19:14:32  
+2026-10-26 19:14:32  Restoring prep changes from backup: C:\Users\Gen.G\Downloads\ShowReady-kit\ShowReady\results\20261026-191205-prep\backup
+2026-10-26 19:14:34  Error during Undo-SRPrepSystem: 'if' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+2026-10-26 19:14:34  
+2026-10-26 19:14:34    RESTORE RESULTS:
+2026-10-26 19:14:34    [DONE]    Toast notifications: Restored successfully
+2026-10-26 19:14:34    [DONE]    Xbox Game Bar background recording: Restored successfully
+2026-10-26 19:14:34    [DONE]    Disable virtual adapter: Radmin VPN: Restored successfully
+2026-10-26 19:14:34    [DONE]    Disable virtual adapter: 이더넷 3: Restored successfully
+2026-10-26 19:14:34    [DONE]    Scheduled updater task: GoogleUpdaterTaskSystem157.0.8089.0{2F576583-BDA5-4AAD-834C-2FE5A40437E6}: Restored successfully
+2026-10-26 19:14:34    [DONE]    Scheduled updater task: MicrosoftEdgeUpdateTaskMachineUA: Restored successfully
+2026-10-26 19:14:34    [DONE]    Scheduled updater task: MicrosoftEdgeUpdateTaskMachineCore: Restored successfully
+2026-10-26 19:14:34    [DONE]    Startup app: RadminVPN: Restored successfully
+2026-10-26 19:14:34    [DONE]    Startup app: Adobe Creative Cloud: Restored successfully
+2026-10-26 19:14:34    [DONE]    Startup app: Adobe CCXProcess: Restored successfully
+2026-10-26 19:14:34    [DONE]    Startup app: MicrosoftEdgeAutoLaunch_D9F5381774F164533D2D002656669DBC: Restored successfully
+2026-10-26 19:14:34    [DONE]    Startup app: Figma Agent: Restored successfully
+2026-10-26 19:14:34    [DONE]    Startup app: Teams: Restored successfully
+2026-10-26 19:14:34    [DONE]    Startup app: SOOPPackage: Restored successfully
+2026-10-26 19:14:34    [DONE]    Startup app: KakaoTalk: Restored successfully
+2026-10-26 19:14:34    [DONE]    Startup app: RiotClient: Restored successfully
+2026-10-26 19:14:34    [DONE]    Power scheme and AC settings: Restored successfully
