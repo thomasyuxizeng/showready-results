@@ -1,0 +1,316 @@
+{
+    "meta":  {
+                 "tool_version":  "1.3.1-prep",
+                 "computer":  "DESKTOP-LCTC4NL",
+                 "user":  "DESKTOP-LCTC4NL\\Gen.G",
+                 "elevated":  true,
+                 "role":  "",
+                 "started":  "2026-10-26T19:14:32.3193232+09:00",
+                 "finished":  "2026-10-26T19:14:34.4573239+09:00",
+                 "dry_run":  false,
+                 "backup_dir":  "C:\\Users\\Gen.G\\Downloads\\ShowReady-kit\\ShowReady\\results\\20261026-191205-prep\\backup"
+             },
+    "tune":  [
+                 {
+                     "id":  "tune_notifications",
+                     "section":  "notifications",
+                     "title":  "Toast notifications",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Remove-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\PushNotifications\u0027 -Name \u0027ToastEnabled\u0027 -ErrorAction SilentlyContinue",
+                                      "Remove-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\u0027 -Name \u0027NOC_GLOBAL_SETTING_TOASTS_ENABLED\u0027 -ErrorAction SilentlyContinue"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_capture",
+                     "section":  "capture",
+                     "title":  "Xbox Game Bar background recording",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKCU:\\System\\GameConfigStore\u0027 -Name \u0027GameDVR_Enabled\u0027 -Value 1 -Type DWord",
+                                      "Remove-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\u0027 -Name \u0027AppCaptureEnabled\u0027 -ErrorAction SilentlyContinue"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_network:virtual:Radmin VPN",
+                     "section":  "network",
+                     "title":  "Disable virtual adapter: Radmin VPN",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Enable-NetAdapter -Name \u0027Radmin VPN\u0027 -Confirm:$false"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_network:virtual:\uc774\ub354\ub137 3",
+                     "section":  "network",
+                     "title":  "Disable virtual adapter: \uc774\ub354\ub137 3",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Enable-NetAdapter -Name \u0027\uc774\ub354\ub137 3\u0027 -Confirm:$false"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:task:\\GoogleSystem\\GoogleUpdater\\GoogleUpdaterTaskSystem157.0.8089.0{2F576583-BDA5-4AAD-834C-2FE5A40437E6}",
+                     "section":  "startup",
+                     "title":  "Scheduled updater task: GoogleUpdaterTaskSystem157.0.8089.0{2F576583-BDA5-4AAD-834C-2FE5A40437E6}",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Enable-ScheduledTask -TaskPath \u0027\\GoogleSystem\\GoogleUpdater\\\u0027 -TaskName \u0027GoogleUpdaterTaskSystem157.0.8089.0{2F576583-BDA5-4AAD-834C-2FE5A40437E6}\u0027"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:task:\\MicrosoftEdgeUpdateTaskMachineUA",
+                     "section":  "startup",
+                     "title":  "Scheduled updater task: MicrosoftEdgeUpdateTaskMachineUA",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Enable-ScheduledTask -TaskPath \u0027\\\u0027 -TaskName \u0027MicrosoftEdgeUpdateTaskMachineUA\u0027"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:task:\\MicrosoftEdgeUpdateTaskMachineCore",
+                     "section":  "startup",
+                     "title":  "Scheduled updater task: MicrosoftEdgeUpdateTaskMachineCore",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Enable-ScheduledTask -TaskPath \u0027\\\u0027 -TaskName \u0027MicrosoftEdgeUpdateTaskMachineCore\u0027"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:RadminVPN",
+                     "section":  "startup",
+                     "title":  "Startup app: RadminVPN",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Remove-ItemProperty -Path \u0027HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32\u0027 -Name \u0027RadminVPN\u0027 -ErrorAction SilentlyContinue"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Adobe Creative Cloud",
+                     "section":  "startup",
+                     "title":  "Startup app: Adobe Creative Cloud",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Remove-ItemProperty -Path \u0027HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32\u0027 -Name \u0027Adobe Creative Cloud\u0027 -ErrorAction SilentlyContinue"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Adobe CCXProcess",
+                     "section":  "startup",
+                     "title":  "Startup app: Adobe CCXProcess",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Remove-ItemProperty -Path \u0027HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run32\u0027 -Name \u0027Adobe CCXProcess\u0027 -ErrorAction SilentlyContinue"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:MicrosoftEdgeAutoLaunch_D9F5381774F164533D2D002656669DBC",
+                     "section":  "startup",
+                     "title":  "Startup app: MicrosoftEdgeAutoLaunch_D9F5381774F164533D2D002656669DBC",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Remove-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027MicrosoftEdgeAutoLaunch_D9F5381774F164533D2D002656669DBC\u0027 -ErrorAction SilentlyContinue"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Figma Agent",
+                     "section":  "startup",
+                     "title":  "Startup app: Figma Agent",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Remove-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027Figma Agent\u0027 -ErrorAction SilentlyContinue"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:Teams",
+                     "section":  "startup",
+                     "title":  "Startup app: Teams",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Remove-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027Teams\u0027 -ErrorAction SilentlyContinue"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:SOOPPackage",
+                     "section":  "startup",
+                     "title":  "Startup app: SOOPPackage",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Set-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027SOOPPackage\u0027 -Value ([Convert]::FromBase64String(\u0027AgAAAAAAAAAAAAAA\u0027)) -Type Binary"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:KakaoTalk",
+                     "section":  "startup",
+                     "title":  "Startup app: KakaoTalk",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Remove-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027KakaoTalk\u0027 -ErrorAction SilentlyContinue"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_startup:RiotClient",
+                     "section":  "startup",
+                     "title":  "Startup app: RiotClient",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "Remove-ItemProperty -Path \u0027HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\u0027 -Name \u0027RiotClient\u0027 -ErrorAction SilentlyContinue"
+                                  ],
+                     "undo":  null
+                 },
+                 {
+                     "id":  "tune_power",
+                     "section":  "power",
+                     "title":  "Power scheme and AC settings",
+                     "status":  "DONE",
+                     "current":  "restored",
+                     "target":  "restored",
+                     "detail":  "Restored successfully",
+                     "risk":  "low",
+                     "needs_reboot":  false,
+                     "needs_admin":  false,
+                     "default_apply":  false,
+                     "commands":  [
+                                      "powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+                                      "powercfg /change standby-timeout-ac 0",
+                                      "powercfg /change hibernate-timeout-ac 0",
+                                      "powercfg /change monitor-timeout-ac 60",
+                                      "powercfg /change disk-timeout-ac 0",
+                                      "powercfg /setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 2a737441-1930-4402-8d77-b2bebba308a3 48e6b7a6-50f5-4782-a5d4-53bb8f07e226 0",
+                                      "powercfg /setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 54533251-82be-4824-96c1-47b60b740d00 893dee8e-2bef-41e0-89c6-b55d0929964c 100",
+                                      "powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"
+                                  ],
+                     "undo":  null
+                 }
+             ],
+    "system":  [
+
+               ]
+}
