@@ -1,0 +1,33 @@
+2026-10-26 19:14:06  
+2026-10-26 19:14:06  ==========================================================================
+2026-10-26 19:14:06    ShowReady 1.3.1-prep  -  PC preparation
+2026-10-26 19:14:06  ==========================================================================
+2026-10-26 19:14:06    ShowReady PC  |  Undo mode (latest)
+2026-10-26 19:14:06    2026-10-26 19:14  |  STUDIOPC1
+2026-10-26 19:14:06  
+2026-10-26 19:14:06  Restoring prep changes from backup: C:\Users\pc\Downloads\ShowReady-kit (1)\ShowReady\results\20261026-190804-prep\backup
+2026-10-26 19:14:09  Error during Undo-SRPrepSystem: The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2026-10-26 19:14:09  
+2026-10-26 19:14:09    RESTORE RESULTS:
+2026-10-26 19:14:09    [DONE]    Toast notifications: Restored successfully
+2026-10-26 19:14:09    [DONE]    Xbox Game Bar background recording: Restored successfully
+2026-10-26 19:14:09    [DONE]    Disable virtual adapter: 이더넷: Restored successfully
+2026-10-26 19:14:09    [DONE]    Disable virtual adapter: Radmin VPN: Restored successfully
+2026-10-26 19:14:09    [DONE]    Scheduled updater task: GoogleUpdaterTaskSystem157.0.8089.0{D09687E6-9B08-48BF-B3CF-76EE43FAEAAC}: Restored successfully
+2026-10-26 19:14:09    [DONE]    Scheduled updater task: OneDrive Startup Task-S-1-5-21-1857157186-2895555079-3495748289-1003: Restored successfully
+2026-10-26 19:14:09    [DONE]    Scheduled updater task: OneDrive Standalone Update Task-S-1-5-21-1857157186-2895555079-3495748289-500: Restored successfully
+2026-10-26 19:14:09    [DONE]    Scheduled updater task: OneDrive Standalone Update Task-S-1-5-21-1857157186-2895555079-3495748289-1003: Restored successfully
+2026-10-26 19:14:09    [DONE]    Scheduled updater task: OneDrive Reporting Task-S-1-5-21-1857157186-2895555079-3495748289-1003: Restored successfully
+2026-10-26 19:14:09    [DONE]    Scheduled updater task: MicrosoftEdgeUpdateTaskMachineUA: Restored successfully
+2026-10-26 19:14:09    [DONE]    Scheduled updater task: MicrosoftEdgeUpdateTaskMachineCore: Restored successfully
+2026-10-26 19:14:09    [DONE]    Startup app: RadminVPN: Restored successfully
+2026-10-26 19:14:09    [DONE]    Startup app: SandollCloud: Restored successfully
+2026-10-26 19:14:09    [DONE]    Startup app: RobloxPlayerBeta: Restored successfully
+2026-10-26 19:14:09    [DONE]    Startup app: MicrosoftEdgeAutoLaunch_72FC07CE8FBC282A90F28F3BD5668C8E: Restored successfully
+2026-10-26 19:14:09    [DONE]    Startup app: Discord: Restored successfully
+2026-10-26 19:14:09    [DONE]    Startup app: Teams: Restored successfully
+2026-10-26 19:14:09    [DONE]    Startup app: Figma Agent: Restored successfully
+2026-10-26 19:14:09    [DONE]    Startup app: RiotClient: Restored successfully
+2026-10-26 19:14:09    [DONE]    Startup app: SOOPPackage: Restored successfully
+2026-10-26 19:14:09    [DONE]    Startup app: KakaoTalk: Restored successfully
+2026-10-26 19:14:09    [DONE]    Power scheme and AC settings: Restored successfully
