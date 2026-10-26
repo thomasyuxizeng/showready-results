@@ -1,0 +1,167 @@
+2026-10-26 19:26:53  
+2026-10-26 19:26:53  ==========================================================================
+2026-10-26 19:26:53    ShowReady 1.3.1-prep  -  PC preparation
+2026-10-26 19:26:53  ==========================================================================
+2026-10-26 19:27:03    observer PC
+2026-10-26 19:27:03    2026-10-26 19:26  |  DESKTOP-QLBEJKT
+2026-10-26 19:27:03  
+2026-10-26 19:27:03  Checking process elevation and user context...
+2026-10-26 19:27:03  Inspecting Windows display language and international settings...
+2026-10-26 19:27:05  Inspecting GPU controllers and driver versions...
+2026-10-26 19:27:05  Inspecting wired network adapter drivers...
+2026-10-26 19:27:07  Searching Windows Update for drivers (can take a few minutes)...
+2026-10-26 19:27:44  Inspecting disk space...
+2026-10-26 19:27:44  Checking for pending system reboots...
+2026-10-26 19:27:44  Checking Windows Update pause state...
+2026-10-26 19:27:44  Inspecting power configuration...
+2026-10-26 19:27:45  Inspecting startup apps...
+2026-10-26 19:27:46  Inspecting background processes...
+2026-10-26 19:27:46  Inspecting network adapters...
+2026-10-26 19:27:46  Inspecting capture settings...
+2026-10-26 19:27:46  Inspecting notification settings...
+2026-10-26 19:27:46    PLAN:
+2026-10-26 19:27:46  
+2026-10-26 19:27:46    === LANGUAGE ===
+2026-10-26 19:27:47    [CHANGE]  Windows display language: ko-KR (override: ) -> en-US display language
+2026-10-26 19:27:47  
+2026-10-26 19:27:47    === DRIVERS ===
+2026-10-26 19:27:47    [INFO]    Process elevation and user context                                                                                : Elevated: Yes, User: DESKTOP-QLBEJKT\User, Console: DESKTOP-QLBEJKT\User -> Elevated with matching console user
+2026-10-26 19:27:47    [OK]      NVIDIA GeForce RTX 2080 driver                                                                                    : NVIDIA GeForce RTX 2080 driver 617.42 (2026-09-30) -> >= 570.00 (NVIDIA Studio Driver)
+2026-10-26 19:27:47    [MANUAL]  Wired adapter driver: 이더넷                                                                                         : Intel(R) Ethernet Connection (7) I219-V driver 12.19.1.37 (2021-06-22) -> Vendor driver (< 3 years old)
+2026-10-26 19:27:47    [CHANGE]  Intel - Other hardware - Intel(R) Xeon(R) E3 - 1200/1500 v5/6th Gen Intel(R) Core(TM) PCIe Controller (x16) - 1901: not installed -> 2015-10-28 OtherHardware
+2026-10-26 19:27:47    [CHANGE]  Intel Corporation - Extension - 8/27/2018 12:00:00 AM - 24.20.100.6291                                            : not installed -> 2018-08-27 Extension
+2026-10-26 19:27:47    [CHANGE]  INTEL - System - 7/18/1968 12:00:00 AM - 10.1.14.7                                                                : not installed -> 1968-07-18 OtherHardware
+2026-10-26 19:27:47    [CHANGE]  Intel Corporation - Display - 30.0.100.9805                                                                       : not installed -> 2021-07-23 Video
+2026-10-26 19:27:47  
+2026-10-26 19:27:47    === DISK ===
+2026-10-26 19:27:47    [OK]      System disk space: 70.9 GB free of 464.6 GB -> >= 50 GB free
+2026-10-26 19:27:47    [INFO]    Disk space on D: : 749.4 GB free of 931.5 GB -> Fixed drive capacity
+2026-10-26 19:27:47  
+2026-10-26 19:27:47    === REBOOT ===
+2026-10-26 19:27:47    [OK]      Pending system reboot: No pending reboot -> No pending reboot
+2026-10-26 19:27:47  
+2026-10-26 19:27:47    === POWER ===
+2026-10-26 19:27:47    [OK]      Power scheme and AC settings: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c (optimized) -> 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+2026-10-26 19:27:47  
+2026-10-26 19:27:47    === STARTUP ===
+2026-10-26 19:27:47    [OK]      Startup app: Steam                                                                               : disabled -> disabled
+2026-10-26 19:27:47    [OK]      Startup app: WallpaperEngine                                                                     : disabled -> disabled
+2026-10-26 19:27:47    [OK]      Startup app: Discord                                                                             : disabled -> disabled
+2026-10-26 19:27:47    [OK]      Startup app: Queue                                                                               : disabled -> disabled
+2026-10-26 19:27:47    [CHANGE]  Startup app: KakaoTalk                                                                           : enabled -> disabled
+2026-10-26 19:27:47    [OK]      Startup app: Volume Controller SD plugin                                                         : enabled -> enabled
+2026-10-26 19:27:47    [CHANGE]  Startup app: SOOPPackage                                                                         : enabled -> disabled
+2026-10-26 19:27:47    [CHANGE]  Startup app: RiotClient                                                                          : enabled -> disabled
+2026-10-26 19:27:47    [CHANGE]  Startup app: Figma Agent                                                                         : enabled -> disabled
+2026-10-26 19:27:47    [CHANGE]  Startup app: AdobeBridge                                                                         : enabled -> disabled
+2026-10-26 19:27:47    [OK]      Startup app: Synapse3                                                                            : enabled -> enabled
+2026-10-26 19:27:47    [CHANGE]  Startup app: MicrosoftEdgeAutoLaunch_C46CFC0629905CC775E70B50EA8A519C                            : enabled -> disabled
+2026-10-26 19:27:47    [OK]      Startup app: SecurityHealth                                                                      : disabled -> disabled
+2026-10-26 19:27:47    [OK]      Startup app: Blackmagic Desktop Video Updater                                                    : enabled -> enabled
+2026-10-26 19:27:47    [OK]      Startup app: Blackmagic Streaming Server                                                         : enabled -> enabled
+2026-10-26 19:27:47    [OK]      Startup app: RTHDVCPL                                                                            : enabled -> enabled
+2026-10-26 19:27:47    [OK]      Startup app: Stream Deck                                                                         : enabled -> enabled
+2026-10-26 19:27:47    [OK]      Startup app: Riot Vanguard                                                                       : disabled -> disabled
+2026-10-26 19:27:47    [OK]      Startup app: Logitech Download Assistant                                                         : disabled -> disabled
+2026-10-26 19:27:47    [CHANGE]  Startup app: Logi Download Assistant                                                             : enabled -> disabled
+2026-10-26 19:27:47    [CHANGE]  Startup app: Lightshot                                                                           : enabled -> disabled
+2026-10-26 19:27:47    [OK]      Startup app: Blackmagic CheckVersion                                                             : enabled -> enabled
+2026-10-26 19:27:47    [CHANGE]  Startup app: Adobe CCXProcess                                                                    : enabled -> disabled
+2026-10-26 19:27:47    [CHANGE]  Startup app: Adobe Creative Cloud                                                                : enabled -> disabled
+2026-10-26 19:27:47    [CHANGE]  Startup app: RadminVPN                                                                           : enabled -> disabled
+2026-10-26 19:27:47    [OK]      Startup item: Imaging Edge Desktop.lnk                                                           : enabled -> enabled
+2026-10-26 19:27:47    [OK]      Startup item: X-USB Control Panel Autostart.lnk                                                  : enabled -> enabled
+2026-10-26 19:27:47    [CHANGE]  Scheduled updater task: MicrosoftEdgeUpdateTaskMachineCore                                       : Ready -> Disabled
+2026-10-26 19:27:47    [CHANGE]  Scheduled updater task: MicrosoftEdgeUpdateTaskMachineUA                                         : Ready -> Disabled
+2026-10-26 19:27:47    [CHANGE]  Scheduled updater task: GoogleUpdaterTaskSystem157.0.8089.0{2EC50B49-F79D-44F0-92A8-5ED0EA9E5662}: Ready -> Disabled
+2026-10-26 19:27:47  
+2026-10-26 19:27:47    === BACKGROUND ===
+2026-10-26 19:27:47    [CHANGE]  Close background app: AdobeIPCBroker (1 instance): 1 running -> closed
+2026-10-26 19:27:47    [CHANGE]  Close background app: CCXProcess (1 instance)    : 1 running -> closed
+2026-10-26 19:27:47    [CHANGE]  Close background app: chrome (11 instances)      : 11 running -> closed
+2026-10-26 19:27:47    [CHANGE]  Close background app: Creative Cloud (1 instance): 1 running -> closed
+2026-10-26 19:27:47    [CHANGE]  Close background app: KakaoTalk (1 instance)     : 1 running -> closed
+2026-10-26 19:27:47    [CHANGE]  Close background app: msedge (5 instances)       : 5 running -> closed
+2026-10-26 19:27:47    [CHANGE]  Close background app: Slack (5 instances)        : 5 running -> closed
+2026-10-26 19:27:47  
+2026-10-26 19:27:47    === NETWORK ===
+2026-10-26 19:27:47    [CHANGE]  Disable virtual adapter: 이더넷       : Up -> Disabled
+2026-10-26 19:27:47    [CHANGE]  Disable virtual adapter: Radmin VPN: Up -> Disabled
+2026-10-26 19:27:47  
+2026-10-26 19:27:47    === CAPTURE ===
+2026-10-26 19:27:47    [CHANGE]  Xbox Game Bar background recording: GameDVR_Enabled=1, AppCaptureEnabled=absent -> 0
+2026-10-26 19:27:47  
+2026-10-26 19:27:47    === NOTIFICATIONS ===
+2026-10-26 19:27:47    [CHANGE]  Toast notifications: ToastEnabled=absent, NOC_GLOBAL_SETTING_TOASTS_ENABLED=absent -> 0
+2026-10-26 19:27:47  
+2026-10-26 19:27:47    === UPDATES ===
+2026-10-26 19:27:47    [CHANGE]  Pause Windows Update: Not paused -> Pause for 7 days (until 2026-11-02T10:27:44Z)
+2026-10-26 19:27:47  
+2026-10-26 19:27:47  --------------------------------------------------------------------------
+2026-10-26 19:27:47    SELECTION
+2026-10-26 19:27:47  --------------------------------------------------------------------------
+2026-10-26 19:29:14  This closes apps now. Save your work first.
+2026-10-26 19:29:22  
+2026-10-26 19:29:22  --------------------------------------------------------------------------
+2026-10-26 19:29:22    APPLYING CHANGES
+2026-10-26 19:29:22  --------------------------------------------------------------------------
+2026-10-26 19:29:22  Downloading English can take 5-30 minutes
+2026-10-26 19:29:22  Applying language (1 item(s))...
+2026-10-26 19:29:22  Starting Install-Language for en-US (can take 5-30 minutes)...
+2026-10-26 19:29:53  Installing language en-US... still in progress
+2026-10-26 19:30:23  Installing language en-US... still in progress
+2026-10-26 19:30:53  Installing language en-US... still in progress
+2026-10-26 19:31:23  Installing language en-US... still in progress
+2026-10-26 19:31:53  Installing language en-US... still in progress
+2026-10-26 19:32:23  Installing language en-US... still in progress
+2026-10-26 19:32:53  Installing language en-US... still in progress
+2026-10-26 19:33:23  Installing language en-US... still in progress
+2026-10-26 19:33:53  Installing language en-US... still in progress
+2026-10-26 19:34:23  Installing language en-US... still in progress
+2026-10-26 19:34:53  Installing language en-US... still in progress
+2026-10-26 19:35:23  Installing language en-US... still in progress
+2026-10-26 19:35:53  Installing language en-US... still in progress
+2026-10-26 19:36:02  Language pack installation completed.
+2026-10-26 19:36:02  Error applying language: 'if' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+2026-10-26 19:36:02  Windows Update drivers can take 5-20 minutes
+2026-10-26 19:36:02  Applying drivers (4 item(s))...
+2026-10-26 19:36:02  Searching Windows Update for update 0977dc84-7d56-4285-ae8b-c6f542500dae...
+2026-10-26 19:36:30  Downloading Windows Update driver: Intel - Other hardware - Intel(R) Xeon(R) E3 - 1200/1500 v5/6th Gen Intel(R) Core(TM) PCIe Controller (x16) - 1901...
+2026-10-26 19:36:43  Installing Windows Update driver: Intel - Other hardware - Intel(R) Xeon(R) E3 - 1200/1500 v5/6th Gen Intel(R) Core(TM) PCIe Controller (x16) - 1901...
+2026-10-26 19:36:52  Error applying drivers: 'if' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+2026-10-26 19:36:55  This closes apps now. Save your work first.
+2026-10-26 19:36:55  Applying tuning (23 item(s))...
+2026-10-26 19:36:55  Error applying tune_background:msedge: 이름이 "msedge"인 프로세스를 찾을 수 없습니다. 프로세스 이름을 검증하고 다시 cmdlet을 호출하십시오.
+2026-10-26 19:36:56  Applying updates pause (1 item(s))...
+2026-10-26 19:36:56  Error applying updates pause: 'if' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+2026-10-26 19:36:56  
+2026-10-26 19:36:56    APPLIED RESULTS:
+2026-10-26 19:36:56    [FAILED]  Windows display language: 'if' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+2026-10-26 19:36:57    [FAILED]  Intel - Other hardware - Intel(R) Xeon(R) E3 - 1200/1500 v5/6th Gen Intel(R) Core(TM) PCIe Controller (x16) - 1901: 'if' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+2026-10-26 19:36:57    [FAILED]  Intel Corporation - Extension - 8/27/2018 12:00:00 AM - 24.20.100.6291: 'if' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+2026-10-26 19:36:57    [FAILED]  INTEL - System - 7/18/1968 12:00:00 AM - 10.1.14.7: 'if' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+2026-10-26 19:36:57    [FAILED]  Intel Corporation - Display - 30.0.100.9805: 'if' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+2026-10-26 19:36:57    [DONE]    Startup app: KakaoTalk: disabled
+2026-10-26 19:36:57    [DONE]    Startup app: SOOPPackage: disabled
+2026-10-26 19:36:57    [DONE]    Startup app: RiotClient: disabled
+2026-10-26 19:36:57    [DONE]    Startup app: Figma Agent: disabled
+2026-10-26 19:36:57    [DONE]    Startup app: AdobeBridge: disabled
+2026-10-26 19:36:57    [DONE]    Startup app: MicrosoftEdgeAutoLaunch_C46CFC0629905CC775E70B50EA8A519C: disabled
+2026-10-26 19:36:57    [DONE]    Startup app: Logi Download Assistant: disabled
+2026-10-26 19:36:57    [DONE]    Startup app: Lightshot: disabled
+2026-10-26 19:36:57    [DONE]    Startup app: Adobe CCXProcess: disabled
+2026-10-26 19:36:57    [DONE]    Startup app: Adobe Creative Cloud: disabled
+2026-10-26 19:36:57    [DONE]    Startup app: RadminVPN: disabled
+2026-10-26 19:36:57    [DONE]    Scheduled updater task: MicrosoftEdgeUpdateTaskMachineCore: Disabled
+2026-10-26 19:36:57    [DONE]    Scheduled updater task: MicrosoftEdgeUpdateTaskMachineUA: Disabled
+2026-10-26 19:36:57    [DONE]    Scheduled updater task: GoogleUpdaterTaskSystem157.0.8089.0{2EC50B49-F79D-44F0-92A8-5ED0EA9E5662}: Disabled
+2026-10-26 19:36:57    [DONE]    Close background app: AdobeIPCBroker (1 instance): closed
+2026-10-26 19:36:58    [DONE]    Close background app: CCXProcess (1 instance): closed
+2026-10-26 19:36:58    [DONE]    Close background app: chrome (11 instances): closed
+2026-10-26 19:36:58    [DONE]    Close background app: Creative Cloud (1 instance): closed
+2026-10-26 19:36:58    [FAILED]  Close background app: msedge (5 instances): 이름이 "msedge"인 프로세스를 찾을 수 없습니다. 프로세스 이름을 검증하고 다시 cmdlet을 호출하십시오.
+2026-10-26 19:36:58    [DONE]    Close background app: KakaoTalk (1 instance): closed
+2026-10-26 19:36:58    [DONE]    Close background app: Slack (5 instances): closed
+2026-10-26 19:36:58    [DONE]    Xbox Game Bar background recording: 0
+2026-10-26 19:36:58    [DONE]    Toast notifications: 0
+2026-10-26 19:36:58    [FAILED]  Pause Windows Update: 'if' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
