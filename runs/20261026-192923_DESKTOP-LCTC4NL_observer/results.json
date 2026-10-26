@@ -1,0 +1,620 @@
+{
+    "schema":  "showready/1",
+    "meta":  {
+                 "tool_version":  "1.3.1",
+                 "role":  "observer",
+                 "mode":  "quick",
+                 "started":  "2026-10-26T19:29:23+09:00",
+                 "finished":  "2026-10-26T19:36:05+09:00",
+                 "computer":  "DESKTOP-LCTC4NL",
+                 "duration_s":  401.9,
+                 "observer_ip":  "121.165.221.94",
+                 "observer_ip_kind":  "wired",
+                 "skipped":  [
+
+                             ],
+                 "steps":  [
+                               {
+                                   "key":  "hardware",
+                                   "title":  "Hardware",
+                                   "status":  "ok",
+                                   "seconds":  6.6,
+                                   "message":  null,
+                                   "collector_errors":  0
+                               },
+                               {
+                                   "key":  "sender",
+                                   "title":  "Sender test",
+                                   "status":  "ok",
+                                   "seconds":  41.5,
+                                   "message":  null,
+                                   "collector_errors":  0
+                               },
+                               {
+                                   "key":  "verdict",
+                                   "title":  "Verdict",
+                                   "status":  "ok",
+                                   "seconds":  0.5,
+                                   "message":  null,
+                                   "collector_errors":  0
+                               }
+                           ],
+                 "lib_errors":  [
+
+                                ]
+             },
+    "profile":  {
+                    "name":  "Gen.G Academy Seoul -\u003e France",
+                    "inputs":  {
+                                   "count":  2,
+                                   "protocol":  "OMT",
+                                   "resolution":  "1920x1080",
+                                   "fps":  60,
+                                   "mbps_per_feed":  {
+                                                         "OMT":  200,
+                                                         "NDI":  150,
+                                                         "NDI-HX3":  62
+                                                     }
+                               },
+                    "outputs":  [
+                                    {
+                                        "id":  "srt",
+                                        "label":  "SRT to France",
+                                        "protocol":  "SRT",
+                                        "video_kbps":  10000,
+                                        "audio_kbps":  192
+                                    },
+                                    {
+                                        "id":  "youtube",
+                                        "label":  "YouTube",
+                                        "protocol":  "RTMP",
+                                        "video_kbps":  17000,
+                                        "audio_kbps":  128
+                                    },
+                                    {
+                                        "id":  "twitch",
+                                        "label":  "Twitch",
+                                        "protocol":  "RTMP",
+                                        "video_kbps":  6000,
+                                        "audio_kbps":  160
+                                    }
+                                ],
+                    "srt_destination_host":  ""
+                },
+    "hardware":  {
+                     "os":  {
+                                "caption":  "Microsoft Windows 11 Pro",
+                                "version":  "10.0.22631",
+                                "build":  "22631"
+                            },
+                     "computer":  {
+                                      "name":  "DESKTOP-LCTC4NL",
+                                      "manufacturer":  "System manufacturer",
+                                      "model":  "System Product Name",
+                                      "is_laptop":  false
+                                  },
+                     "cpu":  {
+                                 "name":  "Intel(R) Core(TM) i7-9700K CPU @ 3.60GHz",
+                                 "cores":  8,
+                                 "threads":  8,
+                                 "max_mhz":  3601
+                             },
+                     "ram_gb":  31.9,
+                     "gpus":  [
+                                  {
+                                      "name":  "NVIDIA GeForce RTX 2080 SUPER",
+                                      "vendor":  "NVIDIA",
+                                      "integrated":  false,
+                                      "driver_version":  "32.0.16.2101",
+                                      "nvidia_driver":  621.01,
+                                      "driver_date":  "2026-10-19",
+                                      "vram_gb":  8
+                                  }
+                              ],
+                     "nics":  [
+                                  {
+                                      "name":  "\uc774\ub354\ub137 3",
+                                      "description":  "Intel(R) Ethernet Connection (7) I219-V",
+                                      "status":  "Up",
+                                      "link_mbps":  1000,
+                                      "kind":  "wired",
+                                      "default_route":  true,
+                                      "ipv4":  [
+                                                   "121.165.221.94"
+                                               ],
+                                      "network_category":  "Public",
+                                      "eee":  "unknown"
+                                  },
+                                  {
+                                      "name":  "Radmin VPN",
+                                      "description":  "Famatech Radmin VPN Ethernet Adapter",
+                                      "status":  "Up",
+                                      "link_mbps":  100,
+                                      "kind":  "virtual",
+                                      "default_route":  false,
+                                      "ipv4":  [
+                                                   "26.4.164.178"
+                                               ],
+                                      "network_category":  "Public",
+                                      "eee":  "unknown"
+                                  }
+                              ],
+                     "power":  {
+                                   "plan_guid":  "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+                                   "plan":  "high_performance",
+                                   "on_battery":  false,
+                                   "battery_pct":  100
+                               },
+                     "disk":  {
+                                  "system_drive":  "C:",
+                                  "free_gb":  117.3,
+                                  "total_gb":  264.9
+                              },
+                     "software":  {
+                                      "vmix":  null,
+                                      "obs":  "31.0.3",
+                                      "ndi_runtime":  "6.1.1.0",
+                                      "ndi_tools":  "6.1.1.0",
+                                      "distroav":  "6.0.0",
+                                      "omt":  null
+                                  },
+                     "windows":  {
+                                     "hags":  "unknown",
+                                     "game_mode":  "unknown",
+                                     "pending_reboot":  false,
+                                     "firewall_profiles":  [
+                                                               {
+                                                                   "name":  "Domain",
+                                                                   "enabled":  true
+                                                               },
+                                                               {
+                                                                   "name":  "Private",
+                                                                   "enabled":  true
+                                                               },
+                                                               {
+                                                                   "name":  "Public",
+                                                                   "enabled":  true
+                                                               }
+                                                           ]
+                                 },
+                     "processes":  {
+                                       "running":  [
+                                                       "ms-teams"
+                                                   ]
+                                   },
+                     "errors":  [
+
+                                ]
+                 },
+    "sender":  {
+                   "ffmpeg":  {
+                                  "found":  true,
+                                  "path":  "C:\\Users\\Gen.G\\Downloads\\ShowReady-kit\\ShowReady\\bin\\ffmpeg.exe",
+                                  "version":  "n8.1.3-18-g46d899d7a0-20261015"
+                              },
+                   "codec":  "speedhq",
+                   "pix_fmt":  "yuv422p",
+                   "width":  1920,
+                   "height":  1080,
+                   "fps":  60,
+                   "seconds":  45,
+                   "source":  {
+                                  "codec":  "speedhq",
+                                  "pix_fmt":  "yuv422p",
+                                  "width":  1920,
+                                  "height":  1080,
+                                  "fps":  60,
+                                  "seconds":  4,
+                                  "file_mb":  24.11
+                              },
+                   "max_speed":  3.88,
+                   "stream":  {
+                                  "speed_min":  1.01,
+                                  "speed_p50":  1.02,
+                                  "fps_p50":  61.08,
+                                  "ok":  false,
+                                  "error":  "Process failed (exit code -22): [speedhq] Invalid pts (2159) \u003c= last (2159)"
+                              },
+                   "system":  {
+                                  "cpu_p50":  22,
+                                  "cpu_p95":  37.45,
+                                  "cpu_max":  50,
+                                  "perf_start":  126,
+                                  "perf_min":  126,
+                                  "perf_p50":  126.5,
+                                  "gpu_3d_p95":  25,
+                                  "mem_used_pct_max":  29,
+                                  "samples":  [
+                                                  {
+                                                      "t":  0,
+                                                      "cpu":  20,
+                                                      "perf":  126,
+                                                      "gpu_3d":  22,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  5,
+                                                      "cpu":  21,
+                                                      "perf":  127,
+                                                      "gpu_3d":  21,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  6,
+                                                      "cpu":  23,
+                                                      "perf":  127,
+                                                      "gpu_3d":  23,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  7,
+                                                      "cpu":  21,
+                                                      "perf":  127,
+                                                      "gpu_3d":  21,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  8,
+                                                      "cpu":  22,
+                                                      "perf":  127,
+                                                      "gpu_3d":  23,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  9,
+                                                      "cpu":  22,
+                                                      "perf":  127,
+                                                      "gpu_3d":  22,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  10,
+                                                      "cpu":  26,
+                                                      "perf":  126,
+                                                      "gpu_3d":  24,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  11,
+                                                      "cpu":  20,
+                                                      "perf":  127,
+                                                      "gpu_3d":  23,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  12,
+                                                      "cpu":  20,
+                                                      "perf":  126,
+                                                      "gpu_3d":  22,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  13,
+                                                      "cpu":  20,
+                                                      "perf":  127,
+                                                      "gpu_3d":  22,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  14,
+                                                      "cpu":  20,
+                                                      "perf":  126,
+                                                      "gpu_3d":  22,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  15,
+                                                      "cpu":  50,
+                                                      "perf":  126,
+                                                      "gpu_3d":  23,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  16,
+                                                      "cpu":  22,
+                                                      "perf":  127,
+                                                      "gpu_3d":  22,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  17,
+                                                      "cpu":  23,
+                                                      "perf":  127,
+                                                      "gpu_3d":  22,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  18,
+                                                      "cpu":  22,
+                                                      "perf":  126,
+                                                      "gpu_3d":  22,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  19,
+                                                      "cpu":  23,
+                                                      "perf":  126,
+                                                      "gpu_3d":  23,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  20,
+                                                      "cpu":  33,
+                                                      "perf":  126,
+                                                      "gpu_3d":  23,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  21,
+                                                      "cpu":  21,
+                                                      "perf":  127,
+                                                      "gpu_3d":  19,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  22,
+                                                      "cpu":  21,
+                                                      "perf":  127,
+                                                      "gpu_3d":  22,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  23,
+                                                      "cpu":  36,
+                                                      "perf":  127,
+                                                      "gpu_3d":  22,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  24,
+                                                      "cpu":  20,
+                                                      "perf":  126,
+                                                      "gpu_3d":  25,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  25,
+                                                      "cpu":  31,
+                                                      "perf":  127,
+                                                      "gpu_3d":  24,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  26,
+                                                      "cpu":  24,
+                                                      "perf":  126,
+                                                      "gpu_3d":  25,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  27,
+                                                      "cpu":  24,
+                                                      "perf":  127,
+                                                      "gpu_3d":  23,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  28,
+                                                      "cpu":  25,
+                                                      "perf":  127,
+                                                      "gpu_3d":  24,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  29,
+                                                      "cpu":  22,
+                                                      "perf":  126,
+                                                      "gpu_3d":  25,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  30,
+                                                      "cpu":  38,
+                                                      "perf":  126,
+                                                      "gpu_3d":  23,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  31,
+                                                      "cpu":  37,
+                                                      "perf":  126,
+                                                      "gpu_3d":  24,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  32,
+                                                      "cpu":  24,
+                                                      "perf":  126,
+                                                      "gpu_3d":  24,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  33,
+                                                      "cpu":  20,
+                                                      "perf":  126,
+                                                      "gpu_3d":  22,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  34,
+                                                      "cpu":  22,
+                                                      "perf":  126,
+                                                      "gpu_3d":  22,
+                                                      "mem":  29
+                                                  },
+                                                  {
+                                                      "t":  35,
+                                                      "cpu":  25,
+                                                      "perf":  127,
+                                                      "gpu_3d":  25,
+                                                      "mem":  29
+                                                  }
+                                              ]
+                              },
+                   "note":  "SpeedHQ is the codec full NDI uses. OMT\u0027s VMX codec has no ffmpeg encoder, so SpeedHQ stands in for both. ffmpeg\u0027s SpeedHQ encoder is less optimised than the NDI SDK\u0027s, so this errs on the safe side.",
+                   "errors":  [
+
+                              ]
+               },
+    "verdict":  {
+                    "role":  "observer",
+                    "overall":  "CAUTION",
+                    "headline":  "Weakest link (warning): Virtual network adapters (1 virtual adapter(s) up; needs none) - Disable the virtual adapters for the show, or pin the adapter in NDI Access Manager / vMix. (+2 more warning(s))",
+                    "weakest":  "lan_virtual_adapters",
+                    "partial":  false,
+                    "not_tested":  [
+
+                                   ],
+                    "checks":  [
+                                   {
+                                       "id":  "lan_wired",
+                                       "section":  "lan",
+                                       "title":  "Wired network connection",
+                                       "status":  "PASS",
+                                       "value":  "\uc774\ub354\ub137 3 at 1000 Mbps",
+                                       "limit":  "wired adapter up",
+                                       "margin":  null,
+                                       "detail":  "Wired adapter(s) up: \uc774\ub354\ub137 3.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "obs_link",
+                                       "section":  "lan",
+                                       "title":  "Wired link speed",
+                                       "status":  "PASS",
+                                       "value":  "1000 Mbps",
+                                       "limit":  "\u003e= 1000 Mbps",
+                                       "margin":  1,
+                                       "detail":  "\uc774\ub354\ub137 3 links at 1000 Mbps.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "lan_virtual_adapters",
+                                       "section":  "lan",
+                                       "title":  "Virtual network adapters",
+                                       "status":  "WARN",
+                                       "value":  "1 virtual adapter(s) up",
+                                       "limit":  "none",
+                                       "margin":  null,
+                                       "detail":  "NDI/OMT discovery may bind to Radmin VPN.",
+                                       "fix":  "Disable the virtual adapters for the show, or pin the adapter in NDI Access Manager / vMix."
+                                   },
+                                   {
+                                       "id":  "lan_profile",
+                                       "section":  "lan",
+                                       "title":  "Windows network profile",
+                                       "status":  "WARN",
+                                       "value":  "Public",
+                                       "limit":  "Private",
+                                       "margin":  null,
+                                       "detail":  "\uc774\ub354\ub137 3 is on a Public network profile, so Windows Firewall blocks NDI/OMT discovery.",
+                                       "fix":  "Set the wired network to Private (Settings \u003e Network \u0026 Internet \u003e Ethernet \u003e Network profile type) so Windows Firewall allows NDI/OMT discovery."
+                                   },
+                                   {
+                                       "id":  "lan_eee",
+                                       "section":  "lan",
+                                       "title":  "Energy-Efficient Ethernet",
+                                       "status":  "INFO",
+                                       "value":  "unknown",
+                                       "limit":  "off",
+                                       "margin":  null,
+                                       "detail":  "Could not read the Energy-Efficient Ethernet setting (needs admin or adapter does not expose it).",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_power",
+                                       "section":  "hardware",
+                                       "title":  "Power plan and mains power",
+                                       "status":  "PASS",
+                                       "value":  "High performance, mains",
+                                       "limit":  "High performance or Ultimate",
+                                       "margin":  null,
+                                       "detail":  "Power plan keeps the CPU at full speed.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "hw_pending_reboot",
+                                       "section":  "hardware",
+                                       "title":  "Pending Windows reboot",
+                                       "status":  "PASS",
+                                       "value":  "none pending",
+                                       "limit":  "none",
+                                       "margin":  null,
+                                       "detail":  "No restart is waiting.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "sw_background",
+                                       "section":  "software",
+                                       "title":  "Background apps",
+                                       "status":  "WARN",
+                                       "value":  "1 running",
+                                       "limit":  "none",
+                                       "margin":  null,
+                                       "detail":  "These programs compete for CPU, GPU or network: ms-teams.",
+                                       "fix":  "Close: ms-teams."
+                                   },
+                                   {
+                                       "id":  "sender_realtime",
+                                       "section":  "sender",
+                                       "title":  "Sender encode in real time",
+                                       "status":  "PASS",
+                                       "value":  "1.01 x",
+                                       "limit":  "\u003e= 0.97 x",
+                                       "margin":  1.04,
+                                       "detail":  "One 1080p60 SpeedHQ encode kept up with real time (slowest 1.01 x). Unpaced it ran at 3.88 x real time.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "sender_cpu",
+                                       "section":  "sender",
+                                       "title":  "CPU load during sender test",
+                                       "status":  "PASS",
+                                       "value":  "37 %",
+                                       "limit":  "\u003c 70 %",
+                                       "margin":  1.87,
+                                       "detail":  "CPU p95 while the game/observer client and one 1080p60 SpeedHQ encode ran together. Peak 50 %.",
+                                       "fix":  ""
+                                   },
+                                   {
+                                       "id":  "sender_throttle",
+                                       "section":  "sender",
+                                       "title":  "CPU clock throttling",
+                                       "status":  "PASS",
+                                       "value":  "0 % drop",
+                                       "limit":  "\u003c= 15 %",
+                                       "margin":  10,
+                                       "detail":  "CPU performance went from 126 % at the start to 126 % at its lowest.",
+                                       "fix":  ""
+                                   }
+                               ],
+                    "settings":  [
+                                     {
+                                         "id":  "power_plan",
+                                         "label":  "Windows power plan",
+                                         "value":  "High performance (or Ultimate), on mains power, sleep off",
+                                         "why":  "The default Balanced plan lets the CPU clock drop under bursty live-video load."
+                                     }
+                                 ],
+                    "manual_checks":  [
+                                          {
+                                              "id":  "mc_obs_wait",
+                                              "text":  "Leave Run-Observer.cmd waiting until the prod PC has finished its LAN test (Run-ShowReady.cmd -LanHosts \u003cthis PC\u0027s IP\u003e,\u003cother observer\u0027s IP\u003e)."
+                                          },
+                                          {
+                                              "id":  "mc_obs_sender",
+                                              "text":  "Before show day, install the NDI/OMT sender (or turn on NDI/OMT output in the observer client) and check that the feed arrives in vMix/OBS on the prod PC."
+                                          },
+                                          {
+                                              "id":  "mc_obs_rehearsal",
+                                              "text":  "Run a 30-minute rehearsal with the game/observer client and the real NDI/OMT output; watch for dropped frames on the prod PC."
+                                          }
+                                      ],
+                    "calc":  {
+
+                             },
+                    "errors":  [
+
+                               ]
+                }
+}
